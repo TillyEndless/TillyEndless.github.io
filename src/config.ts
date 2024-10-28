@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: false,
-    src: '/Users/tilly/code/blog/pic/WechatIMG59.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: '/assets/images/WechatIMG59 10.33.06.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: false,         // Display the credit text of the banner image
@@ -30,7 +30,7 @@ export const siteConfig: SiteConfig = {
   },
   favicon: [    // Leave this array empty to use the default favicon
      {
-       src: '/Users/tilly/code/blog/pic/517811.png',    // Path of the favicon, relative to the /public directory
+       src: '/assets/images/517811.png',    // Path of the favicon, relative to the /public directory
        theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
        sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
      }
@@ -52,7 +52,7 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: '/Users/tilly/code/blog/pic/WechatIMG120.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  avatar: '/assets/images/WechatIMG120.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'Tilly Endless',
   bio: 'This person is very mysterious; he didn\'t write anything…',
   links: [
