@@ -9,9 +9,9 @@ draft: false
 lang: ''
 ---
 ![Insert](/img/ADS1/image.png)
-![Insert](/img/ADS1/image(1).png)
-![Insert](/img/ADS1/image(2).png)
-![Insert](/img/ADS1/image(3).png)
+![Insert](/img/ADS1/image (1).png)
+![Insert](/img/ADS1/image (2).png)
+![Insert](/img/ADS1/image (3).png)
 
 对比自己写的代码，收获：
 1. 做题尽可能拆解、化简思路。如双旋操作可以简化为两次单旋函数的调用。
