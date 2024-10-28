@@ -8,10 +8,10 @@ category: ''
 draft: false 
 lang: ''
 ---
-![image](/Users/tilly/code/blog/TillyEndless.github.io/src/assets/images/ADS1/image.png)
-![image -1-](/Users/tilly/code/blog/TillyEndless.github.io/src/assets/images/ADS1/image(1).png)
-![image -2-](/Users/tilly/code/blog/TillyEndless.github.io/src/assets/images/ADS1/image(2).png)
-![image -3-](/Users/tilly/code/blog/TillyEndless.github.io/src/assets/images/ADS1/image(3).png)
+![image](assets/images/ADS1/image.png)
+![image -1-](assets/images/ADS1/image(1).png)
+![image -2-](assets/images/ADS1/image(2).png)
+![image -3-](assets/images/ADS1/image(3).png)
 
 对比自己写的代码，收获：
 1. 做题尽可能拆解、化简思路。如双旋操作可以简化为两次单旋函数的调用。
