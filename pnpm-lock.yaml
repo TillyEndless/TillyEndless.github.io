@@ -121,6 +121,9 @@ importers:
       '@iconify-json/fa6-solid':
         specifier: ^1.2.1
         version: 1.2.1
+      '@iconify-json/fluent':
+        specifier: ^1.2.5
+        version: 1.2.5
       '@iconify-json/material-symbols':
         specifier: ^1.2.5
         version: 1.2.5
@@ -1026,6 +1029,9 @@ packages:
 
   '@iconify-json/fa6-solid@1.2.1':
     resolution: {integrity: sha512-4H57tDC/xEhy4s7HPSRFuXQ/8gwtIEg33ak+iuiBoQc7kRh8DS6LXSCh4Uh3QNvTcNLDXnwqfQVhPwo0gpInMA==}
+
+  '@iconify-json/fluent@1.2.5':
+    resolution: {integrity: sha512-7d8Pq6szZ+bnWk649wXub6LSLVbRUUpa6al0c/enW+dWa6EGVADReDEyjHLB86WO+Wi05CmBDKHtZBm29SRmwg==}
 
   '@iconify-json/material-symbols@1.2.5':
     resolution: {integrity: sha512-CXG4noUsqBrbr0npZVldxlf8XGUW3LF3VEGvgk/2k+A3GQt/DM/04PsbjkO2wOI/ORP8rcaHz2pw8F2TPL+CKA==}
@@ -5851,6 +5857,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/fa6-solid@1.2.1':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/fluent@1.2.5':
     dependencies:
       '@iconify/types': 2.0.0
 
