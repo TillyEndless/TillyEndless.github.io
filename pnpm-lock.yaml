@@ -124,6 +124,9 @@ importers:
       '@iconify-json/fluent':
         specifier: ^1.2.5
         version: 1.2.5
+      '@iconify-json/grommet-icons':
+        specifier: ^1.2.0
+        version: 1.2.0
       '@iconify-json/material-symbols':
         specifier: ^1.2.5
         version: 1.2.5
@@ -1032,6 +1035,9 @@ packages:
 
   '@iconify-json/fluent@1.2.5':
     resolution: {integrity: sha512-7d8Pq6szZ+bnWk649wXub6LSLVbRUUpa6al0c/enW+dWa6EGVADReDEyjHLB86WO+Wi05CmBDKHtZBm29SRmwg==}
+
+  '@iconify-json/grommet-icons@1.2.0':
+    resolution: {integrity: sha512-YnhfMsJeXsfsSkMQP206MpVPY/O0jXbyhC9+P70W6SkVvpODqw72GK7TV1pnKUuPvNRZzRik2x+9KWQxgmMhGQ==}
 
   '@iconify-json/material-symbols@1.2.5':
     resolution: {integrity: sha512-CXG4noUsqBrbr0npZVldxlf8XGUW3LF3VEGvgk/2k+A3GQt/DM/04PsbjkO2wOI/ORP8rcaHz2pw8F2TPL+CKA==}
@@ -5861,6 +5867,10 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/fluent@1.2.5':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/grommet-icons@1.2.0':
     dependencies:
       '@iconify/types': 2.0.0
 
