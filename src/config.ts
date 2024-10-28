@@ -56,13 +56,13 @@ export const profileConfig: ProfileConfig = {
   name: '靈',
   bio: 'This person is very mysterious; she didn\'t write anything… :)',
   links: [
-    //{
-    //  name: 'Twitter',
-    //   icon: 'fa6-brands:twitter',       // Visit https://icones.js.org/ for icon codes
-    //                                     // You will need to install the corresponding icon set if it's not already included
-    //                                     // `pnpm add @iconify-json/<icon-set-name>`
-    //   url: 'https://twitter.com',
-    // },
+    {
+     name: 'ZJU_CS笔记大索引',
+      icon: 'fluent:accessibility-16-filled',       // Visit https://icones.js.org/ for icon codes
+                                        // You will need to install the corresponding icon set if it's not already included
+                                        // `pnpm add @iconify-json/<icon-set-name>`
+      url: 'https://isshikihugh.github.io/zju-cs-asio/',
+    },
     // {
     //   name: 'Steam',
     //   icon: 'fa6-brands:steam',
