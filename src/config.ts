@@ -58,7 +58,7 @@ export const profileConfig: ProfileConfig = {
   links: [
     {
      name: 'ZJU_CS笔记大索引',
-      icon: 'fa6-brands:accessibility-16-filled',       // Visit https://icones.js.org/ for icon codes
+      icon: 'fa6-brands:group',       // Visit https://icones.js.org/ for icon codes
                                         // You will need to install the corresponding icon set if it's not already included
                                         // `pnpm add @iconify-json/<icon-set-name>`
       url: 'https://isshikihugh.github.io/zju-cs-asio/',
