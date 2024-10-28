@@ -19,7 +19,7 @@ export const siteConfig: SiteConfig = {
     depth: 3,
   },
   banner: {
-    enable: false,
+    enable: true,
     src: '/assets/images/WechatIMG59 10.33.06.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
