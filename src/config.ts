@@ -14,6 +14,10 @@ export const siteConfig: SiteConfig = {
     hue: 250,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false,     // Hide the theme color picker for visitors
   },
+  toc: {
+    enable: true,
+    depth: 3,
+  },
   banner: {
     enable: false,
     src: '/Users/tilly/code/blog/pic/WechatIMG59.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
@@ -32,6 +36,7 @@ export const siteConfig: SiteConfig = {
      }
   ]
 }
+export default siteConfig;
 
 export const navBarConfig: NavBarConfig = {
   links: [
