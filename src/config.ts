@@ -20,7 +20,7 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: 'assets/images/WechatIMG59 10.33.06.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    src: 'assets/images/WechatIMG122.jpg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
     position: 'center',      // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: false,         // Display the credit text of the banner image
@@ -52,9 +52,9 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/WechatIMG120.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-  name: 'Tilly Endless',
-  bio: 'This person is very mysterious; he didn\'t write anything…',
+  avatar: 'assets/images/WechatIMG121.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  name: '靈',
+  bio: 'This person is very mysterious; she didn\'t write anything… :)',
   links: [
     //{
     //  name: 'Twitter',
