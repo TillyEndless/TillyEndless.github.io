@@ -8,7 +8,7 @@ category: ''
 draft: false 
 lang: ''
 ---
-**重装依赖**: 
+### 重装依赖: 
 删除 node_modules 文件夹和 package-lock.json（或 pnpm-lock.yaml）文件，然后重新安装依赖：
 ```zsh 
 rm -rf node_modules
@@ -23,3 +23,4 @@ pnpm install
 git add .  
 git commit -m "Update package.json and pnpm-lock.yaml" 
 git push origin main
+```
