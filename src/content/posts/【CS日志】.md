@@ -10,7 +10,7 @@ lang: ''
 ---
 10.28 搭建博客 学mac基本配件和应用
 10.29 配置iTerm2 
-Link: 
+Link:  
 https://sourabhbajaj.com/mac-setup/
 https://qiita.com/ryamate/items/075c34fcf29d0889c15a
 
