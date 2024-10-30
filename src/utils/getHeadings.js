@@ -1,9 +1,8 @@
 import { remark } from 'remark';
 import remarkHeadingId from 'remark-heading-id';
-import remarkHtml from 'remark-html'; // 导入 remark-html 库
+import remarkHtml from 'remark-html';
 import { visit } from 'unist-util-visit';
 
-// 将 HTML 转换为 Markdown
 async function convertHtmlToMarkdown(html) {
   const markdown = await remark()
     .use(remarkHtml)
@@ -12,15 +11,12 @@ async function convertHtmlToMarkdown(html) {
   return markdown.toString();
 }
 
-// 生成 slug 函数
 function generateSlug(text) {
   return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
 }
 
 export async function getHeadings(content) {
   const headings = [];
-
-  // 确保 content 是字符串并判断内容是 HTML 格式还是 Markdown 格式
   const markdownContent = (typeof content === 'string' && content.startsWith('<')) 
     ? await convertHtmlToMarkdown(content) 
     : content;
@@ -29,11 +25,12 @@ export async function getHeadings(content) {
     .use(remarkHeadingId)
     .use(() => (tree) => {
       visit(tree, 'heading', (node) => {
+        console.log('Found heading:', node); // 调试输出
         const text = node.children[0].value;
-        const slug = generateSlug(text); // 生成 slug
-
+        const slug = generateSlug(text);
+        
         headings.push({
-          slug: slug, // 添加 slug 属性
+          slug: slug,
           text: text,
           depth: node.depth,
         });
@@ -41,5 +38,6 @@ export async function getHeadings(content) {
     })
     .process(markdownContent);
 
+  console.log('Headings:', headings); // 输出最终的headings
   return headings;
 }
