@@ -133,7 +133,15 @@ pnpm install @astrojs/mdx
 ```zsh
 pnpm install @astro/content
 ```
+发现并没有这个模块，最后参考了开始备份的一个gpt代码，修改这个后来生成的错误代码。启用不存在模块。
+继续报错，安装remark和remark-extract-headings
+```zsh
+pnpm install remark
+pnpm list remark
 
+pnpm install remark-extract-headings
+pnpm list remark-extract-headings
+```
 在 astro.config.mjs 文件中添加：
 ```mjs
 import { defineConfig } from 'astro/config';
