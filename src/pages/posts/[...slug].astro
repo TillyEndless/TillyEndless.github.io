@@ -27,6 +27,7 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
+console.log("entry 格式:", typeof entry, entry); // 打印 entry 的类型及其内容
 const { Content } = await entry.render()
 console.log("Content 格式:", typeof Content, Content); // 打印 Content 的类型及其内容
 const { remarkPluginFrontmatter } = await entry.render()
