@@ -28,6 +28,7 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
+console.log("Content 格式:", typeof Content, Content); // 打印 Content 的类型及其内容
 const { remarkPluginFrontmatter } = await entry.render()
 
 const currentUrl = process.env.CURRENT_URL || 'https://tillyendless.github.io/12345/'; 
