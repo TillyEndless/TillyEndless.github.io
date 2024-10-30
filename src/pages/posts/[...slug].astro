@@ -28,6 +28,8 @@ export async function getStaticPaths() {
 const { entry } = Astro.props
 const { Content } = await entry.render()
 const { remarkPluginFrontmatter } = await entry.render()
+
+// 获取内容的标题
 const headings = await getHeadings(Content)
 
 const jsonLd = {
