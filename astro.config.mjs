@@ -144,3 +144,11 @@ export default defineConfig({
     },
   },
 })
+
+// astro.config.mjs
+import { defineConfig } from 'astro/config';
+
+export default defineConfig({
+  // 添加您所需的配置项
+  integrations: [],
+});
