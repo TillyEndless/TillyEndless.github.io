@@ -121,6 +121,7 @@ export default defineConfig({
   vite: {
     build: {
       rollupOptions: {
+        external: ['astro-icon'],
         onwarn(warning, warn) {
           // temporarily suppress this warning
           if (
