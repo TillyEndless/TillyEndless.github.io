@@ -1,5 +1,6 @@
 import { remark } from 'remark';
 import remarkHeadingId from 'remark-heading-id';
+import visit from 'unist-util-visit'; // 导入 visit 函数
 
 export async function getHeadings(markdown) {
   const headings = [];
