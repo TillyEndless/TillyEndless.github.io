@@ -12,6 +12,11 @@ async function convertHtmlToMarkdown(html) {
   return markdown.toString();
 }
 
+// 生成 slug 函数
+function generateSlug(text) {
+  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '').replace(/\-\-+/g, '-');
+}
+
 export async function getHeadings(content) {
   const headings = [];
 
@@ -24,10 +29,13 @@ export async function getHeadings(content) {
     .use(remarkHeadingId)
     .use(() => (tree) => {
       visit(tree, 'heading', (node) => {
+        const text = node.children[0].value;
+        const slug = generateSlug(text); // 生成 slug
+
         headings.push({
-          text: node.children[0].value,
-          level: node.depth,
-          id: node.data.id || `heading-${headings.length}` // 处理可能缺少 id 的情况
+          slug: slug, // 添加 slug 属性
+          text: text,
+          depth: node.depth,
         });
       });
     })
