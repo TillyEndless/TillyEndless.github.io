@@ -158,7 +158,7 @@ export default defineConfig({
 可以编写一个辅助函数，将 Markdown 文件的标题提取出来，生成大纲数据。例如，使用 Astro 的 remark 插件处理 Markdown 内容。
 
 新建一个 utils/getHeadings.js 文件：
-
+```js
 import { remark } from 'remark';
 import remarkExtractHeadings from 'remark-extract-headings';
 
@@ -171,7 +171,7 @@ export async function getHeadings(markdown) {
     level: heading.depth
   }));
 }
-
+```
 3. 创建 Post 页面模板
 
 在 src/pages/posts/[slug].astro 中设置每个帖子页面模板。可以使用 Astro 的 getStaticPaths 动态生成每个帖子页面。使用 getHeadings 函数来生成当前 Markdown 文本的侧边大纲。
