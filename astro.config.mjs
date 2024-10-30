@@ -5,6 +5,7 @@ import swup from '@swup/astro'
 import Compress from 'astro-compress'
 import icon from 'astro-icon'
 import { defineConfig } from 'astro/config'
+import mdx from '@astrojs/mdx';
 import Color from 'colorjs.io'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeComponents from 'rehype-components' /* Render the custom directive content */
@@ -35,6 +36,7 @@ export default defineConfig({
   base: '/',
   trailingSlash: 'always',
   integrations: [
+    mdx(),
     tailwind(),
     swup({
       theme: false,
@@ -145,11 +147,3 @@ export default defineConfig({
     },
   },
 })
-
-// astro.config.mjs
-import { defineConfig } from 'astro/config';
-
-export default defineConfig({
-  // 添加您所需的配置项
-  integrations: [],
-});

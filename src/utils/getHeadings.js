@@ -23,3 +23,4 @@ export async function getHeadings(markdown) {
     id: generateId(heading.value) // 为每个标题生成 ID
   }));
 }
+
