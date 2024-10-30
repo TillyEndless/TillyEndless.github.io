@@ -54,15 +54,23 @@ const jsonLd = {
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
+
     <!-- Sidebar for Headings -->
-    <aside class="sidebar w-1/4 p-4 bg-gray-100 dark:bg-gray-800">
+    <aside class="sidebar w-1/ p-4 bg-gray-100 dark:bg-gray-800">
       <nav class="headings">
-        {headings.map(heading => (
-          <a href={`#${heading.slug}`} class={`heading-${heading.depth} block mb-2`}>
-            {heading.text}
-          </a>
-        ))}
-      </nav>
+        <h2>大纲</h2>
+        <ul>
+          {headings.length > 0 ? (
+            headings.map((heading) => (
+                <li key={heading.id} style={{ marginLeft: `${(heading.level - 1) * 1.5}rem` }}>
+                <a href={`#${heading.id}`}>{heading.text}</a>
+                </li>
+            ))
+            ) : (
+            <li>没有大纲内容</li> // 当 headings 为空时显示的消息
+            )}
+          </ul>
+        </nav>
     </aside>
 
     <!-- Post Content -->
