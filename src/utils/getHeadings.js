@@ -1,6 +1,7 @@
 import { remark } from 'remark';
 import remarkHeadingId from 'remark-heading-id';
 import { visit } from 'unist-util-visit';
+
 export async function getHeadings(markdown) {
   const headings = [];
 
@@ -11,7 +12,7 @@ export async function getHeadings(markdown) {
         headings.push({
           text: node.children[0].value,
           level: node.depth,
-          id: node.data.id // 如果你使用了 remark-heading-id
+          id: node.data.id || `heading-${headings.length}` // 处理可能缺少 id 的情况
         });
       });
     })
@@ -19,4 +20,3 @@ export async function getHeadings(markdown) {
 
   return headings;
 }
-

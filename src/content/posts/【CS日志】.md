@@ -23,7 +23,7 @@ https://qiita.com/ryamate/items/075c34fcf29d0889c15a
 最后采用博客方法解决：
 https://blog.csdn.net/weixin_34256074/article/details/88758143
 
-## 10.30 侧边栏html编写
+## 10.30 侧边栏html编写 && TuringCourse资源cloning
 
 ### 安装自动markdown侧边栏
 #### GPT回答1
@@ -400,7 +400,7 @@ const jsonLd = {
 
 这样，侧边栏的 Markdown 大纲就会随着每个帖子内容的加载自动生成，并显示在浏览器页面的侧边。这个方法非常适合 Astro 项目中发布的每一个 Markdown 文件的内容页面展示。
 
-### 安装nvm
+#### 额外：安装nvm
 要将下载的 nvm-master.zip 文件解压到 ~/.nvm 目录，您可以按照以下步骤进行操作：
 
 1. 打开终端
@@ -457,4 +457,19 @@ nvm --version
 # tilly @ tillydeMacBook-Pro in ~ [8:44:30]
 $ nvm --version
 0.40.1
+```
+
+### TuringCourse资源cloning
+图灵 2024 级学长组资料汇总网站  
+
+https://github.com/ZJU-Turing/TuringDoneRight
+
+本地目录：/Users/tilly/code/reporsity/TuringDoneRight
+
+
+还安装了mkdocs
+```zsh
+# tilly @ tillydeMacBook-Pro in ~/code/reporsity/TuringDoneRight on git:master o [16:33:53]
+$ mkdocs --version
+mkdocs, version 1.4.3 from /Users/tilly/Library/Python/3.9/lib/python/site-packages/mkdocs (Python 3.9)
 ```

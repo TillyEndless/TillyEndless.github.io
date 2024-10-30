@@ -30,15 +30,9 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 const { remarkPluginFrontmatter } = await entry.render()
 
-const markdown = `# 文章标题
-## 小节 1
-内容...
-### 小节 1.1
-更多内容...
-## 小节 2
-内容...`;
-// 获取内容的标题
-const headings = await getHeadings(Content)
+const currentUrl = process.env.CURRENT_URL || 'https://tillyendless.github.io/12345/'; 
+const postID = currentUrl.split('/').slice(-2, -1)[0]; 
+const headings = await getHeadings(Content); // 获取标题
 
 const jsonLd = {
   '@context': 'https://schema.org',
