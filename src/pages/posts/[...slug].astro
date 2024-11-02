@@ -1,79 +1,103 @@
 ---
-import path from 'node:path'
-import { getCollection } from 'astro:content'
-import License from '@components/misc/License.astro'
-import Markdown from '@components/misc/Markdown.astro'
-import I18nKey from '@i18n/i18nKey'
-import { i18n } from '@i18n/translation'
-import MainGridLayout from '@layouts/MainGridLayout.astro'
-import { getDir, getPostUrlBySlug } from '@utils/url-utils'
-import { Icon } from 'astro-icon/components'
-import { licenseConfig } from 'src/config'
-import PostMetadata from '../../components/PostMeta.astro'
-import ImageWrapper from '../../components/misc/ImageWrapper.astro'
-import { profileConfig, siteConfig } from '../../config'
-import { formatDateToYYYYMMDD } from '../../utils/date-utils'
-import { getHeadings } from '../../utils/getHeadings.js'; 
-import Outline from 'Outline.astro';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import License from '@components/misc/License.astro';
+import Markdown from '@components/misc/Markdown.astro';
+import I18nKey from '@i18n/i18nKey';
+import { i18n } from '@i18n/translation';
+import MainGridLayout from '@layouts/MainGridLayout.astro';
+import { getDir, getPostUrlBySlug } from '@utils/url-utils';
+import { Icon } from 'astro-icon/components';
+import { licenseConfig } from 'src/config';
+import PostMetadata from '../../components/PostMeta.astro';
+import ImageWrapper from '../../components/misc/ImageWrapper.astro';
+import { profileConfig, siteConfig } from '../../config';
+import { formatDateToYYYYMMDD } from '../../utils/date-utils';
+import { getHeadings } from '../../utils/getHeadings.js';
+import fs from 'fs/promises';
+import Layout from '../layouts/Layout.astro';
+
+const { headings, content } = Astro.props;
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
+    return import.meta.env.PROD ? data.draft !== true : true;
+  });
   return blogEntries.map(entry => ({
     params: { slug: entry.slug },
     props: { entry },
-  }))
+  }));
 }
 
-const { entry } = Astro.props
-console.log("entry 格式:", typeof entry, entry); // 打印 entry 的类型及其内容
-const { Content } = await entry.render()
-console.log("Content 格式:", typeof Content, Content); // 打印 Content 的类型及其内容
-const { remarkPluginFrontmatter } = await entry.render()
+export async function get({ params }) {
+  const slug = params.slug;
+  const filePath = path.join('./src/content/posts', `${slug}.md`);
 
-const currentUrl = process.env.CURRENT_URL || 'https://tillyendless.github.io/12345/'; 
-const postID = currentUrl.split('/').slice(-2, -1)[0]; 
-const headings = await getHeadings(Content); // 获取标题
+  let content;
+  try {
+    content = await fs.readFile(filePath, 'utf-8');
+  } catch (error) {
+    console.error(`Error reading file at ${filePath}`, error);
+    return { body: 'File not found' };
+  }
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'BlogPosting',
-  headline: entry.data.title,
-  description: entry.data.description || entry.data.title,
-  keywords: entry.data.tags,
-  author: {
-    '@type': 'Person',
-    name: profileConfig.name,
-    url: Astro.site,
-  },
-  datePublished: formatDateToYYYYMMDD(entry.data.published),
-  inLanguage: (entry.data.lang ? entry.data.lang.replace('_', '-') : siteConfig.lang.replace('_', '-')),
-  // TODO include cover image here
+  const headings = await getHeadings(content);
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: entry.data.title,
+    description: entry.data.description || entry.data.title,
+    keywords: entry.data.tags,
+    author: {
+      '@type': 'Person',
+      name: profileConfig.name,
+      url: Astro.site,
+    },
+    datePublished: formatDateToYYYYMMDD(entry.data.published),
+    inLanguage: entry.data.lang
+      ? entry.data.lang.replace('_', '-')
+      : siteConfig.lang.replace('_', '-'),
+    // TODO: Add cover image URL here if applicable
+  };
+
+  return {
+    body: {
+      headings,
+      content,
+      jsonLd,
+    },
+  };
 }
----
+
+--- 
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description} lang={entry.data.lang} setOGTypeArticle={true}>
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
 
-    <!-- Sidebar for Headings -->
-    <aside class="sidebar w-1/ p-4 bg-gray-100 dark:bg-gray-800">
-      <nav class="headings">
-        <h2>大纲</h2>
+    <Layout>
+      <div>
+        <h1>Headings:</h1>
         <ul>
-          {headings.length > 0 ? (
-            headings.map((heading) => (
-                <li key={heading.id} style={{ marginLeft: `${(heading.level - 1) * 1.5}rem` }}>
-                <a href={`#${heading.id}`}>{heading.text}</a>
-                </li>
-            ))
-            ) : (
-            <li>没有大纲内容</li> // 当 headings 为空时显示的消息
-            )}
-          </ul>
-        </nav>
-    </aside>
+          {headings.map((heading) => (
+            <li key={heading.slug}>
+            <a href={`#${heading.slug}`}>{heading.text}</a>
+            </li>
+          ))}
+        </ul>
+
+        <article>
+          <!-- 可以进一步解析content以输出Markdown内容 -->
+            <!-- Markdown Content -->
+            <Markdown class="mb-6 markdown-content onload-animation">
+                <Content />
+            </Markdown>
+
+        </article>
+      </div>
+    </Layout>
+
 
     <!-- Post Content -->
     <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-3/4"]}>
@@ -123,10 +147,6 @@ const jsonLd = {
         <ImageWrapper id="post-cover" src={entry.data.image} basePath={path.join("content/posts/", getDir(entry.id))} class="mb-8 rounded-xl banner-container onload-animation"/>
       }
 
-      <!-- Markdown Content -->
-      <Markdown class="mb-6 markdown-content onload-animation">
-        <Content />
-      </Markdown>
 
       {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
     </div>

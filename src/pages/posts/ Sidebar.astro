@@ -1,0 +1,43 @@
+---
+const { headings } = Astro.props; // 接收从页面传递的标题数组
+---
+
+<nav class="sidebar">
+  <ul>
+    {headings.map(heading => (
+      <li>
+        <a href={`#${heading.id}`}>{heading.text}</a>
+      </li>
+    ))}
+  </ul>
+</nav>
+
+<style>
+  .sidebar {
+    position: fixed; /* 固定在侧边 */
+    top: 100px; /* 根据需求调整 */
+    left: 20px; /* 根据需求调整 */
+    width: 200px; /* 根据需求调整 */
+    background-color: #f9f9f9; /* 背景颜色 */
+    border: 1px solid #ccc; /* 边框 */
+    padding: 10px; /* 内边距 */
+  }
+
+  .sidebar ul {
+    list-style: none; /* 去掉默认的列表样式 */
+    padding: 0; /* 去掉内边距 */
+  }
+
+  .sidebar li {
+    margin: 5px 0; /* 列表项间隔 */
+  }
+
+  .sidebar a {
+    text-decoration: none; /* 去掉下划线 */
+    color: #333; /* 文字颜色 */
+  }
+
+  .sidebar a:hover {
+    text-decoration: underline; /* 悬停时加下划线 */
+  }
+</style>

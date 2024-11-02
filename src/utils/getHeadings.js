@@ -25,7 +25,6 @@ export async function getHeadings(content) {
     .use(remarkHeadingId)
     .use(() => (tree) => {
       visit(tree, 'heading', (node) => {
-        console.log('Found heading:', node); // 调试输出
         const text = node.children[0].value;
         const slug = generateSlug(text);
         
@@ -38,6 +37,5 @@ export async function getHeadings(content) {
     })
     .process(markdownContent);
 
-  console.log('Headings:', headings); // 输出最终的headings
   return headings;
 }
