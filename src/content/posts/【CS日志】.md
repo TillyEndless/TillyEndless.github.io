@@ -278,7 +278,6 @@ const jsonLd = {
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
-    
     <!-- Sidebar for Headings -->
     <aside class="sidebar w-1/4 p-4 bg-gray-100 dark:bg-gray-800">
       <nav class="headings">
@@ -460,126 +459,6 @@ $ nvm --version
 0.40.1
 ```
 
-### 第三种方法：Siderbar组件
-要在每个 post 网页中自动生成一个包含可点击的 Markdown 格式索引目录的侧边导航栏，您可以遵循以下步骤进行修改：
-
-步骤 1：创建侧边导航组件
-
-	1.	创建一个新组件：在项目中创建一个新的 Astro 组件，比如 Sidebar.astro，用于生成侧边导航栏。
-
----
-// Sidebar.astro
-const { headings } = Astro.props; // 接收从页面传递的标题数组
----
-
-<nav class="sidebar">
-  <ul>
-    {headings.map(heading => (
-      <li>
-        <a href={`#${heading.id}`}>{heading.text}</a>
-      </li>
-    ))}
-  </ul>
-</nav>
-
-<style>
-  .sidebar {
-    position: fixed; /* 固定在侧边 */
-    top: 100px; /* 根据需求调整 */
-    left: 20px; /* 根据需求调整 */
-    width: 200px; /* 根据需求调整 */
-    background-color: #f9f9f9; /* 背景颜色 */
-    border: 1px solid #ccc; /* 边框 */
-    padding: 10px; /* 内边距 */
-  }
-
-  .sidebar ul {
-    list-style: none; /* 去掉默认的列表样式 */
-    padding: 0; /* 去掉内边距 */
-  }
-
-  .sidebar li {
-    margin: 5px 0; /* 列表项间隔 */
-  }
-
-  .sidebar a {
-    text-decoration: none; /* 去掉下划线 */
-    color: #333; /* 文字颜色 */
-  }
-
-  .sidebar a:hover {
-    text-decoration: underline; /* 悬停时加下划线 */
-  }
-</style>
-
-步骤 2：在每个 Post 页面中引入 Sidebar.astro
-
-在每个 post 的页面中引入 Sidebar.astro 组件，并传递当前页面的 Markdown 标题（例如 H2、H3 标签）信息。
-
----
-// 假设 post 的内容是从 Markdown 文件中提取的
-const { title, headings } = Astro.props; // 提取标题和其他数据
----
-
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <title>{title}</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <Sidebar headings={headings} />
-
-    <main>
-        <h1>{title}</h1>
-        {/* 这里渲染 Markdown 内容 */}
-    </main>
-</body>
-</html>
-
-步骤 3：从 Markdown 中提取标题
-
-您需要在构建每个 post 页面的时候提取 Markdown 内容中的标题信息。以下是一个示例：
-
----
-import { Markdown } from 'astro:markdown';
-
-// 读取 Markdown 文件并解析
-const { content, title } = await fetchMarkdownContent('path/to/your/post.md');
-
-// 从 Markdown 内容中提取标题信息
-const headings = [];
-const headingRegex = /^(?<level>#{1,6})\s+(?<text>.*)$/gm;
-let match;
-
-while ((match = headingRegex.exec(content)) !== null) {
-  const level = match.groups.level.length; // H1 = 1, H2 = 2, ...
-  const text = match.groups.text;
-  const id = text.toLowerCase().replace(/ /g, '-'); // 创建锚点 ID
-  headings.push({ level, text, id });
-}
----
-
-<main>
-  <Sidebar headings={headings} />
-  <article>
-    <h1>{title}</h1>
-    <Markdown content={content} />
-  </article>
-</main>
-
-说明
-
-	1.	Sidebar 组件：Sidebar.astro 组件负责渲染侧边导航栏，它接收一个标题数组，并生成可点击的链接。
-	2.	提取标题：在每个 post 的页面中，您使用正则表达式从 Markdown 内容中提取标题，并生成相应的锚点 ID。
-	3.	传递数据：将提取的标题数组传递给 Sidebar 组件，以便渲染。
-
-可点击的索引
-
-通过这种方式，您可以为每个 post 页面生成一个包含可点击的 Markdown 格式索引目录的侧边导航栏。用户可以通过点击索引中的链接跳转到页面中的相应部分。确保在 Markdown 内容中使用适当的 H2、H3 标签来生成索引。
-
-
 ### TuringCourse资源cloning
 图灵 2024 级学长组资料汇总网站  
 
@@ -594,5 +473,3 @@ https://github.com/ZJU-Turing/TuringDoneRight
 $ mkdocs --version
 mkdocs, version 1.4.3 from /Users/tilly/Library/Python/3.9/lib/python/site-packages/mkdocs (Python 3.9)
 ```
-
-
