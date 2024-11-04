@@ -14,9 +14,6 @@ lang: ''
   * [10.30 侧边栏html编写 && TuringCourse资源cloning](#1030-%E4%BE%A7%E8%BE%B9%E6%A0%8Fhtml%E7%BC%96%E5%86%99--turingcourse%E8%B5%84%E6%BA%90cloning)
     + [安装自动markdown侧边栏](#%E5%AE%89%E8%A3%85%E8%87%AA%E5%8A%A8markdown%E4%BE%A7%E8%BE%B9%E6%A0%8F)
       - [GPT回答1](#gpt%E5%9B%9E%E7%AD%941)
-- [大纲标题](#%E5%A4%A7%E7%BA%B2%E6%A0%87%E9%A2%98)
-  * [第一部分](#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86)
-  * [第二部分](#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86)
       - [GPT回答2：](#gpt%E5%9B%9E%E7%AD%942)
   * [const { headings, content } = Astro.props;](#const--headings-content---astroprops)
       - [额外：安装nvm](#%E9%A2%9D%E5%A4%96%E5%AE%89%E8%A3%85nvm)
@@ -67,11 +64,11 @@ https://blog.csdn.net/weixin_34256074/article/details/88758143
   <script>
     // 假设你的 Markdown 内容是一个字符串
     const markdownContent = `
-# 大纲标题
-## 第一部分
-一些内容...
-## 第二部分
-更多内容...
+    # 大纲标题
+    ## 第一部分
+    一些内容...
+    ## 第二部分
+    更多内容...
     `;
 
     // 将 Markdown 内容转换为 HTML 并插入到页面
