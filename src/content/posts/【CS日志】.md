@@ -8,6 +8,20 @@ category: ''
 draft: false 
 lang: ''
 ---
+## 目录
+* [10.28 搭建博客 学mac基本配件和应用](#1028-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E5%AD%A6mac%E5%9F%BA%E6%9C%AC%E9%85%8D%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8)
+  * [10.29 配置iTerm2](#1029-%E9%85%8D%E7%BD%AEiterm2)
+  * [10.30 侧边栏html编写 && TuringCourse资源cloning](#1030-%E4%BE%A7%E8%BE%B9%E6%A0%8Fhtml%E7%BC%96%E5%86%99--turingcourse%E8%B5%84%E6%BA%90cloning)
+    + [安装自动markdown侧边栏](#%E5%AE%89%E8%A3%85%E8%87%AA%E5%8A%A8markdown%E4%BE%A7%E8%BE%B9%E6%A0%8F)
+      - [GPT回答1](#gpt%E5%9B%9E%E7%AD%941)
+- [大纲标题](#%E5%A4%A7%E7%BA%B2%E6%A0%87%E9%A2%98)
+  * [第一部分](#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86)
+  * [第二部分](#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86)
+      - [GPT回答2：](#gpt%E5%9B%9E%E7%AD%942)
+  * [const { headings, content } = Astro.props;](#const--headings-content---astroprops)
+      - [额外：安装nvm](#%E9%A2%9D%E5%A4%96%E5%AE%89%E8%A3%85nvm)
+    + [TuringCourse资源cloning](#turingcourse%E8%B5%84%E6%BA%90cloning)
+
 ## 10.28 搭建博客 学mac基本配件和应用
 ## 10.29 配置iTerm2 
 Link:  
@@ -440,8 +454,6 @@ export NVM_DIR="$HOME/.nvm"
 
 保存文件后，重新加载配置：
 
-source ~/.bashrc  # 如果使用 bash
-# 或
 source ~/.zshrc   # 如果使用 zsh
 
 7. 验证 nvm 是否安装成功
