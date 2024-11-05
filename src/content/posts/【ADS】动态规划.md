@@ -4,7 +4,7 @@ published: 2024-11-02
 description: ''
 image: ''
 tags: [ADS]
-category: ''
+category: 'notes'
 draft: false 
 lang: ''
 ---

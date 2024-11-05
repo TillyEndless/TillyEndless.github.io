@@ -1,10 +1,10 @@
 ---
-title: 【ADS】第一章 AVL Tree && Splay Tree
+title: 【ADS】作业1 AVL Tree Insertions
 published: 2024-10-28
 description: ''
 image: ''
 tags: [ADS]
-category: ''
+category: 'notes'
 draft: false 
 lang: ''
 ---
