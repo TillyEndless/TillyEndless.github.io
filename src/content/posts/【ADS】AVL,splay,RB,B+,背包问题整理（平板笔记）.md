@@ -21,7 +21,14 @@ lang: ''
 ![](/img/ADS1/WechatIMG185.jpg)
 ## B+树
 ![](/img/ADS1/WechatIMG186.jpg)
+勘误：B+树性质3去掉，不是所有非叶节点的子树都含有它自身。这个性质只对最下面一层非叶节点有效。
+备注：$M/2 + 1$就是$M/2$向上取整。
 ![](/img/ADS1/WechatIMG187.jpg)
+B+树最好看一下作业题。
+### 补充：
+* 一棵 3 阶 B+ 树，我们也称之为一棵 2-3 树。
+* 一棵 4 阶 B+ 树，我们也称之为一棵 2-3-4 树。一般 M 的选择为 3 或 4。
+* ![](/img/ADS1/1.png)
 ## 背包问题
 ![](/img/ADS1/WechatIMG188.jpg)
 ![](/img/ADS1/WechatIMG189.jpg)
