@@ -8,6 +8,21 @@ category: 'notes'
 draft: false 
 lang: ''
 ---
+## 目录
+- [Leftest Heap VS Skew Heap](#leftest-heap-vs-skew-heap)
+  * [定义](#%E5%AE%9A%E4%B9%89)
+    + [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86)
+    + [斜堆](#%E6%96%9C%E5%A0%86)
+  * [操作：合并](#%E6%93%8D%E4%BD%9C%E5%90%88%E5%B9%B6)
+    + [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86-1)
+    + [斜堆](#%E6%96%9C%E5%A0%86-1)
+  * [摊还分析 ：斜堆](#%E6%91%8A%E8%BF%98%E5%88%86%E6%9E%90-%E6%96%9C%E5%A0%86)
+  * [习题](#%E4%B9%A0%E9%A2%98)
+- [补充：左偏堆单点删除](#%E8%A1%A5%E5%85%85%E5%B7%A6%E5%81%8F%E5%A0%86%E5%8D%95%E7%82%B9%E5%88%A0%E9%99%A4)
+- [Divide && Conquer 时间复杂度计算（公式）](#divide--conquer-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F)
+  * [主方法形式三](#%E4%B8%BB%E6%96%B9%E6%B3%95%E5%BD%A2%E5%BC%8F%E4%B8%89)
+  * [其他形式&方法的理解](#%E5%85%B6%E4%BB%96%E5%BD%A2%E5%BC%8F%E6%96%B9%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3)
+
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
@@ -94,7 +109,7 @@ LeftistHeapNode * merge(LeftistHeapNode * x, LeftistHeapNode * y) {
 ### 摊还分析 ：斜堆
 * 势能函数：**Φ(Heap)=number of heavy node in Heap**
 	* 对于一个子堆 H，如果右子堆大小+1 ≥ 整个堆大小$*(1/2)$（左边+1是因为包括根节点） ，则 H 是**heavy node**，否则是**light node**。
-  摊还证明：![[截屏2024-11-05 22.10.20.png]](/media/3.png)![[截屏2024-11-05 22.18.49.png]](/media/4.png)![[截屏2024-11-05 22.19.21.png]](/media/5.png) ![](/media/6.png)
+  摊还证明：![[截屏2024-11-05 22.10.20.png]](/media/3.png)![[截屏2024-11-05 22.18.49.png]](/media/4.png)![[截屏2024-11-05 22.19.21.png]](/media/6.png)
   至于为什么light nodes的数量是$O(logN)$，课堂上已经证明过（可以预设light nodes最多的情况来作图，数学归纳法证明。
 
 ### 习题
