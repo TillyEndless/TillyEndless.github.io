@@ -94,7 +94,7 @@ LeftistHeapNode * merge(LeftistHeapNode * x, LeftistHeapNode * y) {
 #### 摊还分析 ：斜堆
 * 势能函数：**Φ(Heap)=number of heavy node in Heap**
 	* 对于一个子堆 H，如果右子堆大小+1 ≥ 整个堆大小$*(1/2)$（左边+1是因为包括根节点） ，则 H 是**heavy node**，否则是**light node**。
-  摊还证明：![[截屏2024-11-05 22.10.20.png]](/media/3.png)![[截屏2024-11-05 22.18.49.png]](/media/4.png)![[截屏2024-11-05 22.19.21.png]](/media/5.png) ![]((/media/6.png))
+  摊还证明：![[截屏2024-11-05 22.10.20.png]](/media/3.png)![[截屏2024-11-05 22.18.49.png]](/media/4.png)![[截屏2024-11-05 22.19.21.png]](/media/5.png) ![](/media/6.png)
   至于为什么light nodes的数量是$O(logN)$，课堂上已经证明过（可以预设light nodes最多的情况来作图，数学归纳法证明。
 
 #### 习题
