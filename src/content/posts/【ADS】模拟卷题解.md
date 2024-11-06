@@ -8,3 +8,91 @@ category: 'notes'
 draft: false 
 lang: ''
 ---
+## 模拟一
+### 判断题
+R1-1
+![[截屏2024-11-05 19.26.16.png]](/media/12.png)
+F
+考点：时间复杂度的表示含义，数量级比较
+
+![[截屏2024-11-05 19.26.33.png]](/media/111.png)
+F
+考点：skew heap, merge 操作, amortized cost计算, potential functions记忆
+
+![[截屏2024-11-05 19.26.46.png]](/media/13.png)
+?
+【knapsack problem】背包问题
+【approximation ratio】
+考点：背包问题，贪心算法，packing rule
+
+![[截屏2024-11-05 19.26.56.png]](/media/14.png)
+F
+
+![[截屏2024-11-05 19.27.13.png]](/media/15.png)
+T
+考点：Divide && Conquer公式记忆（多种方法？条件？）
+解析：主方法形式三失效了。但是题干假设我们已知时间复杂度，符合代换法”先猜后证“条件，用代换法证明。
+
+![[截屏2024-11-05 19.27.29.png]](/media/16.png)
+T
+考点：leftest heap定义，merge操作（时间复杂度？）
+![[截屏2024-11-05 19.27.38.png]](/media/17.png)
+?
+NP没学
+
+### 单选题
+![[截屏2024-11-05 19.32.42.png]](/media/18.png)
+【balanced binary tree parallel algorithm】
+考点：并行计算，求前缀和
+
+![[截屏2024-11-05 19.33.43.png]](/media/19.png)
+考点：binomial queues, deleteMin操作
+
+![[截屏2024-11-05 19.34.22.png]](/media/20.png)
+？
+考点：贪心
+
+![[截屏2024-11-05 19.34.51.png]](/media/21.png)
+？
+考点：Files ?   precision && recall 计算
+
+![[截屏2024-11-05 19.35.41.png]](/media/22.png)
+？
+【binary counter】
+考点：二项式堆的势能函数，摊还分析
+
+![[截屏2024-11-05 19.37.08.png]](/media/23.png)
+考点：对分治法conqure和merge代价的式子理解
+
+![[截屏2024-11-05 19.37.42.png]](/media/24.png)
+考点：binomial queues的数组表示？
+
+![[截屏2024-11-05 19.38.29.png]](/media/25.png)
+考点：【动规】背包问题（考的蛮多的感觉）
+
+![[截屏2024-11-05 19.39.03.png]](/media/26.png)
+考点：NP没学
+
+![[截屏2024-11-05 19.40.58.png]](/media/27.png)
+D
+考点：skew heap，merge操作
+
+![[截屏2024-11-05 19.41.42.png]](/media/28.png)
+D
+考点：skew heap，merge操作
+
+![[截屏2024-11-05 19.42.30.png]](/media/29.png)
+？
+考点：Divide && Conquer公式记忆
+
+![[截屏2024-11-05 19.43.05.png]](/media/30.png)
+D
+考点：splay tree的find操作（带基本spaly操作）
+
+![[截屏2024-11-05 19.43.51.png]](/media/31.png)
+A？
+考点：不会做
+
+![[截屏2024-11-05 19.44.20.png]](/media/32.png)
+？
+考点：B+树（B+树的定义好多有分歧，见我的平板笔记！）
