@@ -95,4 +95,4 @@ A？
 
 ![[截屏2024-11-05 19.44.20.png]](/media/32.png)
 ？
-考点：B+树（B+树的定义好多有分歧，见我的[平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#b%E6%A0%91)）
+考点：B+树（B+树的定义好多有分歧，见我的[平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#b%E6%A0%91)
