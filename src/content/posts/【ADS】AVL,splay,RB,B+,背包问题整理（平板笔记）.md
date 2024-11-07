@@ -18,10 +18,13 @@ lang: ''
 ![](/img/ADS1/WechatIMG183.jpg)
 ![](/img/ADS1/WechatIMG184.jpg)
 ## 红黑树
-![](/img/ADS1/WechatIMG185.jpg)
+![](/img/ADS1/WechatIMG197.jpg)
+（红黑树性质3怎么来的？）
+补充：
+* 红黑树只有左子树/右子树 = 只有红色左子节点/红色右子节点。
+* 黑高不包括根节点。
 ## B+树
-![](/img/ADS1/WechatIMG186.jpg)
-勘误：B+树性质3去掉，不是所有非叶节点的子树都含有它自身。这个性质只对最下面一层非叶节点有效。
+![](/img/ADS1/WechatIMG198.jpg)
 备注：$M/2 + 1$就是$M/2$向上取整。
 ![](/img/ADS1/WechatIMG187.jpg)
 B+树最好看一下作业题。
