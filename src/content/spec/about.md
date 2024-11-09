@@ -6,13 +6,3 @@
 > - [JA的博客](https://ja101617.github.io/) [JA2012的博客园](https://www.cnblogs.com/JA2012)
 > - [Lane的博客](http://lane-home.top)
 
-
-
-
----
-### 关于我
-地球人身份：就读于老和山职业技术学校，ckc计科混混。大二女大，最大的爱好是喝奶茶和煲耳机（可能还有study & coding）。
-
-我的公众号：“文理漫思”，站在20岁上的随笔。（2024.5 - ）
-
-未来可能会搭建一个个人网站，域名(herobrine101.top)
