@@ -26,7 +26,7 @@ F
 
 【knapsack problem】背包问题
 
-【approximation ratio】
+【approximation ratio】近似度；近似比
 
 考点：背包问题，贪心算法，packing rule
 
@@ -88,7 +88,7 @@ A
 考点：binomial queues的数组表示？
 
 ![[截屏2024-11-05 19.38.29.png]](/media/25.png)
-考点：【动规】背包问题（考的蛮多的感觉）
+考点：【动规/贪心】背包问题（考的蛮多的感觉）
 
 ![[截屏2024-11-05 19.39.03.png]](/media/26.png)
 考点：NP没学
