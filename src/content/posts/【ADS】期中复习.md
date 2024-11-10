@@ -33,11 +33,12 @@ lang: ''
   * [Backtracing代码模板](#backtracing%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF)
   * [ɑ-β 剪枝](#%C9%91-%CE%B2-%E5%89%AA%E6%9E%9D)
     + [Tic-tac-toe: Minimax Strategy](#tic-tac-toe--minimax-strategy)
-    
+
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
 先来看左偏堆对dist的定义：
+
 一个左偏堆的结点维护了左右子堆的地址、自身的键值、和一个“**距离(dist)**”。
 ```c
 struct LeftistHeapNode {
@@ -49,19 +50,25 @@ struct LeftistHeapNode {
 一共定义了四个”部件“，不难类比到，左偏堆对dist的维护相当于AVL Tree对height的维护，左偏堆->斜堆，可以类比为 AVL ->splay，是一种对维护信息负担的化简。
 ![截屏2024-11-05 20.20.10.png](/media/1.png)
 从第二点可以看出，dist是**递归**定义的。
+
 从dist定义左偏堆：
 ![截屏2024-11-05 20.25.36.png](/media/2.png)
 
 #### 斜堆
 再来看斜堆的定义特点。
+
 斜堆只定义了val,\*rchild,\*lchild,相比左偏堆少了对dist的维护。
+
 斜堆的好处是能够快速合并，实现完全自上而下的并发操作。
+
 下面讲merge操作：
 
 ### 操作：合并
 #### 左偏堆
 **先维护堆的性质**，在**回溯时维护左偏性质**。
+
 即先自上而下按照根的大小合并（根节点和左子树），再自下而上maintain（维护左偏性质，进行左右子树交换）
+
 形式也分为两种方式：**递归式**和**迭代式**。迭代式需要额外维护两个指针，分别指向两棵树*还没被合并* 的子树的根，并不断选择较小的那个合并进去，直到两个指针都为空。
 
 **递归式代码：**
@@ -127,11 +134,14 @@ LeftistHeapNode * merge(LeftistHeapNode * x, LeftistHeapNode * y) {
 
 ![[截屏2024-11-05 19.26.33.png]](/media/111.png)
 F
+
 考点：skew heap, merge 操作, amortized cost计算, potential functions记忆
 
 ## 补充：左偏堆单点删除
 （这个也忘记了，盘一下细节）
+
 操作：只需要**合并**被删除的结点的两个子结点，得到新的树根节点去代替被删除的结点，再在回溯的过程中 bottom-up 地更新 dist 即可。
+
 回溯maintain的过程：只要从新根节点开始检查/交换，因为**左偏堆的子树都是左偏堆**
 
 代码实现：
@@ -151,6 +161,7 @@ LeftistHeapNode * del(LeftistHeapNode * cur, ElementType x) {
 直接看[修佬笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec07/#%E5%A4%8D%E6%9D%82%E5%BA%A6%E5%88%86%E6%9E%90)
 
 总结一下：
+
 三类方法：代换法、递归树法、主方法
 ### 主方法形式三
 考试一般会用到的是主方法第三种形式：![[截屏2024-11-05 22.28.18.png]](/media/7.png)
