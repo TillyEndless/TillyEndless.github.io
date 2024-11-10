@@ -150,3 +150,152 @@ LeftistHeapNode * del(LeftistHeapNode * cur, ElementType x) {
 	* 可能需要运用数学工具：![[截屏2024-11-05 23.04.28.png]](/media/9.png)（巧记：最上面和最下面换一下）
 * 主方法形式一（有人能记住吗）![[截屏2024-11-05 23.11.11.png]](/media/10.png)
 * 主方法形式二![[截屏2024-11-05 23.11.29.png]](/media/11.png)
+
+
+## Binomial Tree && Binomial Queue
+### Binomial Tree
+* 二项树是一个 N 叉树，所以通常我们使用链表 sibling 的形式来表示一个节点的 children。
+* 性质：
+	* ![[1.png]](/media/123/1.png)
+	* 二项树满足堆的性质，即 parent 节点的值小于（大于） child 节点的值
+	*   k 阶二项树都是同构的（k 阶二项树结构唯一确定），且 k 阶二项树是两个 k−1 阶二项树合并得到的。而其合并方式是直接令其中一棵成为另外一棵的根的新 child，因此二项树的每个 child 也是二项树。
+* k阶二项树：$B_k$
+### Binomial Queue：TBC
+* 重要联系/工具:二进制表示
+* N个节点，则有$O(logN)$个二项树
+* 操作
+	* 队列合并：从小到大合并（**从低位到高位**）。
+	* 查询队首：![[ADS/media/123/2.png]](/media/123/2.png)
+
+
+## Precision && Recall 计算
+![[ADS/media/123/3.png]](/media/123/3.png)
+precision：遍历（retrieved）到的
+recall：相关（relevant）的
+（为啥叫recall??）
+
+## B+树
+参考[我的平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#b%E6%A0%91)
+## 红黑树
+参考[我的平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#%E7%BA%A2%E9%BB%91%E6%A0%91)
+> 红黑树的操作动画：
+> - [红黑树 - 定义, 插入, 构建]( https://www.bilibili.com/video/BV1Xm421x7Lg/?share_source=copy_web&vd_source=759a6191b199b3735f0e3c6d6f33d199)
+> - [红黑树 - 删除]( https://www.bilibili.com/video/BV16m421u7Tb/?share_source=copy_web&vd_source=759a6191b199b3735f0e3c6d6f33d199)
+
+## Backtracking
+### The Turnpike Reconstruction Problem 收费站问题
+[🔗修佬的笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec06/#%E6%A1%88%E4%BE%8B-the-turnpike-reconstruction-problem)
+![[截屏2024-11-10 11.37.06.png]](/media/33.png)
+代码实现：
+```c
+bool Reconstruct ( DistType X[ ], DistSet D, int N, int left, int right )
+{ /* X[1]...X[left-1] and X[right+1]...X[N] are solved */
+    bool Found = false;
+    if ( Is_Empty( D ) )
+        return true; /* solved */
+    D_max = Find_Max( D );
+    /* option 1：X[right] = D_max */
+    /* check if |D_max-X[i]|D is true for all X[i]’s that have been solved */
+    OK = Check( D_max, N, left, right ); /* pruning */
+    if ( OK ) { /* add X[right] and update D */
+        X[right] = D_max;
+        for ( i=1; i<left; i++ )  Delete( |X[right]-X[i]|, D);
+        for ( i=right+1; i<=N; i++ )  Delete( |X[right]-X[i]|, D);
+        Found = Reconstruct ( X, D, N, left, right-1 );
+        if ( !Found ) { /* if does not work, undo */
+            for ( i=1; i<left; i++ )  Insert( |X[right]-X[i]|, D);
+            for ( i=right+1; i<=N; i++ )  Insert( |X[right]-X[i]|, D);
+        }
+    }
+    /* finish checking option 1 */
+    if ( !Found ) { /* if option 1 does not work */
+        /* option 2: X[left] = X[N]-D_max */
+        OK = Check( X[N]-D_max, N, left, right );
+        if ( OK ) {
+            X[left] = X[N] – D_max;
+            for ( i=1; i<left; i++ )  Delete( |X[left]-X[i]|, D);
+            for ( i=right+1; i<=N; i++ )  Delete( |X[left]-X[i]|, D);
+            Found = Reconstruct (X, D, N, left+1, right );
+            if ( !Found ) {
+                for ( i=1; i<left; i++ ) Insert( |X[left]-X[i]|, D);
+                for ( i=right+1; i<=N; i++ ) Insert( |X[left]-X[i]|, D);
+            }
+        }
+        /* finish checking option 2 */
+    } /* finish checking all the options */
+    
+    return Found;
+}
+```
+### Backtracing代码模板
+可以类比Turnpike Reconstruction的代码
+```c
+bool Backtracking ( int i )
+{   Found = false;
+    if ( i > N )
+        return true; /* solved with (x1, …, xN) */
+    for ( each xi  Si ) { 
+        /* check if satisfies the restriction R */
+        OK = Check((x1, …, xi) , R ); /* pruning */
+        if ( OK ) {
+            Count xi in;
+            Found = Backtracking( i+1 );
+            if ( !Found )
+                Undo( i ); /* recover to (x1, …, xi-1) */
+        }
+        if ( Found ) break; 
+    }
+    return Found;
+}
+```
+### ɑ-β 剪枝
+参考[【OI Wiki】alpha-beta 剪枝](https://oi-wiki.org/search/alpha-beta/#alpha-beta-%E5%89%AA%E6%9E%9D "Permanent link")
+应用案例：Tic-tac-toe
+#### Tic-tac-toe:  Minimax Strategy
+![截屏2024-11-10 12.17.07.png](/media/34.png)
+![截屏2024-11-10 13.56.26.png](/media/35.png)
+代码实现：
+```c
+#include <stdio.h>
+
+#define MAXN (8+1)
+
+int n;
+int ori_flag;
+int leaves[MAXN]; // The value of each leaf, from left to right.
+
+int max(int a, int b) { return a >= b ? a : b; }
+int min(int a, int b) { return a <= b ? a : b; }
+
+int dfs(int l, int r, int flag, int pruning_flag, int bound)
+// `l` and `r` mark the two ends of the subscript of the leaves of the current subtree.
+// `flag` marks whether current level returns the maximum (flag = 1) or minimum (flag = 0) value between the two children of the root.
+// `pruning_flag` marks whether it is valid (pruning_flag = 1) to prune the right child of the root or not (pruning_flag = 0).
+// `bound` is a bound of pruning.
+{
+    int left_child, right_child;
+    //printf("%d %d\n", l, r); // Test which nodes are visited
+    if (l == r) return leaves[l]; // Base case for leaf nodes
+    
+    left_child = dfs(l, l + (r - l) / 2, !flag, 0, bound);
+
+    // Pruning condition
+    if (pruning_flag && ((flag && left_child >= bound) || (!flag && left_child <= bound))) {
+        return left_child; // prune if condition met
+    }
+
+    right_child = dfs(l + (r - l) / 2 + 1, r, !flag, 1, left_child);
+    
+    return flag ? max(left_child, right_child) : min(left_child, right_child);
+}
+
+int main()
+{
+    scanf("%d%d", &n, &ori_flag);
+    for(int i = 1; i <= n; i++) { scanf("%d", &leaves[i]); }
+    printf("%d\n", dfs(1, n, ori_flag, 0, 0));
+    // When `ori_flag` is 1, the value of the root of the game tree is the maximum value between its two children,
+    // Otherwise the value of the root is the minimum value between its two children.
+}
+```
+
