@@ -22,7 +22,18 @@ lang: ''
 - [Divide && Conquer 时间复杂度计算（公式）](#divide--conquer-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F)
   * [主方法形式三](#%E4%B8%BB%E6%96%B9%E6%B3%95%E5%BD%A2%E5%BC%8F%E4%B8%89)
   * [其他形式&方法的理解](#%E5%85%B6%E4%BB%96%E5%BD%A2%E5%BC%8F%E6%96%B9%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3)
-
+- [Binomial Tree && Binomial Queue](#binomial-tree--binomial-queue)
+  * [Binomial Tree](#binomial-tree)
+  * [Binomial Queue：TBC](#binomial-queuetbc)
+- [Precision && Recall 计算](#precision--recall-%E8%AE%A1%E7%AE%97)
+- [B+树](#b%E6%A0%91)
+- [红黑树](#%E7%BA%A2%E9%BB%91%E6%A0%91)
+- [Backtracking](#backtracking)
+  * [The Turnpike Reconstruction Problem 收费站问题](#the-turnpike-reconstruction-problem-%E6%94%B6%E8%B4%B9%E7%AB%99%E9%97%AE%E9%A2%98)
+  * [Backtracing代码模板](#backtracing%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF)
+  * [ɑ-β 剪枝](#%C9%91-%CE%B2-%E5%89%AA%E6%9E%9D)
+    + [Tic-tac-toe: Minimax Strategy](#tic-tac-toe--minimax-strategy)
+    
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
