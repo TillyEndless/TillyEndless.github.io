@@ -1,5 +1,5 @@
 ---
-title: 【Markdown】 turnpike reconstruction problem数学公式和特殊符号
+title: 【Markdown】数学公式和特殊符号
 published: 2024-11-06
 description: ''
 image: ''
