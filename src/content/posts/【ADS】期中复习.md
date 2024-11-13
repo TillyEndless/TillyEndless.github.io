@@ -33,7 +33,30 @@ lang: ''
   * [Backtracing代码模板](#backtracing%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF)
   * [ɑ-β 剪枝](#%C9%91-%CE%B2-%E5%89%AA%E6%9E%9D)
     + [Tic-tac-toe: Minimax Strategy](#tic-tac-toe--minimax-strategy)
-
+  * [数据结构操作的时间复杂度汇总：需要勘误 TBC](#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%93%8D%E4%BD%9C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%B1%87%E6%80%BB%E9%9C%80%E8%A6%81%E5%8B%98%E8%AF%AF-tbc)
+- [看PPT](#%E7%9C%8Bppt)
+  * [Inverted File Index](#inverted-file-index)
+    + [Index Generator 伪代码](#index-generator-%E4%BC%AA%E4%BB%A3%E7%A0%81)
+    + [优化：reading a term](#%E4%BC%98%E5%8C%96reading-a-term)
+      - [Word Stemming 词干分析](#word-stemming-%E8%AF%8D%E5%B9%B2%E5%88%86%E6%9E%90)
+      - [Stop Words](#stop-words)
+    + [优化：accessing a term](#%E4%BC%98%E5%8C%96accessing-a-term)
+      - [Search trees ( B- trees, B+ trees, Tries, ... )](#search-trees--b--trees-b-trees-tries--)
+      - [Hashing](#hashing)
+      - [利弊：](#%E5%88%A9%E5%BC%8A)
+    + [Distributed indexing](#distributed-indexing)
+    + [修佬笔记没有的内容：（PPT）](#%E4%BF%AE%E4%BD%AC%E7%AC%94%E8%AE%B0%E6%B2%A1%E6%9C%89%E7%9A%84%E5%86%85%E5%AE%B9ppt)
+      - [precision && recall的关系和理想情况图](#precision--recall%E7%9A%84%E5%85%B3%E7%B3%BB%E5%92%8C%E7%90%86%E6%83%B3%E6%83%85%E5%86%B5%E5%9B%BE)
+      - [Dynamic indexing](#dynamic-indexing)
+      - [Compression](#compression)
+      - [Thresholding 阈值转换法](#thresholding-%E9%98%88%E5%80%BC%E8%BD%AC%E6%8D%A2%E6%B3%95)
+  * [Binomial Queue](#binomial-queue)
+  * [Heap](#heap)
+  * [RB Tree && B+ Tree](#rb-tree--b-tree)
+    + [1. RB Tree](#1-rb-tree)
+    + [2. B+ Tree](#2-b-tree)
+  * [Backtracing](#backtracing)
+  * [Divide && Conquer](#divide--conquer)
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
@@ -320,4 +343,248 @@ int main()
     // Otherwise the value of the root is the minimum value between its two children.
 }
 ```
+
+## 数据结构操作的时间复杂度汇总：需要勘误 TBC
+已学数据结构的基本操作时间复杂度如下：(区分“是”“平均”“均摊（摊销）”的代价)
+1.  AVL Tree （平衡操作时间复杂度是$O(\log n)$）
+	- **查找**：$O(\log n)$
+	- **插入**：$O(\log n)$
+	- **删除**：$O(\log n)$
+2. Binary Search Tree (BST)
+	- **查找**: 平均 $O(\log n)$，最坏 $O(n)$（当树退化为链表时）
+	- **插入**: 平均 $O(\log n)$，最坏 $O(n)$
+	- **删除**: 平均 $O(\log n)$，最坏 $O(n)$
+3. Splay Tree
+	- **查找**: 平均摊销 $O(\log n)$，最坏 $O(n)$
+	- **插入**: 平均摊销 $O(\log n)$，最坏 $O(n)$
+	- **删除**: 平均摊销 $O(\log n)$，最坏 $O(n)$
+4. B+ Tree
+	- **查找**: $O(\log n)$—— B+树是一种多路平衡树，深度为 $O(\log n)$。
+	- **插入**: $O(\log n)$—— 插入时可能分裂节点，但深度仍保持为 $O(\log n)$。
+	- **删除**: $O(\log n)$——删除时可能合并节点，复杂度为 $O(\log n)$
+5.  Binomial Queue
+	- **查找最小值**: $O(\log n)$
+	- **插入**: 单次是 $O(\log n)$（最坏）；连续n次总共是$O(n)$，平均代价$O(1)$
+	- **删除最小值**: $O(\log n)$
+	- **合并**: $O(\log n)$
+6. Skew Heap
+	- **查找最小值**: $O(1)$
+	- **插入**: 摊销 $O(\log n)$
+	- **删除最小值**: 摊销 $O(\log n)$
+	- **合并**: $O(\log n)$
+7. Leftist Heap 
+	- **查找最小值**: $O(1)$
+	- **插入**:$O(\log n)$
+	- **删除最小值**: $O(\log n)$
+	- **合并**: $O(\log n)$
+
+
+# 看PPT
+TO DO
+- [ ] AVL, Splay Tree
+- [x] RB Tree, B+ Tree
+- [x] Heaps
+- [x] Inverted File Index
+- [x] Binomial Queue
+- [x] Backtracking
+- [x] Divide and Conquer
+- [ ] DP
+- [ ] Greedy Algorithms
+
+## Inverted File Index
+这部分最好看：[修佬的笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec03/#%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95)
+
+- Posting List  倒排列表 / 倒排表
+- Term-Document Incidence Matrix 术语-文档关联矩阵
+- Inverted File Index 倒排索引
+几个搜索solution：
+* solution 2: Term-Document Incidence Matrix![[51.png]](/media/51.png)
+* solution 3: Inverted File Index
+	* version 1： ![[52.png]](/media/52.png)
+	* version 2： ![[53.png]](/media/53.png)
+### Index Generator 伪代码
+![[54.png]](/media/54.png)
+内存不足时改进：
+![[56.png]](/media/56.png)
+
+### 优化：reading a term 
+#### Word Stemming 词干分析
+将单词转换为其词干，多个单词共享同一条索引记录，在存和找的过程中都能优化效果。
+#### Stop Words
+常用单词/字符不储存
+
+### 优化：accessing a term 
+#### Search trees ( B- trees, B+ trees, Tries, ... )
+#### Hashing
+#### 利弊：
+![[55.png]](/media/55.png)
+
+### Distributed indexing
+Each node contains index of a subset of collection
+
+有两种分布式的策略，其一是根据单词的字典序进行分布式，其二是根据文档进行分布。
+
+显然根据单词的内容进行分布式，能够提高索引效率，但是这样的话，我们就需要将所有形式接近的单词都存储在一个地方，这样就会造成单点故障，容灾能力很差，所以这种方式并不是很好。
+
+而第二种办法则有较强的容灾性能。即使一台机器无法工作，也不会剧烈影响到整个系统。
+![[57.png]](/media/57.png)
+
+### 修佬笔记没有的内容：（PPT）
+#### precision && recall的关系和理想情况图
+![[58.png]](/media/58.png)
+
+#### Dynamic indexing
+新建doc、删除doc的操作![[59.png]](/media/59.png)
+有许多不同的情况，问gpt
+#### Compression
+**块级压缩（Blocking / Skip Pointers）**：
+
+将posting list分成多个块，对每个块的起始位置建立指针。这样在检索时可以快速跳过不需要的部分，降低访问成本。
+![[60.png]](/media/60.png)
+
+#### Thresholding 阈值转换法
+本质上是讨论文档的哪些部分需要搜索，减少搜索范围。
+![[61.png]](/media/61.png)
+（图示第二种）查询： 按频率升序排列查询词；仅根据原始查询词的部分百分比进行搜索。
+
+## Binomial Queue
+![[63.png]](/media/63.png)
+注意binomial queue的插入代价有两种，一种是单次，一种是连续n次，两者不一样。
+![[64.png]](/media/64.png)
+
+![[65.png]](/media/65.png)
+↑需要记忆
+
+解释：第三步为什么是$O(\log N)$：需要把每个子树都摘下来塞进新的binomial queue，所以最多遍历$O(\log N)$个子树根节点。
+
+![[66.png]](/media/66.png)
+![[68.png]](/media/68.png)
+![[70.png]](/media/70.png)代码需要记忆
+
+这种操作的时间复杂度为$O(1)$
+
+combine里的交换，目的是搭建小根堆（元素小的作为新树根节点，大的作为新根节点的新左儿子）
+
+merge 操作代码：
+![[71.png]](/media/71.png)
+这个代码考过作业填空。要注意switch括号里的顺序！
+
+我们为了节省空间，习惯把merge后的结果储存在两个queue数组的其一中（这里是结构体数组H1）
+
+111的情况，不同题目的考虑可能不一样，T1,T2,Carry都有可能成为当前位的子树
+
+不要忘记对CurrentSize的更新！
+
+
+DeleteMin操作实现：
+![[72.png]](/media/72.png)
+不要忘记：
+1. 两个binomial queue的CurrentSize的更新
+2. free替换后的旧指针
+3. NextSibling置为NULL，断开
+
+MaxTrees的值可以被替换为实际根的数量。
+
+binomial queue连续n次插入的代价证明：摊还分析
+![[73.png]](/media/73.png)
+
+![[74.png]](/media/74.png)
+* splay trees：势能函数是所有子树大小的对数和（具体怎么推？）
+* skew heaps：heavy nodes的数目，但是只要看最右侧路径的heavy nodes变化（这里有较多结论）
+* binomial queues：二进制，看1的数目为势能
+
+## Heap
+![[75.png]](/media/75.png)
+![[76.png]](/media/76.png)
+左偏堆节点定义：![[77.png]](/media/77.png)
+比普通BST额外维护了Npl，这也是后面斜堆优化的对象
+
+merge操作：
+
+三步走：merge, attach, swap
+![[78.png]](/media/78.png)
+时间复杂度为$O(\log N)$，因为树的高度为$O(\log N)$
+
+不要忘记更新Npl（交换后相当于是RightChildren的npl +1）
+
+![[79.png]](/media/79.png)
+iterative是先对各个右子树根sort然后不断连接右儿子。最后还要从下至上进行判断和swap
+
+DeleteMin同理也可以证明是$O(\log N)$时间复杂度
+
+![[80.png]](/media/80.png)
+![[96.png]](/media/96.png)
+这里的最后一个被合并右子树（根节点）为18，18不需要再swap它的子树。
+
+insert同样也是特殊的merge
+![[81.png]](/media/81.png)
+这里的iterative不同于左偏堆，每回合合并的右子树节点都接在左儿子指针，然后无条件交换自己的子树。注意这里还是最后一个右子树节点不需要swap。
+
+摊还分析前面写了，这里就不提了。
+
+
+## RB Tree && B+ Tree
+### 1. RB Tree
+![[82.png]](/media/82.png)
+性质：黑根，黑叶子结点，不红红，黑路同
+
+![[83.png]](/media/83.png)
+
+![[84.png]](/media/84.png)
+
+黑高不包括x节点自身，也不包括NIL
+![[85.png]](/media/85.png)
+![[86.png]](/media/86.png)
+![[87.png]](/media/87.png)
+红黑树插入：
+
+默认插入节点为红色，分为三种情况：
+![[92.png]](/media/92.png)
+其中第一种违反根叶黑，第二、三种违反不红红。其他情况不违背，不需要考虑调整。
+
+分析第二、三种情况：
+1. 父节点肯定是红色的。
+2. 叔叔是红色，那么祖父节点肯定是黑色 -> 祖父和叔父辈交换颜色，这时祖父节点可能也违反了性质，重新按照插入红节点的方法处理
+3. 叔叔是黑色，这种情况叔叔肯定是NIL，祖父节点是红色，只有一个子节点为父节点。那么需要旋转，然后父节点变黑，原先祖父节点为根的这个子树结构仍然保持黑高不变，不需要做其他部分的调整
+红黑树删除:
+
+考虑BST性质，删除三种情况：
+![[93.png]](/media/93.png)
+那么前两种情况，进一步考虑红黑树性质的影响：
+1. 第二种情况，相当于只有一个孩子，必然是叶子结点为红，父节点为黑 -> 直接删除没有影响
+2. 第一种情况，没有孩子：
+	1. 如果删除的是红节点，不会影响黑高，直接删。
+	2. 如果删除的是黑节点，去查表，理解为什么这么操作（…………）
+### 2. B+ Tree
+![[88.png]](/media/88.png)
+![[89.png]](/media/89.png)
+关于叶子节点分裂：
+![[90.png]](/media/90.png)
+![[截屏2024-11-13 00.03.51.png]](/media/91.png)
+这里没消化完
+
+
+## Backtracing
+八皇后限制：
+![[94.png]](/media/94.png)
+第一个限制加上第二个限制，解的可能性从$8^8$变为$8!$
+![[95.png]](/media/95.png)
+八皇后时间复杂度（加上剪枝）为$O(N!)$, 剪枝前是单纯的暴搜回溯，时间复杂度为$O(2^N)$
+
+
+收费站重建问题：
+
+1. 最优时间复杂度是$O(N^2\log N)$，其中递归调用$O(N)$次，每次调用开销为$O(N\log N)$
+2. 最坏时间复杂度是$O(2^N N\log N)$，其中递归调用$O(2^N)$次，每次调用开销为$O(N\log N)$
+
+
+## Divide && Conquer
+![[97.png]](/media/97.png)
+↑递归树法结合先猜后证法的一个例子（递推式不止一个$T(N/b)$情况）
+
+画出分治树后猜证，其实中间也带了放缩思想
+
+![[98.png]](/media/98.png)
+常规（一项$O(N/b)$）的还是等比数列求和，也要画出图
+
 
