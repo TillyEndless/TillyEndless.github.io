@@ -57,6 +57,16 @@ lang: ''
     + [2. B+ Tree](#2-b-tree)
   * [Backtracing](#backtracing)
   * [Divide && Conquer](#divide--conquer)
+  * [Dynamic Programing](#dynamic--programing)
+    + [0. 基本概念 && 方法](#0-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5--%E6%96%B9%E6%B3%95)
+    + [1. Product Assembly 问题](#1-product-assembly-%E9%97%AE%E9%A2%98)
+    + [2. Ordering Matrix Multiplications 问题](#2-ordering-matrix-multiplications-%E9%97%AE%E9%A2%98)
+    + [3. Optimal Binary Search Tree (OBST)](#3-optimal-binary-search-tree-obst)
+    + [4. All-Pairs Shortest Path](#4-all-pairs-shortest-path)
+  * [Greedy Algorithm](#greedy-algorithm)
+    + [1. The Activity Selection Problem](#1-the-activity-selection-problem)
+    + [2. Huffman Codes](#2-huffman-codes)
+    
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
@@ -388,8 +398,8 @@ TO DO
 - [x] Binomial Queue
 - [x] Backtracking
 - [x] Divide and Conquer
-- [ ] DP
-- [ ] Greedy Algorithms
+- [x] DP
+- [x] Greedy Algorithms
 
 ## Inverted File Index
 这部分最好看：[修佬的笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec03/#%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95)
@@ -657,3 +667,23 @@ method 2看前k项来递归
 代码实现：
 ![[122.png]](/media/122.png)
 要注意$k,i,j$在循环中的遍历顺序！
+
+## Greedy Algorithm
+* 最优解定义：A feasible solution for which the function has the best possible value
+* 贪心策略定义：Make decisions in stages. Find a best choice at each stage, under some greedy criterion, without violating the whole “feasibility”（keys: 阶段，贪心准则，最优选择）
+
+### 1. The Activity Selection Problem 
+每次选择最早结束的活动意味着我们“耗费”的时间最少，最大限度地增加后续活动的安排可能性。
+
+该算法时间复杂度为$O(\log N)$，其中排序$O(\log N)$，选择活动$O(N)$。
+
+判断为最优贪心解：
+1. 局部贪心（剩余时间最多）
+2. 全局最优解（消耗的时间最少）
+3. 满足题意，不冲突
+![[124.png]](/media/124.png)
+
+![[125.png]](/media/125.png)
+
+### 2. Huffman Codes
+复习过，略。
