@@ -1,6 +1,6 @@
 ---
 title: 【ADS】期中复习
-published: 2024-11-05
+published: 2024-11-13
 description: ''
 image: ''
 tags: [ADS]
@@ -66,7 +66,7 @@ lang: ''
   * [Greedy Algorithm](#greedy-algorithm)
     + [1. The Activity Selection Problem](#1-the-activity-selection-problem)
     + [2. Huffman Codes](#2-huffman-codes)
-    
+
 ## Leftest Heap VS Skew Heap
 ### 定义
 #### 左偏堆
