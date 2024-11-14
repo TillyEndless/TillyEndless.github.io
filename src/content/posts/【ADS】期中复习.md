@@ -9,30 +9,31 @@ draft: false
 lang: ''
 ---
 ## 目录
-- [Leftest Heap VS Skew Heap](#leftest-heap-vs-skew-heap)
-  * [定义](#%E5%AE%9A%E4%B9%89)
-    + [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86)
-    + [斜堆](#%E6%96%9C%E5%A0%86)
-  * [操作：合并](#%E6%93%8D%E4%BD%9C%E5%90%88%E5%B9%B6)
-    + [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86-1)
-    + [斜堆](#%E6%96%9C%E5%A0%86-1)
-  * [摊还分析 ：斜堆](#%E6%91%8A%E8%BF%98%E5%88%86%E6%9E%90-%E6%96%9C%E5%A0%86)
-  * [习题](#%E4%B9%A0%E9%A2%98)
-- [补充：左偏堆单点删除](#%E8%A1%A5%E5%85%85%E5%B7%A6%E5%81%8F%E5%A0%86%E5%8D%95%E7%82%B9%E5%88%A0%E9%99%A4)
-- [Divide && Conquer 时间复杂度计算（公式）](#divide--conquer-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F)
-  * [主方法形式三](#%E4%B8%BB%E6%96%B9%E6%B3%95%E5%BD%A2%E5%BC%8F%E4%B8%89)
-  * [其他形式&方法的理解](#%E5%85%B6%E4%BB%96%E5%BD%A2%E5%BC%8F%E6%96%B9%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3)
-- [Binomial Tree && Binomial Queue](#binomial-tree--binomial-queue)
-  * [Binomial Tree](#binomial-tree)
-  * [Binomial Queue：TBC](#binomial-queuetbc)
-- [Precision && Recall 计算](#precision--recall-%E8%AE%A1%E7%AE%97)
-- [B+树](#b%E6%A0%91)
-- [红黑树](#%E7%BA%A2%E9%BB%91%E6%A0%91)
-- [Backtracking](#backtracking)
-  * [The Turnpike Reconstruction Problem 收费站问题](#the-turnpike-reconstruction-problem-%E6%94%B6%E8%B4%B9%E7%AB%99%E9%97%AE%E9%A2%98)
-  * [Backtracing代码模板](#backtracing%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF)
-  * [ɑ-β 剪枝](#%C9%91-%CE%B2-%E5%89%AA%E6%9E%9D)
-    + [Tic-tac-toe: Minimax Strategy](#tic-tac-toe--minimax-strategy)
+* [Leftest Heap VS Skew Heap](#leftest-heap-vs-skew-heap)
+    + [定义](#%E5%AE%9A%E4%B9%89)
+      - [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86)
+      - [斜堆](#%E6%96%9C%E5%A0%86)
+    + [操作：合并](#%E6%93%8D%E4%BD%9C%E5%90%88%E5%B9%B6)
+      - [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86-1)
+      - [斜堆](#%E6%96%9C%E5%A0%86-1)
+    + [摊还分析 ：斜堆](#%E6%91%8A%E8%BF%98%E5%88%86%E6%9E%90-%E6%96%9C%E5%A0%86)
+    + [习题](#%E4%B9%A0%E9%A2%98)
+  * [补充：左偏堆单点删除](#%E8%A1%A5%E5%85%85%E5%B7%A6%E5%81%8F%E5%A0%86%E5%8D%95%E7%82%B9%E5%88%A0%E9%99%A4)
+  * [Divide && Conquer 时间复杂度计算（公式）](#divide--conquer-%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F)
+    + [主方法形式三](#%E4%B8%BB%E6%96%B9%E6%B3%95%E5%BD%A2%E5%BC%8F%E4%B8%89)
+    + [其他形式&方法的理解](#%E5%85%B6%E4%BB%96%E5%BD%A2%E5%BC%8F%E6%96%B9%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3)
+  * [Binomial Tree && Binomial Queue](#binomial-tree--binomial-queue)
+    + [Binomial Tree](#binomial-tree)
+    + [Binomial Queue：TBC](#binomial-queuetbc)
+  * [Precision && Recall 计算](#precision--recall-%E8%AE%A1%E7%AE%97)
+  * [B+树](#b%E6%A0%91)
+  * [红黑树](#%E7%BA%A2%E9%BB%91%E6%A0%91)
+  * [Backtracking](#backtracking)
+    + [Backtracing代码模板](#backtracing%E4%BB%A3%E7%A0%81%E6%A8%A1%E6%9D%BF)
+    + [八皇后](#%E5%85%AB%E7%9A%87%E5%90%8E)
+    + [The Turnpike Reconstruction Problem 收费站问题](#the-turnpike-reconstruction-problem-%E6%94%B6%E8%B4%B9%E7%AB%99%E9%97%AE%E9%A2%98)
+    + [ɑ-β 剪枝](#%C9%91-%CE%B2-%E5%89%AA%E6%9E%9D)
+      - [Tic-tac-toe: Minimax Strategy](#tic-tac-toe--minimax-strategy)
   * [数据结构操作的时间复杂度汇总：需要勘误 TBC](#%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E6%93%8D%E4%BD%9C%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6%E6%B1%87%E6%80%BB%E9%9C%80%E8%A6%81%E5%8B%98%E8%AF%AF-tbc)
 - [看PPT](#%E7%9C%8Bppt)
   * [Inverted File Index](#inverted-file-index)
@@ -238,6 +239,80 @@ recall：相关（relevant）的
 > - [红黑树 - 删除]( https://www.bilibili.com/video/BV16m421u7Tb/?share_source=copy_web&vd_source=759a6191b199b3735f0e3c6d6f33d199)
 
 ## Backtracking
+### Backtracing代码模板
+可以类比八皇后和Turnpike Reconstruction的代码
+```c
+bool Backtracking ( int i )
+{   Found = false;
+    if ( i > N )
+        return true; /* solved with (x1, …, xN) */
+    for ( each xi  Si ) { 
+        /* check if satisfies the restriction R */
+        OK = Check((x1, …, xi) , R ); /* pruning */
+        if ( OK ) {
+            Count xi in;
+            Found = Backtracking( i+1 );
+            if ( !Found )
+                Undo( i ); /* recover to (x1, …, xi-1) */
+        }
+        if ( Found ) break; 
+    }
+    return Found;
+}
+```
+### 八皇后
+代码实现：
+```c
+#include<stdio.h>
+#include<math.h>
+#define bool int
+#define false 0
+#define true 1
+bool Backtracking(int i, int a[], int N);
+bool Check(int i, int j, int a[]);
+int num;
+int main(void){
+    int N;
+    scanf("%d",&N);
+    int a[N];
+    for(int cnt = 0; cnt < N; ++cnt)a[cnt] = 0;
+    bool tmp = Backtracking(1, a, N);
+    printf("%d\n", num);
+    return 0;
+}
+bool Check(int i, int j, int a[]){
+    for(int ci = 0; ci < i-1; ++ci){
+        if(a[ci] == j){
+            return false;
+        }
+        if(abs(a[ci] - j) == abs(ci + 1 - i)){
+            return false;
+        }
+    }
+    return true;
+}
+bool Backtracking ( int i, int a[], int N )
+{   bool Found = false;
+    if ( i > N ){
+        if(num < 3){
+            for(int cnt = 0; cnt < N-1; ++cnt)printf("%d ",a[cnt]);
+            printf("%d\n",a[N-1]);
+        }
+        num++;
+        return true; /* solved with (x1, …, xN) */   
+    }
+    for (int j = 1; j <= N; ++j) { 
+        /* check if satisfies the restriction R */
+        int OK = Check(i, j, a); /* pruning */
+        if ( OK ) {
+            a[i-1] = j;
+            Found = Backtracking( i+1, a, N );
+            a[i-1] = 0;
+        }
+    }
+    return Found;
+}
+```
 ### The Turnpike Reconstruction Problem 收费站问题
 [🔗修佬的笔记](https://note.isshikih.top/cour_note/D2CX_AdvancedDataStructure/Lec06/#%E6%A1%88%E4%BE%8B-the-turnpike-reconstruction-problem)
 ![[截屏2024-11-10 11.37.06.png]](/media/33.png)
@@ -279,27 +354,6 @@ bool Reconstruct ( DistType X[ ], DistSet D, int N, int left, int right )
         /* finish checking option 2 */
     } /* finish checking all the options */
     
-    return Found;
-}
-```
-### Backtracing代码模板
-可以类比Turnpike Reconstruction的代码
-```c
-bool Backtracking ( int i )
-{   Found = false;
-    if ( i > N )
-        return true; /* solved with (x1, …, xN) */
-    for ( each xi  Si ) { 
-        /* check if satisfies the restriction R */
-        OK = Check((x1, …, xi) , R ); /* pruning */
-        if ( OK ) {
-            Count xi in;
-            Found = Backtracking( i+1 );
-            if ( !Found )
-                Undo( i ); /* recover to (x1, …, xi-1) */
-        }
-        if ( Found ) break; 
-    }
     return Found;
 }
 ```
