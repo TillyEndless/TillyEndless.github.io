@@ -686,7 +686,7 @@ ps：
 代码：（如果只要求最小值，版本1就够了）
 * 版本1![[115.png]](/media/115.png)
 * 版本2![[107.png]](/media/107.png)
-![[108.png]]
+![[108.png]](/media/108.png)
 ### 2. Ordering Matrix Multiplications 问题
 ![[109.png]](/media/109.png)
 得到递推式：
