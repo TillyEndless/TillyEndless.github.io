@@ -691,7 +691,6 @@ ps：
 ![[109.png]](/media/109.png)
 得到递推式：
 ![[110.png]](/media/110.png)
-![[111.png]](/media/111.png)
 递归方程：
 ![[112.png]](/media/112.png)
 代码实现：
