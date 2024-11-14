@@ -721,6 +721,7 @@ method 2看前k项来递归
 ![[122.png]](/media/122.png)
 要注意$k,i,j$在循环中的遍历顺序！
 
+其实感觉第三层（j的循环）可以从i+1开始。    
 ## Greedy Algorithm
 * 最优解定义：A feasible solution for which the function has the best possible value
 * 贪心策略定义：Make decisions in stages. Find a best choice at each stage, under some greedy criterion, without violating the whole “feasibility”（keys: 阶段，贪心准则，最优选择）
