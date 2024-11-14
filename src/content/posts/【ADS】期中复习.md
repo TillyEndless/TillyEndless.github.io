@@ -710,7 +710,7 @@ $O(N^2)$算法（补充）：wyy的讲义：
 ![[119.png]](/media/119.png)
 
 ### 4. All-Pairs Shortest Path
-![[120.png]](/media/122.png)
+![[120.png]](/media/120.png)
 method 1适用于稀疏图，时间复杂度为$O(|V|^3)$；method 2适用于密集图，时间复杂度为$O(N^3)$
 
 method 2看前k项来递归
