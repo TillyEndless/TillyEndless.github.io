@@ -482,3 +482,61 @@ https://github.com/ZJU-Turing/TuringDoneRight
 $ mkdocs --version
 mkdocs, version 1.4.3 from /Users/tilly/Library/Python/3.9/lib/python/site-packages/mkdocs (Python 3.9)
 ```
+
+## 11.15 添加密码
+留档/src/content/config.ts：
+```ts
+import { defineCollection, z } from 'astro:content'
+
+const postsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    published: z.date(),
+    draft: z.boolean().optional().default(false),
+    description: z.string().optional().default(''),
+    image: z.string().optional().default(''),
+    tags: z.array(z.string()).optional().default([]),
+    category: z.string().optional().default(''),
+    lang: z.string().optional().default(''),
+
+    /* For internal use */
+    prevTitle: z.string().default(''),
+    prevSlug: z.string().default(''),
+    nextTitle: z.string().default(''),
+    nextSlug: z.string().default(''),
+  }),
+})
+export const collections = {
+  posts: postsCollection,
+}
+```
+第一步修改：
+```ts
+import { defineCollection, z } from 'astro:content';
+
+const postsCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    published: z.date(),
+    draft: z.boolean().optional().default(false),
+    description: z.string().optional().default(''),
+    image: z.string().optional().default(''),
+    tags: z.array(z.string()).optional().default([]),
+    category: z.string().optional().default(''),
+    lang: z.string().optional().default(''),
+
+    /* For internal use */
+    prevTitle: z.string().default(''),
+    prevSlug: z.string().default(''),
+    nextTitle: z.string().default(''),
+    nextSlug: z.string().default(''),
+
+    // 新增的密码字段
+    password: z.string().optional(),
+  }),
+});
+
+export const collections = {
+  posts: postsCollection,
+};
+```

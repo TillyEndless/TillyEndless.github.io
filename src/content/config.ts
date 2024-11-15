@@ -1,4 +1,4 @@
-import { defineCollection, z } from 'astro:content'
+import { defineCollection, z } from 'astro:content';
 
 const postsCollection = defineCollection({
   schema: z.object({
@@ -16,8 +16,12 @@ const postsCollection = defineCollection({
     prevSlug: z.string().default(''),
     nextTitle: z.string().default(''),
     nextSlug: z.string().default(''),
+
+    // 新增的密码字段
+    password: z.string().optional(),
   }),
-})
+});
+
 export const collections = {
   posts: postsCollection,
-}
+};
