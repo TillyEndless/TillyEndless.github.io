@@ -37,7 +37,15 @@ const jsonLd = {
 
 // 设置文章密码
 const postPassword = "your-password"
-const [isAuthorized, setAuthorized] = Astro.state(false)
+let isAuthorized = false;
+
+function checkPassword(input) {
+  if (input === postPassword) {
+    isAuthorized = true;
+  } else {
+    alert("密码错误");
+  }
+}
 
 export async function getStaticPaths() {
   const blogEntries = await getCollection('posts', ({ data }) => {
@@ -117,8 +125,7 @@ export async function getStaticPaths() {
         <input type="password" id="password-input" class="input mb-4" />
         <button class="btn-primary" onClick={() => {
           const input = document.getElementById("password-input").value
-          if (input === postPassword) setAuthorized(true)
-          else alert("密码错误")
+          checkPassword(input)
         }}>查看内容</button>
       </div>
     )}
@@ -174,6 +181,5 @@ export async function getStaticPaths() {
     border-left: 2px solid var(--primary);
   }
   .heading-1 { font-size: 1.25rem; font-weight: bold; }
-  .heading-2 { font-size: 1rem; padding-left: 1rem; }
-  .heading-3 { font-size: 0.875rem; padding-left: 2rem; }
+  .heading-2 { font-size: 1.125rem; }
 </style>
