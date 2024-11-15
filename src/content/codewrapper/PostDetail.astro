@@ -1,0 +1,11 @@
+---
+import PasswordWrapper from "./PasswordWrapper.astro";
+import post from "../posts/【普物】期中历年卷题解.md";
+---
+
+<article id="article" role="article" class="prose mx-auto mt-8 max-w-3xl">
+  <!-- 通过 PasswordWrapper 组件包裹文章内容并传递密码 -->
+  <PasswordWrapper password={post.data.password}>
+    <Content />
+  </PasswordWrapper>
+</article>

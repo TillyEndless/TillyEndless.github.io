@@ -1,0 +1,90 @@
+---
+import { encrypt } from "./encrypt.ts";
+
+export interface Props {
+  password: 457766024;
+}
+
+const html = await Astro.slots.render("default");
+const encryptedHtml = await encrypt(html, Astro.props.password);
+---
+
+<meta name="encrypted" content={encryptedHtml} />
+
+<div>
+  <input
+    id="password"
+    class="w-auto rounded border border-skin-fill
+border-opacity-40 bg-skin-fill p-2 text-skin-base
+placeholder:italic placeholder:text-opacity-75
+focus:border-skin-accent focus:outline-none"
+    placeholder="Enter password"
+    type="text"
+    autocomplete="off"
+    autofocus
+  />
+  <button
+    id="password-btn"
+    class="bg-skin-full rounded-md
+    border border-skin-fill border-opacity-50 p-2
+    text-skin-base
+    hover:border-skin-accent"
+  >
+    Submit
+  </button>
+</div>
+
+<script is:inline data-astro-rerun>
+  async function decrypt(data, key) {
+    key = key.padEnd(16, "0");
+
+    const decoder = new TextDecoder();
+    const dataBuffer = new Uint8Array(
+      atob(data)
+        .split("")
+        .map(c => c.charCodeAt(0))
+    );
+    const keyBuffer = new TextEncoder().encode(key);
+
+    const cryptoKey = await crypto.subtle.importKey(
+      "raw",
+      keyBuffer,
+      { name: "AES-CBC", length: 256 },
+      false,
+      ["decrypt"]
+    );
+
+    const iv = dataBuffer.slice(0, 16);
+    const encryptedData = dataBuffer.slice(16);
+
+    const decryptedData = await crypto.subtle.decrypt(
+      { name: "AES-CBC", iv },
+      cryptoKey,
+      encryptedData
+    );
+
+    return decoder.decode(decryptedData);
+  }
+
+  function prepare() {
+    const encrypted = document
+      .querySelector("meta[name=encrypted]")
+      ?.getAttribute("content");
+    const input = document.getElementById("password");
+    const btn = document.getElementById("password-btn");
+    const article = document.querySelector("#article");
+
+    btn?.addEventListener("click", async () => {
+      const password = input.value;
+      try {
+        const html = await decrypt(encrypted, password);
+        article.innerHTML = html;
+      } catch (e) {
+        alert("Incorrect password");
+      }
+    });
+  }
+
+  prepare();
+  document.addEventListener("astro:after-swap", prepare);
+</script>

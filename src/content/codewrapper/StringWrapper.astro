@@ -1,0 +1,8 @@
+---
+const html = await Astro.slots.render("default");
+import { Code } from "astro/components";
+---
+
+<Fragment set:html={html} />
+
+<Code code={html} lang="html" />
