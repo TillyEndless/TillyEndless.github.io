@@ -36,19 +36,21 @@ const jsonLd = {
 }
 
 // 设置文章密码
-const postPassword = "457766024"
-let isAuthorized = false;
+const postPassword = "457766024";
 
-// 检查是否已经授权（从 localStorage 中读取状态）
+// 从 localStorage 获取验证状态
+let isAuthorized = false;
 if (typeof window !== "undefined" && localStorage.getItem("postAuthorized") === "true") {
   isAuthorized = true;
 }
 
+// 密码验证函数
 function checkPassword(input) {
   if (input === postPassword) {
-    isAuthorized = true;
-    localStorage.setItem("postAuthorized", "true"); // 保存验证状态
-    window.location.reload(); // 刷新页面以更新内容显示
+    // 设置 localStorage 标志为已验证
+    localStorage.setItem("postAuthorized", "true");
+    // 页面重新加载
+    window.location.reload();
   } else {
     alert("密码错误");
   }
@@ -165,28 +167,4 @@ export async function getStaticPaths() {
   #password-form { 
     text-align: center; 
   }
-  .input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .btn-primary {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007acc;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .btn-primary:hover {
-    background-color: #005f99;
-  }
-  .headings {
-    padding: 1rem;
-    border-left: 2px solid var(--primary);
-  }
-  .heading-1 { font-size: 1.25rem; font-weight: bold; }
-  .heading-2 { font-size: 1.125rem; }
 </style>
