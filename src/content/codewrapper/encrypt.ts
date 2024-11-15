@@ -22,4 +22,4 @@ export async function encrypt(data: string, key: string): Promise<string> {
     combinedData.set(iv);
     combinedData.set(new Uint8Array(encryptedData), iv.length);
     return Buffer.from(combinedData).toString("base64");
-  }
+}
