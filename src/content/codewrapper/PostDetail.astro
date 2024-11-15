@@ -2,7 +2,7 @@
 import PasswordWrapper from "./PasswordWrapper.astro";
 import { encrypt } from "../codewrapper/encrypt.ts"; // 导入加密函数
 
-const postContent = await Astro.fetchContent('../posts/【普物】期中历年卷题解.md'); // 获取 Markdown 内容
+const postContent = await Astro.fetchContent('../posts/【普物】期中历年卷题解.md'); // 获取文章内容
 const password = '457766024'; // 设置密码
 const encryptedContent = await encrypt(postContent.body, password); // 加密文章内容
 ---

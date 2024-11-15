@@ -6,7 +6,7 @@ export interface Props {
 }
 
 const html = await Astro.slots.render("default");
-const encryptedHtml = await encrypt(html, Astro.props.password);
+const encryptedHtml = await encrypt(html, Astro.props.password); // 加密 HTML 内容
 ---
 
 <meta name="encrypted" content={encryptedHtml} />
@@ -77,10 +77,10 @@ const encryptedHtml = await encrypt(html, Astro.props.password);
     btn?.addEventListener("click", async () => {
       const password = input.value;
       try {
-        const html = await decrypt(encrypted, password);
-        article.innerHTML = html;
+        const html = await decrypt(encrypted, password); // 解密内容
+        article.innerHTML = html; // 显示解密后的内容
       } catch (e) {
-        alert("Incorrect password");
+        alert("Incorrect password"); // 密码错误提示
       }
     });
   }

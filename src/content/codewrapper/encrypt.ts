@@ -18,8 +18,10 @@ export async function encrypt(data: string, key: string): Promise<string> {
       cryptoKey,
       dataBuffer
     );
+    
     const combinedData = new Uint8Array(iv.length + encryptedData.byteLength);
     combinedData.set(iv);
     combinedData.set(new Uint8Array(encryptedData), iv.length);
+  
     return Buffer.from(combinedData).toString("base64");
-}
+  }
