@@ -37,22 +37,13 @@ const jsonLd = {
 
 // 设置文章密码
 const postPassword = "457766024"
-
-// 检查密码状态
-let isAuthorized = false
-if (typeof window !== "undefined") {
-  // 页面加载时，检查localStorage中是否存储了验证结果
-  isAuthorized = localStorage.getItem('isAuthorized') === 'true'
-}
+let isAuthorized = false;
 
 function checkPassword(input) {
   if (input === postPassword) {
-    isAuthorized = true
-    // 密码正确后，设置localStorage，刷新页面保持状态
-    localStorage.setItem('isAuthorized', 'true')
-    window.location.reload()  // 刷新页面来显示内容
+    isAuthorized = true;
   } else {
-    alert("密码错误")
+    alert("密码错误");
   }
 }
 
@@ -71,6 +62,7 @@ export async function getStaticPaths() {
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
+
     <!-- 密码保护 -->
     {isAuthorized ? (
       <div id="post-container" class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full">
@@ -133,7 +125,7 @@ export async function getStaticPaths() {
         <input type="password" id="password-input" class="input mb-4" />
         <button class="btn-primary" onClick={() => {
           const input = document.getElementById("password-input").value
-          checkPassword(input)  // 调用checkPassword函数
+          checkPassword(input)
         }}>查看内容</button>
       </div>
     )}
@@ -184,4 +176,10 @@ export async function getStaticPaths() {
   .btn-primary:hover {
     background-color: #005f99;
   }
+  .headings {
+    padding: 1rem;
+    border-left: 2px solid var(--primary);
+  }
+  .heading-1 { font-size: 1.25rem; font-weight: bold; }
+  .heading-2 { font-size: 1.125rem; }
 </style>
