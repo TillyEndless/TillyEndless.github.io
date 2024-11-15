@@ -14,7 +14,17 @@ import ImageWrapper from '../../components/misc/ImageWrapper.astro'
 import { profileConfig, siteConfig } from '../../config'
 import { formatDateToYYYYMMDD } from '../../utils/date-utils'
 import { getHeadings } from '../../utils/getHeadings.js'; 
-import Outline from 'Outline.astro'
+import Outline from 'Outline.astro';
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection('posts', ({ data }) => {
+    return import.meta.env.PROD ? data.draft !== true : true
+  })
+  return blogEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }))
+}
 
 const { entry } = Astro.props
 const { Content } = await entry.render()
@@ -33,102 +43,69 @@ const jsonLd = {
   },
   datePublished: formatDateToYYYYMMDD(entry.data.published),
   inLanguage: (entry.data.lang ? entry.data.lang.replace('_', '-') : siteConfig.lang.replace('_', '-')),
-}
-
-// 设置文章密码
-const postPassword = "457766024"
-let isAuthorized = false;
-
-function checkPassword(input) {
-  if (input === postPassword) {
-    isAuthorized = true;
-  } else {
-    alert("密码错误");
-  }
-}
-
-export async function getStaticPaths() {
-  const blogEntries = await getCollection('posts', ({ data }) => {
-    return import.meta.env.PROD ? data.draft !== true : true
-  })
-  return blogEntries.map(entry => ({
-    params: { slug: entry.slug },
-    props: { entry },
-  }))
+  // TODO include cover image here
 }
 ---
-
 <MainGridLayout banner={entry.data.image} title={entry.data.title} description={entry.data.description} lang={entry.data.lang} setOGTypeArticle={true}>
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
 
-    <!-- 密码保护 -->
-    {isAuthorized ? (
-      <div id="post-container" class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full">
-        <!-- 展示文章内容 -->
-        <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
-          <div class="flex flex-row items-center">
-            <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
-              <Icon name="material-symbols:notes-rounded"></Icon>
-            </div>
-            <div class="text-sm">{remarkPluginFrontmatter.words} {" " + i18n(I18nKey.wordsCount)}</div>
+    <!-- Post Content -->
+    <div id="post-container" class:list={["card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-4/4"]}>
+      <!-- word count and reading time -->
+      <div class="flex flex-row text-black/30 dark:text-white/30 gap-5 mb-3 transition onload-animation">
+        <div class="flex flex-row items-center">
+          <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
+            <Icon name="material-symbols:notes-rounded"></Icon>
           </div>
-          <div class="flex flex-row items-center">
-            <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
-              <Icon name="material-symbols:schedule-outline-rounded"></Icon>
-            </div>
-            <div class="text-sm">{remarkPluginFrontmatter.minutes} {" " + i18n(I18nKey.minutesCount)}</div>
+          <div class="text-sm">{remarkPluginFrontmatter.words} {" " + i18n(I18nKey.wordsCount)}</div>
+        </div>
+        <div class="flex flex-row items-center">
+          <div class="transition h-6 w-6 rounded-md bg-black/5 dark:bg-white/10 text-black/50 dark:text-white/50 flex items-center justify-center mr-2">
+            <Icon name="material-symbols:schedule-outline-rounded"></Icon>
           </div>
+          <div class="text-sm">{remarkPluginFrontmatter.minutes} {" " + i18n(I18nKey.minutesCount)}</div>
         </div>
-
-        <!-- Post title -->
-        <div class="relative onload-animation">
-          <div
-            data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title"
-            class="transition w-full block font-bold mb-3
-            text-3xl md:text-[2.5rem]/[2.75rem]
-            text-black/90 dark:text-white/90
-            md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
-            before:absolute before:top-[0.75rem] before:left-[-1.125rem]
-          ">
-            {entry.data.title}
-          </div>
-        </div>
-
-        <!-- Post metadata -->
-        <div class="onload-animation">
-          <PostMetadata
-            class="mb-5"
-            published={entry.data.published}
-            tags={entry.data.tags}
-            category={entry.data.category}
-          ></PostMetadata>
-          {!entry.data.image && <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"></div>}
-        </div>
-
-        <!-- Cover Image -->
-        {entry.data.image &&
-          <ImageWrapper id="post-cover" src={entry.data.image} basePath={path.join("content/posts/", getDir(entry.id))} class="mb-8 rounded-xl banner-container onload-animation"/>
-        }
-
-        <!-- Markdown Content -->
-        <Markdown class="mb-6 markdown-content onload-animation">
-          <Content />
-        </Markdown>
-
-        {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
       </div>
-    ) : (
-      <div id="password-form" class="w-full flex flex-col items-center justify-center py-16">
-        <p class="text-lg mb-4">请输入密码以查看内容：</p>
-        <input type="password" id="password-input" class="input mb-4" />
-        <button class="btn-primary" onClick={() => {
-          const input = document.getElementById("password-input").value
-          checkPassword(input)
-        }}>查看内容</button>
+
+      <!-- title -->
+      <div class="relative onload-animation">
+        <div
+          data-pagefind-body data-pagefind-weight="10" data-pagefind-meta="title"
+          class="transition w-full block font-bold mb-3
+          text-3xl md:text-[2.5rem]/[2.75rem]
+          text-black/90 dark:text-white/90
+          md:before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
+          before:absolute before:top-[0.75rem] before:left-[-1.125rem]
+        ">
+          {entry.data.title}
+        </div>
       </div>
-    )}
+
+      <!-- metadata -->
+      <div class="onload-animation">
+        <PostMetadata
+          class="mb-5"
+          published={entry.data.published}
+          tags={entry.data.tags}
+          category={entry.data.category}
+        ></PostMetadata>
+        {!entry.data.image && <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"></div>}
+      </div>
+
+      <!-- cover image -->
+      {entry.data.image &&
+        <ImageWrapper id="post-cover" src={entry.data.image} basePath={path.join("content/posts/", getDir(entry.id))} class="mb-8 rounded-xl banner-container onload-animation"/>
+      }
+
+      <!-- Markdown Content -->
+      <Markdown class="mb-6 markdown-content onload-animation">
+        <Content />
+      </Markdown>
+
+      {licenseConfig.enable && <License title={entry.data.title} slug={entry.slug} pubDate={entry.data.published} class="mb-6 rounded-xl license-container onload-animation"></License>}
+    </div>
   </div>
 
   <div class="flex flex-col md:flex-row justify-between mb-4 gap-4 overflow-hidden w-full">
@@ -152,34 +129,23 @@ export async function getStaticPaths() {
       </div>}
     </a>
   </div>
+
 </MainGridLayout>
 
 <style is:global>
-  #password-form { 
-    text-align: center; 
-  }
-  .input {
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  .btn-primary {
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007acc;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  .btn-primary:hover {
-    background-color: #005f99;
-  }
-  .headings {
-    padding: 1rem;
-    border-left: 2px solid var(--primary);
-  }
-  .heading-1 { font-size: 1.25rem; font-weight: bold; }
-  .heading-2 { font-size: 1.125rem; }
+.headings {
+  padding: 1rem;
+  border-left: 2px solid var(--primary);
+}
+
+.heading-1 { font-size: 1.25rem; font-weight: bold; }
+.heading-2 { font-size: 1rem; padding-left: 1rem; }
+.heading-3 { font-size: 0.875rem; padding-left: 2rem; }
+
+#post-container :nth-child(1) { animation-delay: calc(var(--content-delay) + 0ms) }
+#post-container :nth-child(2) { animation-delay: calc(var(--content-delay) + 50ms) }
+#post-container :nth-child(3) { animation-delay: calc(var(--content-delay) + 100ms) }
+#post-container :nth-child(4) { animation-delay: calc(var(--content-delay) + 175ms) }
+#post-container :nth-child(5) { animation-delay: calc(var(--content-delay) + 250ms) }
+#post-container :nth-child(6) { animation-delay: calc(var(--content-delay) + 325ms) } 
 </style>
