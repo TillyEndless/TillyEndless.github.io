@@ -39,9 +39,16 @@ const jsonLd = {
 const postPassword = "457766024"
 let isAuthorized = false;
 
+// 检查是否已经授权（从 localStorage 中读取状态）
+if (typeof window !== "undefined" && localStorage.getItem("postAuthorized") === "true") {
+  isAuthorized = true;
+}
+
 function checkPassword(input) {
   if (input === postPassword) {
     isAuthorized = true;
+    localStorage.setItem("postAuthorized", "true"); // 保存验证状态
+    window.location.reload(); // 刷新页面以更新内容显示
   } else {
     alert("密码错误");
   }
