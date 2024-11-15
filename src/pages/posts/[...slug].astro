@@ -36,23 +36,23 @@ const jsonLd = {
 }
 
 // 设置文章密码
-const postPassword = "457766024";
+const postPassword = "457766024"
 
-// 从 localStorage 获取验证状态
-let isAuthorized = false;
-if (typeof window !== "undefined" && localStorage.getItem("postAuthorized") === "true") {
-  isAuthorized = true;
+// 检查密码状态
+let isAuthorized = false
+if (typeof window !== "undefined") {
+  // 页面加载时，检查localStorage中是否存储了验证结果
+  isAuthorized = localStorage.getItem('isAuthorized') === 'true'
 }
 
-// 密码验证函数
 function checkPassword(input) {
   if (input === postPassword) {
-    // 设置 localStorage 标志为已验证
-    localStorage.setItem("postAuthorized", "true");
-    // 页面重新加载
-    window.location.reload();
+    isAuthorized = true
+    // 密码正确后，设置localStorage，刷新页面保持状态
+    localStorage.setItem('isAuthorized', 'true')
+    window.location.reload()  // 刷新页面来显示内容
   } else {
-    alert("密码错误");
+    alert("密码错误")
   }
 }
 
@@ -71,7 +71,6 @@ export async function getStaticPaths() {
   <script is:inline slot="head" type="application/ld+json" set:html={JSON.stringify(jsonLd)}></script>
 
   <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4">
-
     <!-- 密码保护 -->
     {isAuthorized ? (
       <div id="post-container" class="card-base z-10 px-6 md:px-9 pt-6 pb-4 relative w-full">
@@ -134,7 +133,7 @@ export async function getStaticPaths() {
         <input type="password" id="password-input" class="input mb-4" />
         <button class="btn-primary" onClick={() => {
           const input = document.getElementById("password-input").value
-          checkPassword(input)
+          checkPassword(input)  // 调用checkPassword函数
         }}>查看内容</button>
       </div>
     )}
@@ -166,5 +165,23 @@ export async function getStaticPaths() {
 <style is:global>
   #password-form { 
     text-align: center; 
+  }
+  .input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .btn-primary {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007acc;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .btn-primary:hover {
+    background-color: #005f99;
   }
 </style>
