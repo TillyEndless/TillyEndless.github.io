@@ -3,8 +3,8 @@ title: 【计组】第四章整理(Part 1)
 published: 2024-11-11
 description: '这一章Part1的核心就是搞懂不同类型指令执行在单周期CPU中的数据通路，重点关注controler（控制信号）&& MUX信号控制。'
 image: ''
-tags: [计组]
-category: 'notes'
+tags: [notes]
+category: '计组'
 draft: false 
 lang: ''
 ---

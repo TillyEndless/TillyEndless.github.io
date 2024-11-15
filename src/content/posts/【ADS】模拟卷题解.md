@@ -3,8 +3,8 @@ title: 【ADS】模拟卷题解
 published: 2024-11-05
 description: '尚未完工，可能存在纰漏'
 image: ''
-tags: [ADS]
-category: 'notes'
+tags: [exercises]
+category: 'ADS'
 draft: false 
 lang: ''
 ---

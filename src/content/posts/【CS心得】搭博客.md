@@ -3,8 +3,8 @@ title: 【CS心得】搭博客
 published: 2024-10-28
 description: ''
 image: ''
-tags: [CS心得]
-category: 'journal'
+tags: [journal]
+category: 'CS心得'
 draft: false 
 lang: ''
 ---

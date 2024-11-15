@@ -3,8 +3,8 @@ title: 【ADS】作业1 AVL Tree Insertions
 published: 2024-10-28
 description: ''
 image: ''
-tags: [ADS]
-category: 'notes'
+tags: [notes]
+category: 'ADS'
 draft: false 
 lang: ''
 ---

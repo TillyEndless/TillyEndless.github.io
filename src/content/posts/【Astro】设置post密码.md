@@ -3,8 +3,8 @@ title: 【Astro】设置post密码
 published: 2024-11-15
 description: ''
 image: ''
-tags: []
-category: ''
+tags: [sources]
+category: 'Astro'
 draft: false 
 lang: ''
 ---

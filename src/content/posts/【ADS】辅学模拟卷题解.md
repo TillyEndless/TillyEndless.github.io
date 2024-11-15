@@ -3,8 +3,8 @@ title: 【ADS】辅学模拟卷题解
 published: 2024-11-13
 description: '总结：主要还是新学的算法章节有漏洞，比如贪心、动态规划、回溯，等等。'
 image: ''
-tags: [ADS]
-category: 'exercises'
+tags: [exercises]
+category: 'ADS'
 draft: false 
 lang: ''
 ---

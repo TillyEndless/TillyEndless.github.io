@@ -3,8 +3,8 @@ title: CS日志
 published: 2024-10-29
 description: ''
 image: ''
-tags: [CS心得]
-category: 'journal'
+tags: [journal]
+category: 'CS心得'
 draft: false 
 lang: ''
 ---

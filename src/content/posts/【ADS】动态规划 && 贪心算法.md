@@ -3,8 +3,8 @@ title: 【ADS】动态规划 && 贪心算法
 published: 2024-11-02
 description: ''
 image: ''
-tags: [ADS]
-category: 'notes'
+tags: [notes]
+category: 'ADS'
 draft: false 
 lang: ''
 ---

@@ -3,8 +3,8 @@ title: 【ADS】AVL,splay,RB,B+,背包问题整理（平板笔记）
 published: 2024-11-05
 description: ''
 image: ''
-tags: [ADS]
-category: 'notes'
+tags: [notes]
+category: 'ADS'
 draft: false 
 lang: ''
 ---
