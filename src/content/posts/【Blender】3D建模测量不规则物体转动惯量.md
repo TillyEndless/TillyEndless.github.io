@@ -1,15 +1,22 @@
 ---
 title: 【Blender】3D建模测量不规则物体转动惯量
 published: 2024-11-20
-description: ''
+description: '会不断更新'
 image: ''
 tags: [Blender]
 category: '技术杂项'
 draft: false 
 lang: ''
 ---
+不断更新。
 
-# 如何使用blender进行不规则物体转动惯量测量实验：
+---
+# 新手入门：
+> Link:
+> - [3D神器Blender教程来了！从入门到跨过门槛](https://www.uisdc.com/blender-introductory-tutorial)
+> - [官方文档-刚体世界环境](https://docs.blender.org/manual/zh-hans/2.83/physics/rigid_body/world.html)
+
+# GPT问答：如何使用blender进行不规则物体转动惯量测量实验：
 
 在Blender中可以通过物理模拟和数学计算来测量不规则物体的转动惯量。以下是一个完整的实验步骤：
 
