@@ -3,8 +3,8 @@ title: 【Blender】3D建模测量不规则物体转动惯量
 published: 2024-11-20
 description: ''
 image: ''
-tags: []
-category: ''
+tags: [Blender]
+category: '技术杂项'
 draft: false 
 lang: ''
 ---
@@ -51,10 +51,11 @@ Blender可以通过物理引擎和物体属性计算出模拟的转动惯量。
 	2. 用 Timeline 或 Graph Editor 记录角速度和力矩的变化。
 
 6. 计算转动惯量
-根据力矩和角速度的关系计算转动惯量：$ I = \touque / \alpha $
-* $\touque$：力矩（在 Blender 中可以通过脚本测量）
+根据力矩和角速度的关系计算转动惯量：$ I = \tau / \alpha $
+* $\tau$：力矩（在 Blender 中可以通过脚本测量）
 * $\alpha$：角加速度（角速度变化率，可以从模拟中记录）
-高级方法：使用Blender Python脚本
+
+## 高级方法：使用Blender Python脚本
 1. 打开 Scripting 界面，创建新脚本。
 2. 使用以下代码计算转动惯量：
 ```py
