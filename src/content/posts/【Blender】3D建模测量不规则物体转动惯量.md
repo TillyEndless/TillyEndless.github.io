@@ -73,7 +73,7 @@ angular_velocity = obj.rigid_body.angular_velocity
 inertia_z = mass * (angular_velocity.x**2 + angular_velocity.y**2)
 print(f"转动惯量 (绕Z轴): {inertia_z}")
 ```
-注意事项
+## 注意事项
 1.	模型精度：确保不规则物体的网格足够细密以提高计算精度。
 2.	物理参数：正确设置物体质量和旋转初始条件。
 3.	单位一致性：Blender默认单位为米、千克和秒，确保输入符合单位制。
