@@ -3,8 +3,8 @@ title: 【ADS】NP问题
 published: 2024-11-19
 description: ''
 image: ''
-tags: []
-category: ''
+tags: [notes]
+category: 'ADS'
 draft: false 
 lang: ''
 ---
