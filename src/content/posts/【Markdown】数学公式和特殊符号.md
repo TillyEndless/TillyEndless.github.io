@@ -13,3 +13,7 @@ Link:
 > - [【稀土掘金】MarkDown数学公式基本语法](https://juejin.cn/post/7092968789297332237)
 > - [【八白龙的博客】Markdown笔记·公式篇](https://ericzong.github.io/posts/markdown-formula.html)
 > - [Markdown中的空格和空行](https://cloud.baidu.com/article/2970805)
+
+> 关于希腊字母的总结：(从以上链接文档摘录，方便跳转)
+> - https://juejin.cn/post/7092968789297332237#heading-3
+> - https://ericzong.github.io/posts/markdown-formula.html
