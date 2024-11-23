@@ -54,7 +54,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/WechatIMG121.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: '靈',
-  bio: 'This person is very mysterious; she didn\'t write anything… :)',
+  bio: '不动笔墨不读书。',
   links: [
     // {
     //   name: 'Steam',
