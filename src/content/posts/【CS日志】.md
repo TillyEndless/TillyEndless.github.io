@@ -540,3 +540,6 @@ export const collections = {
   posts: postsCollection,
 };
 ```
+
+## 11.28 更换url
+gpt聊天已归档
