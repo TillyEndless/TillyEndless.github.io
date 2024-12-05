@@ -1,16 +1,29 @@
 ---
 title: 【Blender】3D建模测量不规则物体转动惯量
-published: 2024-11-20
-description: '会不断更新'
+published: 2024-11-20T00:00:00.000Z
+description: 会不断更新
 image: ''
-tags: [Blender]
-category: '技术杂项'
-draft: false 
+tags:
+  - Blender
+category: 技术杂项
+draft: false
 lang: ''
 ---
 不断更新。
 
 ---
+***目录***
+
+<!-- toc -->
+
+- [新手入门：](#%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8)
+- [GPT问答：如何使用blender进行不规则物体转动惯量测量实验：](#gpt%E9%97%AE%E7%AD%94%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8blender%E8%BF%9B%E8%A1%8C%E4%B8%8D%E8%A7%84%E5%88%99%E7%89%A9%E4%BD%93%E8%BD%AC%E5%8A%A8%E6%83%AF%E9%87%8F%E6%B5%8B%E9%87%8F%E5%AE%9E%E9%AA%8C)
+  * [实验原理](#%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86)
+  * [高级方法：使用Blender Python脚本](#%E9%AB%98%E7%BA%A7%E6%96%B9%E6%B3%95%E4%BD%BF%E7%94%A8blender-python%E8%84%9A%E6%9C%AC)
+  * [注意事项](#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9)
+
+<!-- tocstop -->
+
 # 新手入门：
 > Link:
 > - [3D神器Blender教程来了！从入门到跨过门槛](https://www.uisdc.com/blender-introductory-tutorial)
@@ -84,3 +97,4 @@ print(f"转动惯量 (绕Z轴): {inertia_z}")
 1.	模型精度：确保不规则物体的网格足够细密以提高计算精度。
 2.	物理参数：正确设置物体质量和旋转初始条件。
 3.	单位一致性：Blender默认单位为米、千克和秒，确保输入符合单位制。
+

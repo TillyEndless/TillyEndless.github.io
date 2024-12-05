@@ -1,13 +1,24 @@
 ---
 title: 【ADS】模拟卷题解
-published: 2024-11-05
-description: '尚未完工，可能存在纰漏'
+published: 2024-11-05T00:00:00.000Z
+description: 尚未完工，可能存在纰漏
 image: ''
-tags: [exercises]
-category: 'ADS'
-draft: false 
+tags:
+  - exercises
+category: ADS
+draft: false
 lang: ''
 ---
+***目录***
+
+<!-- toc -->
+
+- [模拟一](#%E6%A8%A1%E6%8B%9F%E4%B8%80)
+  * [判断题](#%E5%88%A4%E6%96%AD%E9%A2%98)
+  * [单选题](#%E5%8D%95%E9%80%89%E9%A2%98)
+
+<!-- tocstop -->
+
 ## 模拟一
 ### 判断题
 R1-1
@@ -130,3 +141,4 @@ A？
 B
 
 考点：B+树（B+树的定义好多有分歧，见我的[平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0)
+

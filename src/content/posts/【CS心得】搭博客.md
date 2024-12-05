@@ -1,13 +1,22 @@
 ---
 title: 【CS心得】搭博客
-published: 2024-10-28
+published: 2024-10-28T00:00:00.000Z
 description: ''
 image: ''
-tags: [journal]
-category: 'CS心得'
-draft: false 
+tags:
+  - journal
+category: CS心得
+draft: false
 lang: ''
 ---
+***目录***
+
+<!-- toc -->
+
+- [重装依赖:](#%E9%87%8D%E8%A3%85%E4%BE%9D%E8%B5%96)
+
+<!-- tocstop -->
+
 ### 重装依赖: 
 删除 node_modules 文件夹和 package-lock.json（或 pnpm-lock.yaml）文件，然后重新安装依赖：
 ```zsh 
@@ -37,3 +46,6 @@ git add .
 git commit -m "Update package.json and pnpm-lock.yaml" 
 git push origin main
 ```
+
+
+

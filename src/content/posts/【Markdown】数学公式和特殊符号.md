@@ -1,11 +1,12 @@
 ---
 title: 【Markdown】数学公式和特殊符号
-published: 2024-11-06
+published: 2024-11-06T00:00:00.000Z
 description: ''
 image: ''
-tags: [sources]
-category: 'Markdown'
-draft: false 
+tags:
+  - sources
+category: Markdown
+draft: false
 lang: ''
 ---
 Link:
@@ -17,3 +18,4 @@ Link:
 > 关于希腊字母的总结：(从以上链接文档摘录，方便跳转)
 > - https://juejin.cn/post/7092968789297332237#heading-3
 > - https://ericzong.github.io/posts/markdown-formula.html
+

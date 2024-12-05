@@ -1,11 +1,12 @@
 ---
 title: 【ADS】NP问题
-published: 2024-11-19
+published: 2024-11-19T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'ADS'
-draft: false 
+tags:
+  - notes
+category: ADS
+draft: false
 lang: ''
 ---
 生词：complement of $X$:也就是$X^c$（$\bar{X}$）,$X$的补集/逆
@@ -23,3 +24,5 @@ lang: ''
     * 归约的例子：![](/media/17294768970224/17320039322899.png)
 ![](/media/17294768970224/17320117774977.png)
 ![](/media/17294768970224/17320117900632.png)
+
+

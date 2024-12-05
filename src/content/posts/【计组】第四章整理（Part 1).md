@@ -1,16 +1,27 @@
 ---
 title: 【计组】第四章整理(Part 1)
-published: 2024-11-11
-description: '这一章Part1的核心就是搞懂不同类型指令执行在单周期CPU中的数据通路，重点关注controler（控制信号）&& MUX信号控制。'
+published: 2024-11-11T00:00:00.000Z
+description: 这一章Part1的核心就是搞懂不同类型指令执行在单周期CPU中的数据通路，重点关注controler（控制信号）&& MUX信号控制。
 image: ''
-tags: [notes]
-category: '计组'
-draft: false 
+tags:
+  - notes
+category: 计组
+draft: false
 lang: ''
 ---
 参考：[@JA101617 静安的计组笔记](https://ja101617.github.io/posts/note-computer-organization/#%E9%99%84%E5%BD%95)  &&  [咸鱼暄的计组笔记](https://xuan-insr.github.io/computer_organization/1_prelude/).
 
 ---
+***目录***
+
+<!-- toc -->
+
+- [数据通路](#%E6%95%B0%E6%8D%AE%E9%80%9A%E8%B7%AF)
+
+<!-- tocstop -->
+
+---
+
 这一章Part1的核心就是搞懂不同类型指令执行在单周期CPU中的数据通路，重点关注controler（控制信号）&& MUX信号控制。
 
 除此之外许多电路图需要记忆。
@@ -70,4 +81,6 @@ single-bit wire replication 符号位线复制
 ![](/media/17291747644116/17312907996185.png)
 ![](/media/17291747644116/17312910665185.png)
 ![](/media/17291747644116/17312910922204.png)
+
+
 

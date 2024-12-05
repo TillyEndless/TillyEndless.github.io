@@ -1,18 +1,25 @@
 ---
-title: 【ADS】AVL,splay,RB,B+,背包问题整理（平板笔记）
-published: 2024-11-05
+title: '【ADS】AVL,splay,RB,B+,背包问题整理（平板笔记）'
+published: 2024-11-05T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'ADS'
-draft: false 
+tags:
+  - notes
+category: ADS
+draft: false
 lang: ''
 ---
-## 目录
+***目录***
+
+<!-- toc -->
+
 - [AVL树 && Splay树](#avl%E6%A0%91--splay%E6%A0%91)
 - [红黑树](#%E7%BA%A2%E9%BB%91%E6%A0%91)
 - [B+树](#b%E6%A0%91)
+  * [补充：](#%E8%A1%A5%E5%85%85)
 - [背包问题](#%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98)
+
+<!-- tocstop -->
 
 ## AVL树 && Splay树
 ![](/img/ADS1/WechatIMG183.jpg)
@@ -37,3 +44,5 @@ B+树最好看一下作业题。
 ## 背包问题
 ![](/img/ADS1/WechatIMG188.jpg)
 ![](/img/ADS1/WechatIMG189.jpg)
+
+

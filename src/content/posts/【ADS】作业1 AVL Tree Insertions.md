@@ -1,14 +1,14 @@
 ---
 title: 【ADS】作业1 AVL Tree Insertions
-published: 2024-10-28
+published: 2024-10-28T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'ADS'
-draft: false 
+tags:
+  - notes
+category: ADS
+draft: false
 lang: ''
 ---
-
 **章节目标：代码（完成），操作（图）（完成），时间复杂度分析，均摊代价分析过程，和其他树的对比。**
 ##  AVL树
 ![Insert](/img/ADS1/image.png)
@@ -335,3 +335,4 @@ int main() {
     return 0;
 }
 ```
+

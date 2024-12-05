@@ -1,13 +1,25 @@
 ---
 title: 【ADS】动态规划 && 贪心算法
-published: 2024-11-02
+published: 2024-11-02T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'ADS'
-draft: false 
+tags:
+  - notes
+category: ADS
+draft: false
 lang: ''
 ---
+***目录***
+
+<!-- toc -->
+
+- [动态规划（Dynamic Programming, DP）](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92dynamic-programming-dp)
+    + [什么时候不适合使用动态规划](#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E4%B8%8D%E9%80%82%E5%90%88%E4%BD%BF%E7%94%A8%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92)
+- [贪心](#%E8%B4%AA%E5%BF%83)
+  * [什么时候能用贪心得到最优解？](#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%83%BD%E7%94%A8%E8%B4%AA%E5%BF%83%E5%BE%97%E5%88%B0%E6%9C%80%E4%BC%98%E8%A7%A3)
+
+<!-- tocstop -->
+
 # 动态规划（Dynamic Programming, DP）
 空间换时间。
 动规VS分治：动规和分治都是分解为子问题，但动规是纵向的，代代相传，分治是横向的，兄弟分家。
@@ -51,3 +63,4 @@ lang: ''
 * 硬币找零问题（任意面额）：当面额没有特定结构时（如3分和4分等），贪心算法并不总能生成最优解。
 
 总的来说，贪心算法适用于具备贪心选择性质和最优子结构的场景。
+

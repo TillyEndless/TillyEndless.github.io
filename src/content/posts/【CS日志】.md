@@ -1,23 +1,31 @@
 ---
 title: CS日志
-published: 2024-10-29
+published: 2024-10-29T00:00:00.000Z
 description: ''
 image: ''
-tags: [journal]
-category: 'CS心得'
-draft: false 
+tags:
+  - journal
+category: CS心得
+draft: false
 lang: ''
 ---
-## 目录
-* [10.28 搭建博客 学mac基本配件和应用](#1028-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E5%AD%A6mac%E5%9F%BA%E6%9C%AC%E9%85%8D%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8)
-  * [10.29 配置iTerm2](#1029-%E9%85%8D%E7%BD%AEiterm2)
-  * [10.30 侧边栏html编写 && TuringCourse资源cloning](#1030-%E4%BE%A7%E8%BE%B9%E6%A0%8Fhtml%E7%BC%96%E5%86%99--turingcourse%E8%B5%84%E6%BA%90cloning)
-    + [安装自动markdown侧边栏](#%E5%AE%89%E8%A3%85%E8%87%AA%E5%8A%A8markdown%E4%BE%A7%E8%BE%B9%E6%A0%8F)
-      - [GPT回答1](#gpt%E5%9B%9E%E7%AD%941)
-      - [GPT回答2：](#gpt%E5%9B%9E%E7%AD%942)
-  * [const { headings, content } = Astro.props;](#const--headings-content---astroprops)
-      - [额外：安装nvm](#%E9%A2%9D%E5%A4%96%E5%AE%89%E8%A3%85nvm)
-    + [TuringCourse资源cloning](#turingcourse%E8%B5%84%E6%BA%90cloning)
+***目录***
+
+<!-- toc -->
+
+- [10.28 搭建博客 学mac基本配件和应用](#1028-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2-%E5%AD%A6mac%E5%9F%BA%E6%9C%AC%E9%85%8D%E4%BB%B6%E5%92%8C%E5%BA%94%E7%94%A8)
+- [10.29 配置iTerm2](#1029-%E9%85%8D%E7%BD%AEiterm2)
+- [10.30 侧边栏html编写 && TuringCourse资源cloning](#1030-%E4%BE%A7%E8%BE%B9%E6%A0%8Fhtml%E7%BC%96%E5%86%99--turingcourse%E8%B5%84%E6%BA%90cloning)
+  * [安装自动markdown侧边栏](#%E5%AE%89%E8%A3%85%E8%87%AA%E5%8A%A8markdown%E4%BE%A7%E8%BE%B9%E6%A0%8F)
+    + [GPT回答1](#gpt%E5%9B%9E%E7%AD%941)
+    + [GPT回答2：](#gpt%E5%9B%9E%E7%AD%942)
+- [const { headings, content } = Astro.props;](#const--headings-content---astroprops)
+    + [额外：安装nvm](#%E9%A2%9D%E5%A4%96%E5%AE%89%E8%A3%85nvm)
+  * [TuringCourse资源cloning](#turingcourse%E8%B5%84%E6%BA%90cloning)
+- [11.15 添加密码](#1115-%E6%B7%BB%E5%8A%A0%E5%AF%86%E7%A0%81)
+- [11.28 更换url](#1128-%E6%9B%B4%E6%8D%A2url)
+
+<!-- tocstop -->
 
 ## 10.28 搭建博客 学mac基本配件和应用
 ## 10.29 配置iTerm2 
@@ -543,3 +551,4 @@ export const collections = {
 
 ## 11.28 更换url
 gpt聊天已归档
+

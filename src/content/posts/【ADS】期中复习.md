@@ -1,15 +1,19 @@
 ---
 title: 【ADS】期中复习
-published: 2024-11-13
+published: 2024-11-13T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'ADS'
-draft: false 
+tags:
+  - notes
+category: ADS
+draft: false
 lang: ''
 ---
-## 目录
-* [Leftest Heap VS Skew Heap](#leftest-heap-vs-skew-heap)
+***目录***
+
+<!-- toc -->
+
+  * [Leftest Heap VS Skew Heap](#leftest-heap-vs-skew-heap)
     + [定义](#%E5%AE%9A%E4%B9%89)
       - [左偏堆](#%E5%B7%A6%E5%81%8F%E5%A0%86)
       - [斜堆](#%E6%96%9C%E5%A0%86)
@@ -67,6 +71,8 @@ lang: ''
   * [Greedy Algorithm](#greedy-algorithm)
     + [1. The Activity Selection Problem](#1-the-activity-selection-problem)
     + [2. Huffman Codes](#2-huffman-codes)
+
+<!-- tocstop -->
 
 ## Leftest Heap VS Skew Heap
 ### 定义
@@ -741,3 +747,4 @@ method 2看前k项来递归
 
 ### 2. Huffman Codes
 复习过，略。
+
