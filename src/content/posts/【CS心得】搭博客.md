@@ -46,6 +46,7 @@ git add .
 git commit -m "Update package.json and pnpm-lock.yaml" 
 git push origin main
 ```
-
-
-
+对文件目录下的所有.md文件自动运行命令markdown-toc -i 文件名.md（更新所有post目录）
+```zsh
+for file in *.md; do markdown-toc -i "$file"; done
+```
