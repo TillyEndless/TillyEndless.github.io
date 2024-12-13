@@ -19,3 +19,6 @@ Link:
 > - https://juejin.cn/post/7092968789297332237#heading-3
 > - https://ericzong.github.io/posts/markdown-formula.html
 
+> - 波浪线”~“转义：用语法\sim
+
+
