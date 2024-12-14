@@ -16,9 +16,12 @@ Link:
 > - [Markdown中的空格和空行](https://cloud.baidu.com/article/2970805)
 
 > 关于希腊字母的总结：(从以上链接文档摘录，方便跳转)
+> - https://ericzong.github.io/posts/markdown-formula.html (这个更详细)
 > - https://juejin.cn/post/7092968789297332237#heading-3
-> - https://ericzong.github.io/posts/markdown-formula.html
 
+其他结论：
 > - 波浪线”~“转义：用语法\sim
+> - 求偏导：用\partial,举例: \$\frac{\partial f}{\partial x}\$ $$\frac{\partial f}{\partial x}$$
+> - 绝对值符号可以通过 |...| 或 \lvert...\rvert 来表示
 
 
