@@ -237,9 +237,9 @@ recall：相关（relevant）的
 （为啥叫recall??）
 
 ## B+树
-参考[我的平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#b%E6%A0%91)
+参考[我的平板笔记](https://herobrine101.top/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#b%E6%A0%91)
 ## 红黑树
-参考[我的平板笔记](https://tillyendless.github.io/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#%E7%BA%A2%E9%BB%91%E6%A0%91)
+参考[我的平板笔记](https://herobrine101.top/posts/adsavlsplayrbb%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98%E6%95%B4%E7%90%86%E5%B9%B3%E6%9D%BF%E7%AC%94%E8%AE%B0/#%E7%BA%A2%E9%BB%91%E6%A0%91)
 > 红黑树的操作动画：
 > - [红黑树 - 定义, 插入, 构建]( https://www.bilibili.com/video/BV1Xm421x7Lg/?share_source=copy_web&vd_source=759a6191b199b3735f0e3c6d6f33d199)
 > - [红黑树 - 删除]( https://www.bilibili.com/video/BV16m421u7Tb/?share_source=copy_web&vd_source=759a6191b199b3735f0e3c6d6f33d199)
