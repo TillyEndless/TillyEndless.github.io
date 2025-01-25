@@ -5,7 +5,7 @@ description: ''
 image: ''
 tags: [notes]
 category: '嗑嗑论文'
-draft: 'false' 
+draft: false
 lang: ''
 ---
 arXiv:2412.14528v2
