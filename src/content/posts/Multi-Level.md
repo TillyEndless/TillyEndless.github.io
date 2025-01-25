@@ -5,12 +5,13 @@ description: ''
 image: ''
 tags: [notes]
 category: '嗑嗑论文'
-draft: false 
+draft: 'false' 
 lang: ''
 ---
 arXiv:2412.14528v2
 
 ---
+
 ### 关于 vocabulary alignment的各论文说法：
 1. DSKD (Dual-Space Knowledge Distillation) ：试图通过投影将 logits 对齐，但其方法仍然依赖 token-by-token 级别的映射，导致信息丢失。
 2. 传统的 KD 方法（如 KL 散度、JS 散度）要求 逐 token 对齐（token-by-token alignment），但不同分词器的 token 划分方式可能完全不同，导致对齐困难。
