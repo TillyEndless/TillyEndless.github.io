@@ -1,0 +1,95 @@
+---
+title: Multi-Level Optimal Transport for Universal Cross-Tokenizer KnowledgeDistillation on Language Models
+published: 2025-01-25
+description: ''
+image: ''
+tags: [notes]
+category: '嗑嗑论文'
+draft: false 
+lang: ''
+---
+
+### 关于 vocabulary alignment的各论文说法：
+1. DSKD (Dual-Space Knowledge Distillation) ：试图通过投影将 logits 对齐，但其方法仍然依赖 token-by-token 级别的映射，导致信息丢失。
+2. 传统的 KD 方法（如 KL 散度、JS 散度）要求 逐 token 对齐（token-by-token alignment），但不同分词器的 token 划分方式可能完全不同，导致对齐困难。
+3. 现有方法如 ULD (Universal Logit Distillation) 采用 token-wise 最优传输（Optimal Transport, OT） 解决部分对齐问题，但忽略了 全局上下文信息，并且填充操作（zero-padding）会引入噪声。
+4. FUSELLM 中的alignment方法：Minimum edit distance (MinED) strategy
+
+---
+
+
+
+
+# **动态规划中的 Cost 及其产生方式**
+
+在这篇文章中，提到的 **"cost"** 是在 **动态规划（dynamic programming）** 方法中用于衡量**将一个 token 序列编辑为与另一个 token 序列对齐**的代价。
+
+---
+
+## **1. 什么是 "Cost"？**
+
+在最优传输问题或动态规划中，"cost" 是指将**一个 token 序列**通过某种操作（如插入、删除或替换）转变为**另一个 token 序列**时的代价。具体而言，在这个上下文中，**cost** 是指将**一个 token** 转换为另一个 token 的代价。
+
+这些操作通常有不同的代价，具体取决于任务和使用的算法。例如：
+- **插入（Insertion）**：在一个序列中插入一个新的 token。
+- **删除（Deletion）**：从序列中删除一个 token。
+- **替换（Substitution）**：将一个 token 替换为另一个 token。
+
+每个操作都有一个“代价”值，表示执行该操作所需的“资源”或“计算成本”。这个代价可以是 **固定的** 或 **基于某种度量（如相似度、距离、概率等）** 来定义的。
+
+---
+
+## **2. 动态规划中的 Cost 产生方式**
+
+在动态规划中，**序列对齐（sequence alignment）** 或 **最优传输（optimal transport）** 的任务可以用 **编辑距离（edit distance）** 来度量，这通常是通过动态规划来求解的。具体到这篇文章中，代价（cost）的产生方式通常包括以下几种常见形式：
+
+### **(1) 代价矩阵（Cost Matrix）**
+动态规划方法常常依赖于一个**代价矩阵**，该矩阵中的元素表示**将一个 token 转化为另一个 token** 的代价。通常，这个矩阵是对称的，并且包含了通过某种距离或相似度度量来计算的编辑代价。
+
+假设有两个 token 序列：
+- $A = [a_1, a_2, ..., a_n]$
+- $B = [b_1, b_2, ..., b_m]$
+
+代价矩阵 $C$ 的每个元素 $C(i, j)$ 表示将序列 $A$ 中的 $a_i$ 转换为序列 $B$ 中的 $b_j$ 的代价。这个代价可能基于如下考虑：
+- **替换代价（Substitution Cost）**：如果 $a_i$ 和 $b_j$ 不同，可能有一个更高的代价。例如，计算两个 token 之间的距离（如通过字符级相似度、词嵌入距离等）。
+- **插入代价（Insertion Cost）**：如果需要插入一个 token，可能会有一个固定的代价（比如插入一个新 token 所需的代价）。
+- **删除代价（Deletion Cost）**：如果需要删除一个 token，同样也会有一个固定的代价。
+
+---
+
+### **(2) 编辑距离（Edit Distance）**
+**编辑距离** 是衡量两个序列相似度的标准，它表示将一个序列转换为另一个序列所需的最小操作数。在动态规划中，通过构建一个二维的代价矩阵来递归计算编辑距离。例如，常见的有：
+- **Levenshtein 距离**：计算两个字符串之间的编辑距离，包括插入、删除和替换三种操作。
+
+---
+
+### **(3) 递归最小化（Recursive Minimization）**
+动态规划通过递归公式来计算最小代价，常用的递归公式如下：
+$$
+D(i, j) = \min \begin{cases}
+D(i-1, j-1) + \text{cost}(a_i, b_j) & \text{if substituting } a_i \text{ with } b_j \\
+D(i-1, j) + \text{cost}(a_i, \text{delete}) & \text{if deleting } a_i \\
+D(i, j-1) + \text{cost}(\text{insert}, b_j) & \text{if inserting } b_j
+\end{cases}
+$$
+其中：
+- $D(i, j)$ 是从 $A_1$ 到 $A_i$ 和从 $B_1$ 到 $B_j$ 的最小代价。
+- **cost$(a_i, b_j)$** 是将 $a_i$ 转换为 $b_j$ 的代价，可能是替换代价、插入代价或删除代价。
+
+通过递归地最小化代价，可以得到整个序列对齐的最小代价。
+
+---
+
+## **3. 代价函数的设计**
+代价函数设计的关键在于如何定义不同操作的代价，以及如何根据任务要求进行调整。常见的代价设计方法包括：
+- **相似度度量**：例如，通过词向量或嵌入空间计算两个 token 之间的距离，作为替换代价。
+- **固定代价**：例如，所有插入和删除操作的代价都设置为 1，简单的离散操作。
+
+在知识蒸馏的背景下，**cost** 可以是两种模型之间的 **logits** 或 **特征表示** 的差异，或者是跨 token 间的一种损失度量。
+
+---
+
+## **4. 总结**
+在动态规划中，**cost** 是衡量将一个序列（或 token）变换为另一个序列（或 token）的代价。通过定义合适的编辑操作（如插入、删除、替换），并为每个操作分配一个代价，可以使用动态规划方法递归地找到最小代价并完成对齐任务。在知识蒸馏（KD）中，这种方法可以用于**跨分词器之间的对齐**，从而提高蒸馏效果和模型的性能。
+
+希望这解答清楚了 "cost" 在动态规划中的产生过程。如果有更具体的问题，欢迎继续交流！🚀
