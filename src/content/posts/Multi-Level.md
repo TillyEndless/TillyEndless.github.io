@@ -1,5 +1,5 @@
 ---
-title: Multi-Level Optimal Transport for Universal Cross-Tokenizer KnowledgeDistillation on Language Models
+title: Multi-Level Optimal Transport for Universal Cross-Tokenizer Knowledge Distillation on Language Models
 published: 2025-01-25
 description: ''
 image: ''
