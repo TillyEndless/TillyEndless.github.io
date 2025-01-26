@@ -4,7 +4,7 @@ published: 2025-01-25
 description: ''
 image: ''
 tags: [notes]
-category: '磕磕论文'
+category: '嗑嗑论文'
 draft: false 
 lang: ''
 ---
