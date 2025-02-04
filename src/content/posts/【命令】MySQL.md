@@ -1,10 +1,10 @@
 ---
-title: 【常用命令】MySQL
+title: 【命令】MySQL
 published: 2025-01-22
 description: ''
 image: ''
 tags: [journal]
-category: '常用命令'
+category: '命令'
 draft: false 
 lang: ''
 ---
