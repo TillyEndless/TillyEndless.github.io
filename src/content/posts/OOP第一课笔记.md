@@ -33,6 +33,8 @@ int main()
 g++ -o hello hello.cpp # 优化编译，同目录下产生hello文件
 # 或者
 g++ hellp.cpp # 直接编译，同目录下产生a.out文件
+# 也可以加上c++版本要求
+g++ hello.cpp -std=c++11 # 指定C++11标准
 ```
 编译文件运行：
 ```zsh
