@@ -126,7 +126,7 @@ std::string str;
 File2 >> str;
 ```
 
-- ”<regex>“库：
+- regex库：
     - 提供了正则表达式的功能
     - Ref:[菜鸟教程-C++ 标准库 <regex>](https://www.runoob.com/cplusplus/cpp-libs-regex.html)
 
