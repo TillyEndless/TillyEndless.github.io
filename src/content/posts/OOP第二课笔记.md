@@ -237,3 +237,11 @@ std::string name() const override{
 }
 ```
 这里没搞懂，为什么不const就报错了。
+
+后面还实现了一个selection_sort加一个bool参数，实现分别按照area或perimeter的两种排序。
+
+更一般的扩展，快速上手：
+```cpp
+selection_sort(arr, n, [](Shape* s1, Shape* s2){return s1->get_perimeter() > s2->get_perimeter();})
+//函数可以不带名字
+```
