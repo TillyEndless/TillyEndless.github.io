@@ -14,6 +14,7 @@ lang: ''
 这节课主要讲了cpp标准库、输入输出、string类、文件I/O。
 
 ---
+## 基础
 ```cpp
 #include <iostream>
 //标准库(输入输出)
@@ -127,5 +128,5 @@ File2 >> str;
 
 - ”<regex>“库：
     - 提供了正则表达式的功能
-    - Ref:![菜鸟教程-C++ 标准库 <regex>](https://www.runoob.com/cplusplus/cpp-libs-regex.html)
+    - Ref:[菜鸟教程-C++ 标准库 <regex>](https://www.runoob.com/cplusplus/cpp-libs-regex.html)
 
