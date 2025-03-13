@@ -22,7 +22,7 @@ lang: ''
   * [Map](#map)
   * [Algorithm](#algorithm)
 - [Typedefs](#typedefs)
-- [Putfall Situations (when using STL)](#putfall-situations-when-using-stl)
+- [Pitfall Situations (when using STL)](#pitfall-situations-when-using-stl)
 
 <!-- tocstop -->
 
@@ -246,7 +246,7 @@ For sorted types, like `map`, `set`, ...: **(Why `map` need compration?)**
 
 ---
 
-## Putfall Situations (when using STL)
+## Pitfall Situations (when using STL)
 ![](/media/OOP/1.png)
 ![](/media/OOP/2.png)
 ![](/media/OOP/3.png)
