@@ -1,16 +1,33 @@
 ---
 title: OOP第一课笔记
-published: 2025-03-06
+published: 2025-03-06T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'OOP'
-draft: false 
+tags:
+  - notes
+category: OOP
+draft: false
 lang: ''
 ---
 由于这个人什么也不会，所以她做了C++的语言笔记。
 
 ---
+***目录***
+
+<!-- toc -->
+
+- [基础](#%E5%9F%BA%E7%A1%80)
+- [The string class](#the-string-class)
+  * [Assignment:](#assignment)
+  * [Concatenation](#concatenation)
+  * [Constructors](#constructors)
+  * [Substring](#substring)
+  * [Search](#search)
+  * [Example](#example)
+- [File I/O](#file-io)
+
+<!-- tocstop -->
+
 这节课主要讲了cpp标准库、输入输出、string类、文件I/O。
 
 ---
@@ -131,4 +148,5 @@ File2 >> str;
 - regex库：
     - 提供了正则表达式的功能
     - Ref:[菜鸟教程-C++ 标准库 <regex>](https://www.runoob.com/cplusplus/cpp-libs-regex.html)
+
 

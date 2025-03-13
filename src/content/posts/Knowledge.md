@@ -1,16 +1,31 @@
 ---
 title: Knowledge Fusion of Large Language Models
-published: 2025-01-25
+published: 2025-01-25T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: '嗑嗑论文'
-draft: false 
+tags:
+  - notes
+category: 嗑嗑论文
+draft: false
 lang: ''
 ---
 2401.10491v2
 
 ---
+***目录***
+
+<!-- toc -->
+
+- [**动态规划中的 Cost 及其产生方式**](#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B8%AD%E7%9A%84-cost-%E5%8F%8A%E5%85%B6%E4%BA%A7%E7%94%9F%E6%96%B9%E5%BC%8F)
+  * [**1. 什么是 "Cost"？**](#1-%E4%BB%80%E4%B9%88%E6%98%AF-cost)
+  * [**2. 动态规划中的 Cost 产生方式**](#2-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E4%B8%AD%E7%9A%84-cost-%E4%BA%A7%E7%94%9F%E6%96%B9%E5%BC%8F)
+    + [**(1) 代价矩阵（Cost Matrix）**](#1-%E4%BB%A3%E4%BB%B7%E7%9F%A9%E9%98%B5cost-matrix)
+    + [**(2) 编辑距离（Edit Distance）**](#2-%E7%BC%96%E8%BE%91%E8%B7%9D%E7%A6%BBedit-distance)
+    + [**(3) 递归最小化（Recursive Minimization）**](#3-%E9%80%92%E5%BD%92%E6%9C%80%E5%B0%8F%E5%8C%96recursive-minimization)
+  * [**3. 代价函数的设计**](#3-%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0%E7%9A%84%E8%AE%BE%E8%AE%A1)
+  * [**4. 总结**](#4-%E6%80%BB%E7%BB%93)
+
+<!-- tocstop -->
 
 # **动态规划中的 Cost 及其产生方式**
 

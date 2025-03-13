@@ -1,16 +1,28 @@
 ---
 title: OOP第二课笔记
-published: 2025-03-06
+published: 2025-03-06T00:00:00.000Z
 description: ''
 image: ''
-tags: [notes]
-category: 'OOP'
-draft: false 
+tags:
+  - notes
+category: OOP
+draft: false
 lang: ''
 ---
 由于这个人什么也不会，所以她做了C++的语言笔记。
 
 ---
+***目录***
+
+<!-- toc -->
+
+- [Template](#template)
+- [结构体](#%E7%BB%93%E6%9E%84%E4%BD%93)
+- [Class](#class)
+  * [问题：数组截断](#%E9%97%AE%E9%A2%98%E6%95%B0%E7%BB%84%E6%88%AA%E6%96%AD)
+  * [不改变字段的函数约定：const](#%E4%B8%8D%E6%94%B9%E5%8F%98%E5%AD%97%E6%AE%B5%E7%9A%84%E5%87%BD%E6%95%B0%E7%BA%A6%E5%AE%9Aconst)
+
+<!-- tocstop -->
 
 能不能在函数
 ```cpp
@@ -202,7 +214,7 @@ std::ostream& operator<<(std::ostream& out, const Shape& s)
 ```
 注：要定义get_area()和get_perimeter()，因为operator<<()属于外部操作，不能访问protected的字段。
 
-或者可以加上friend:
+或者可以加上 `friend` :
 ```cpp
 class Shape{
 protected: 
@@ -245,3 +257,4 @@ std::string name() const override{
 selection_sort(arr, n, [](Shape* s1, Shape* s2){return s1->get_perimeter() > s2->get_perimeter();})
 //函数可以不带名字
 ```
+
