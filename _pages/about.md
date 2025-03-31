@@ -1,10 +1,9 @@
 ---
 permalink: /
-title: "Xiaoling Zhou 周小灵"
+title: "Hi~👋🏻"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
-# Hi~👋🏻
 ## About Me
