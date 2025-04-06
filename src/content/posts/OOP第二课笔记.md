@@ -258,3 +258,204 @@ selection_sort(arr, n, [](Shape* s1, Shape* s2){return s1->get_perimeter() > s2-
 //函数可以不带名字
 ```
 
+---
+## 补充学习，待整理
+### class基本
+- class 函数在类内和内外定义格式；内联函数&类成员函数
+- 成员和类的默认访问修饰符是 private
+- public变量可以不使用成员函数来赋值/修改
+- protected成员区别于private：
+    - private 成员只能被本类成员（类内）和友元访问，不能被派生类访问
+    - protected 成员可以被派生类访问
+    - 有三种继承：public,protected,private
+    - protected 成员继承实例：
+```cpp
+#include <iostream>
+using namespace std;
+ 
+class Box
+{
+   protected:
+      double width;
+};
+ 
+class SmallBox:Box // SmallBox 是派生类
+{
+   public:
+      void setSmallWidth( double wid );
+      double getSmallWidth( void );
+};
+ 
+// 子类的成员函数
+double SmallBox::getSmallWidth(void)
+{
+    return width ;
+}
+ 
+void SmallBox::setSmallWidth( double wid )
+{
+    width = wid;
+}
+ 
+// 程序的主函数
+int main( )
+{
+   SmallBox box;
+ 
+   // 使用成员函数设置宽度
+   box.setSmallWidth(5.0);
+   cout << "Width of box : "<< box.getSmallWidth() << endl;
+ 
+   return 0;
+}
+```
+---
+### 类构造函数
+- 类的构造函数是类的一种特殊的成员函数，它会在每次创建类的新对象时执行。
+- 构造函数的名称与类的名称是完全相同的，并且不会返回任何类型，也不会返回`void`。构造函数可用于为某些成员变量设置初始值。
+- 类外定义构造函数(不含参)：
+```cpp
+#include <iostream>
+ 
+using namespace std;
+ 
+class Line
+{
+   public:
+      void setLength( double len );
+      double getLength( void );
+      Line();  // 这是构造函数
+ 
+   private:
+      double length;
+};
+ 
+// 成员函数定义，包括构造函数
+Line::Line(void)
+{
+    cout << "Object is being created" << endl;
+}
+ 
+void Line::setLength( double len )
+{
+    length = len;
+}
+ 
+double Line::getLength( void )
+{
+    return length;
+}
+// 程序的主函数
+int main( )
+{
+   Line line;
+ 
+   // 设置长度
+   line.setLength(6.0); 
+   cout << "Length of line : " << line.getLength() <<endl;
+ 
+   return 0;
+}
+```
+运行结果：
+```bash
+Object is being created
+Length of line : 6
+```
+
+- 带参数构造函数：在创建对象时会给对象赋初始值
+```cpp
+class Line{
+   public:
+      Line(double len);  // 这是构造函数
+};
+// 成员函数定义，包括构造函数
+Line::Line( double len){
+    cout << "Object is being created, length = " << len << endl;
+    length = len;
+}
+//使用：
+Line line(10.0);
+```
+
+- 用初始化列表来初始化字段
+```cpp
+Line::Line( double len): length(len){...}
+//上面的语法等同于下面：
+Line::Line( double len){
+    length = len;
+    ...
+}
+```
+传多个参数也同理。
+
+---
+### 拷贝构造函数
+常见形式：
+```cpp
+classname (const classname &obj) {
+   // 构造函数的主体
+}
+```
+实例：（比较长简单看）
+```cpp
+#include <iostream>
+ 
+using namespace std;
+ 
+class Line
+{
+   public:
+      int getLength( void );
+      Line( int len );             // 简单的构造函数
+      Line( const Line &obj);      // 拷贝构造函数
+      ~Line();                     // 析构函数
+ 
+   private:
+      int *ptr;
+};
+ 
+// 成员函数定义，包括构造函数
+Line::Line(int len)
+{
+    cout << "调用构造函数" << endl;
+    // 为指针分配内存
+    ptr = new int;
+    *ptr = len;
+}
+ 
+Line::Line(const Line &obj)
+{
+    cout << "调用拷贝构造函数并为指针 ptr 分配内存" << endl;
+    ptr = new int;
+    *ptr = *obj.ptr; // 拷贝值
+}
+ 
+Line::~Line(void)
+{
+    cout << "释放内存" << endl;
+    delete ptr;
+}
+int Line::getLength( void )
+{
+    return *ptr;
+}
+ 
+void display(Line obj)
+{
+   cout << "line 大小 : " << obj.getLength() <<endl;
+}
+ 
+// 程序的主函数
+int main( )
+{
+   Line line1(10);
+ 
+   Line line2 = line1; // 这里也调用了拷贝构造函数
+ 
+   display(line1);
+   display(line2);
+ 
+   return 0;
+}
+```

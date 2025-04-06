@@ -30,7 +30,7 @@ int& r = c;
 
 **区别reference和指针**
 
-```vpp
+```cpp
 void f(int& a);
 f(y);
 ```
@@ -48,10 +48,111 @@ class A{
         A(T& a) : a(a) { /* 构造函数体 */ } //a在这时候被初始化绑定
 }
 ```
+
+一种错误赋值的情况：
+```cpp
+void func(int &);
+
+func(i * 3);
+```
+\* *因为左右值的关系*
+
+
+### Type restrictions
+1. 没有引用的引用。
+2. 不存在引用指针，但指针可以有引用变量。
+如：
+```cpp
+int&* p; //illegal
+void f(int*& p); //ok
+```
+3. 数组不能是引用变量类型。
+
+---
+## Dynamic memory allocation
+- new expression
+- delete expression
+ 
+```cpp
+int *p = new int(1000);
+int *p = new int[1000];
+int *p = new int[1000](); //加小括号是可以初始化
+```
+delete不能重复两次。
+null指针delete不会起任何作用，也不会报错。
+
+**a = nullptr**, null指针。
+
+\* *其实new得到的指针前面还有八个字节（size_t变量类型大小），储存new获取的size*
+
+## Const
+const不会分配存储，不能再其他模块使用。修改const变量会报错。
+
+const在编译的时候会直接代值到表达式内。
+所以const int不适合作为数组长度声明。
+```cpp
+int * const p = a; //p is const
+*p = 20;
+p++; //error!
+
+const int *p = a; //(*p) is const
+*p = 20; //error!
+p++;
+```
+
+```cpp
+int i;
+const int ci = 3;
+
+int* ip;
+const int* cip;
+
+ip = &i;
+ip = &ci; //error!
+cip = &i;
+cip = &ci;
+
+*ip = 54; //always legal
+*cip = 54; //never illegal
+```
+
 ---
 *补充：构造函数初始化列表（initializer list）*
 构造函数的定义分为两部分：参数列表和初始化列表，然后是构造函数体。
 
-格式是：
+**构造函数的名字和类名必须相同！**
+
+使用初始化列表来初始化字段：
 
 构造函数名(参数列表) : 成员1(初始值), 成员2(初始值), … { 构造函数体 }
+
+如：
+```cpp
+Line::Line( double len): length(len)
+{
+    cout << "Object is being created, length = " << len << endl;
+}
+```
+等同于
+```cpp
+Line::Line( double len)
+{
+    length = len;
+    cout << "Object is being created, length = " << len << endl;
+}
+```
+
+（构造函数如果在class外部定义，需要进行继承）：
+```cpp
+class Line
+{
+   public:
+      Line();  // 构造函数
+};
+ 
+// 成员函数定义，包括构造函数
+Line::Line(void)
+{
+    cout << "Object is being created" << endl;
+}
+```
