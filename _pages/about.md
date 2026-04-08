@@ -23,4 +23,4 @@ My long-term goal is to develop models with **genuine physical consistency**, ca
 - **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds**   
 Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
 [PDF: Coming soon]   
-<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 40%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 40%;">
+<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">
