@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Tilly's Homepage"
+title                    : "Xiaoling Zhou's Homepage"
 title_separator          : "-"
-name                     : &name "Your Name"
-description              : &description "personal description"
+name                     : &name "Xiaoling Zhou"
+description              : &description "Undergraduate researcher working on LLM reasoning, interpretability, and reinforcement learning."
 url                      : https://tillyendless.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "TillyEndless/TillyEndless.github.io"
@@ -23,11 +23,11 @@ repository               : "TillyEndless/TillyEndless.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Zhou Xiaoling"
+  name             : "Xiaoling Zhou[周小灵]"
   pronouns         : # example: "she/her"  
-  bio              : "Student majored in Computer Science from Zhejiang University, Chu Kochen Honors College."
-  location         : "Hangzhou, Chine"
-  employer         : "Zhejiang University"
+  bio              : ""
+  location         : "Hangzhou, China"
+  employer         : "Zhejiang University at CKC Honors College"
   uri              : # URL
   email            : "endlesstilly@gmail.com" 
 
@@ -45,7 +45,7 @@ author:
   bitbucket        : # Username - Update with your username on the site
   codepen          : # Username
   dribbble         : # Username
-  github           : "TillyEndless"
+  github           : "https://github.com/TillyEndless"
   kaggle           : # Username  
   stackoverflow    : # User number or user number and name (i.e., use "1" or "1/jeff-atwood")    
 
@@ -118,7 +118,7 @@ staticman:
       options:
         format           : "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
 atom_feed:
-  hide                   : false     # change to true to hide the RSS feed in the footer
+  hide                   : true      # change to true to hide the RSS feed in the footer
   path                   : # blank (default) uses feed.xml
 
 
@@ -140,9 +140,11 @@ og_image                 :  # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : *name
+  links:
+    - https://github.com/TillyEndless
+    - https://herobrine101.top/
 
 
 # Analytics

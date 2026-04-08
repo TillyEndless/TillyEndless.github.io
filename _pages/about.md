@@ -1,18 +1,20 @@
 ---
 permalink: /
-title: "Hi~👋🏻"
+title: "About Me"
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-## About Me
-I am a junior student at [Zhejiang University](https://www.zju.edu.cn/), pursuing a Bachelor's degree in Computer Science and Technology with an honors degree from [Chu Kochen Honors College](http://ckc.zju.edu.cn/). I expect to receive my degree in June 2027. Currently, I am a research intern at Tsinghua University and Zhejiang University.
+I am an undergraduate student at **Zhejiang University**, majoring in Computer Science & Technology at the **Chu Kochen Honors College**. I currently work on **model-based reinforcement learning** with a focus on the foundations of **Physical AI**.
 
-My research interests primarily lie in the Inference and Interpretability of Large Language Models (LLMs) and Reinforcement Learning. Specifically, I'm currently interested in continuous Chain-of-Thought (CoT) reasoning, concept-enhanced frameworks in latent spaces, and advancing world models through active counterfactual reasoning. 
+My current research interests center on the realizable path toward **physical intelligence**, particularly representations and training paradigms that can support genuine spatial understanding. Previously, my work focused on LM interpretability and continuous reasoning, motivated by the goal of improving reasoning efficiency and stability. Over time, I came to realize that **AGI** and its deployment in the physical world both depend on **true spatial intelligence**. This led me to shift my research toward **physical world models**, with the hope of "bringing AI beyond screens and into the physical world of everyday life."
 
-My ultimate goal is to bridge the gap between complex reasoning capabilities and model interpretability, building more reliable and transparent AI systems. If you have any ideas or would like to discuss potential collaborations, please feel free to contact me!
+My long-term goal is to develop models with **genuine physical consistency**, capable of programmable and interactive behavior in the real world.
 
-## Publications
-*Please see my publication [here](/publications/).*
+
+## News
+[2025-2026] One paper submitted (under review with strong feedback).   
+[2025. 10] Started research at Tsinghua University on physical world models and RL exploration.    
+[2024. 10] Awarded National Scholarship (Top 0.5%).   
