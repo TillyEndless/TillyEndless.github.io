@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-{% assign cv_pdf = '/files/简历 周小灵.pdf' | replace: ' ', '%20' | relative_url %}
+{% assign cv_pdf = '/files/cv.pdf' | relative_url %}
 
 <meta http-equiv="refresh" content="0; url={{ cv_pdf }}">
 <script>
