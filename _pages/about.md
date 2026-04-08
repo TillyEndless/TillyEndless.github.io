@@ -9,7 +9,7 @@ redirect_from:
 
 I am an third-year undergraduate student at **Zhejiang University**, majoring in Computer Science & Technology at the Chu Kochen Honors College. I am currently a research intern at **Tsinghua University**, where I work on **model-based reinforcement learning** and **physical world models**.
 
-I am obsessed with one question: **“what is the realizable path toward physical intelligence?”** I believe it will require **new model architectures** with built-in 3D inductive biases and **new training representations** for spatial understanding, rather than incremental extensions of today’s LM/VLM-style frameworks. My broader ambition is to **help bring AI from screens into the physical world** of everyday life.
+I am obsessed with one question: *“what is the realizable path toward physical intelligence?”* I believe it will require **new model architectures** with built-in 3D inductive biases and **new training representations** for spatial understanding, rather than incremental extensions of today’s LM/VLM-style frameworks. My broader ambition is to **help bring AI from screens into the physical world** of everyday life.
 
 Previously, I worked on **LM interpretability** and **continuous reasoning**, motivated by improving reasoning efficiency and stability. That experience led me to think more deeply about the foundations of intelligence, and ultimately to believe that real-world **AGI** depends on **true spatial intelligence**.
 
