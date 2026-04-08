@@ -1,16 +1,19 @@
 ---
-title: "AI未来的方向判断"
+title: "Where AI Is Headed"
 date: 2026-03-16
 ---
 
-未来 AI 产业界有两个趋势，一个是解决产能不足，一个是降本增效。
+I see two major trends in the AI industry going forward. One is addressing capacity shortages; the other is improving cost efficiency.
 
-产能不足，来自于算力瓶颈。相较于无限的算力，工业界大模型算法的上限还远没有达到，所以从这种意义上讲，AI 泡沫尚未到来。但是产能不足，需大于求，企业需要扩大产能、提高 token 利用率来降低用户的使用成本。
+The capacity shortage comes from the compute bottleneck. Relative to a world of effectively unlimited compute, the algorithmic ceiling of industrial-scale language models is still far from exhausted. In that sense, the AI bubble has not truly arrived yet. At the same time, however, demand currently exceeds supply, so companies are under pressure to expand capacity and improve token efficiency in order to reduce the cost borne by users.
 
-例如，Antigravity 提出要优化第三方 agent 框架接入带来的 token 损失，因此切断了第三方 agent harness 对 Claude 订阅的使用。
+For example, Antigravity has argued that the token loss introduced by third-party agent frameworks needs to be reduced, and as a result it cut off third-party agent harnesses from using Claude subscriptions.
 
-本质是模型层足够强，agent 层太弱，导致订阅和实际成本失配。增强对算力的利用率趋势，由此可见一斑。
+<img src="{{ '/images/image1.png' | relative_url }}" alt="图注" style="width: 70%;">
 
-降本增效，主要来自于金融泡沫。当前 AI 处于夏季，但在之后的秋冬季到来时，泡沫会进行收缩。OpenAI 去年亏了 120 亿，各大厂也在不断烧钱，但是变现率仍旧不够。
 
-这会造成三个事情，一者是国外可能泡沫先塌，造成国内投资者削弱信心，企业不得不裁员降本、调整业务链减少开支；二者是需要转向烧钱少、来钱多的模式，烧钱少需要做 inference 效率优化和 infra 优化，来钱多需要做应用层，包括垂类、toC 端的内容，进行更好的变现（toC 端我很看好 Physical AI，虽然现在很多还是 VLM 套壳，但未来一定非常重要）；三者是竞争加剧，进行淘汰，大小厂各建壁垒，各自为营。例如，OpenAI 现在在做 AI 社区、AI 头条推送，通过社交增加用户粘性，将周活变成日活，来营造壁垒，同时拓宽变现渠道。
+At bottom, the model layer has become strong enough while the agent layer remains too weak, creating a mismatch between subscription pricing and real inference cost. That alone tells us a great deal about the direction in which compute utilization is heading.
+
+The second trend, cost reduction and efficiency gains, is driven mainly by the financial bubble around AI. Right now the field is still in its summer, but when autumn and winter arrive, the bubble will contract. OpenAI reportedly lost 12 billion dollars last year, and every major player is still burning enormous amounts of cash while monetization remains insufficient.
+
+I think this will lead to three consequences. First, the bubble may burst overseas before it does in China, weakening confidence among domestic investors and forcing companies to cut headcount, trim expenses, and restructure their business chains. Second, the industry will have to move toward models that burn less money while generating more revenue. Spending less means improving inference efficiency and infrastructure; earning more means pushing further into the application layer, including vertical products and consumer-facing content, to monetize more effectively. On the consumer side, I am especially bullish on Physical AI. Many current products are still little more than VLM wrappers, but I believe this area will become extremely important. Third, competition will intensify and weaker players will be eliminated, with both large and small companies building their own moats and operating more independently. OpenAI, for instance, is now investing in AI communities and AI news delivery, using social features to increase stickiness, turn weekly active users into daily active users, and broaden its monetization channels.

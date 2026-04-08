@@ -1,10 +1,12 @@
 ---
-title: "Physical AI的可实现路径"
+title: "A Realizable Path to Physical AI"
 date: 2026-04-03
 ---
 
-现在的 physical AI 处在行业周期曲线的早期，各种范式层出不穷，例如世界模型就有 9、10 种解释。
+Physical AI is still in the early phase of its industry cycle, and new paradigms are emerging one after another. Even the term "world model" already comes with nine or ten different interpretations.
 
-现在很多人热衷于做 latent space world model，我之前的方向也主要是这个。但我认为，大多数此类工作仍旧是在套壳 VLM，可以提高样本利用率和学习速度，但无法真正创造出真正的空间理解模型。
+![Illustration]({{ '/images/image2.jpg' | relative_url }})
 
-个人认为，物理 AI 最终的范式是：拥有物理理解结构的神经网络，通过对 space visual token 进行学习从而达到物理智能。我是相信 bitter lesson 的，所以真正的物理智能需要类似 LM 的训练范式，充分利用数据和算力，但现在的 LM、VLM 范式并不能真正匹配空间理解，需要我们寻找新的出路。
+Many people are currently enthusiastic about latent-space world models; this was also the direction I mainly worked on before. But in my view, most of this line of work is still essentially VLM-based wrapping. It can improve sample efficiency and accelerate learning, but it does not truly create a model with genuine spatial understanding.
+
+My view is that the eventual paradigm for Physical AI will be a neural network with an architecture explicitly suited to physical understanding, trained on spatial visual tokens in a way that leads to genuine physical intelligence. I believe strongly in the Bitter Lesson, so I think real physical intelligence will ultimately require a training paradigm analogous to language models, one that fully leverages data and compute. But the current LM and VLM paradigms are still fundamentally mismatched with true spatial understanding, which means we need to find a different path forward.

@@ -1,35 +1,17 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
-author_profile: true
+author_profile: false
 redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+{% assign cv_pdf = '/files/简历 周小灵.pdf' | replace: ' ', '%20' | relative_url %}
 
-## Education
+<meta http-equiv="refresh" content="0; url={{ cv_pdf }}">
+<script>
+  window.location.replace("{{ cv_pdf }}");
+</script>
 
-- **Zhejiang University**, Chu Kochen Honors College  
-  B.Eng. in Computer Science and Technology, expected June 2027
-
-## Current Position
-
-- **Research Intern**, Tsinghua University and Zhejiang University  
-  Working on LLM inference, reasoning, and interpretability
-
-## Research Interests
-
-- Inference and interpretability of large language models
-- Continuous Chain-of-Thought reasoning
-- Concept-enhanced reasoning in latent spaces
-- World models and active counterfactual reasoning
-- Reinforcement learning
-
-## Links
-
-- [Homepage]({{ base_path }}/)
-- [GitHub](https://github.com/TillyEndless)
-- [Blog](https://herobrine101.top/)
-- [Email](mailto:endlesstilly@gmail.com)
+If the PDF does not open automatically, [click here to view it]({{ cv_pdf }}).
