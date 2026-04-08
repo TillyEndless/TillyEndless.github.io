@@ -18,3 +18,9 @@ My long-term goal is to develop models with **genuine physical consistency**, ca
 [2025. 10] Started research at Tsinghua University on physical world models and RL exploration.   
 [2025. 10] Awarded First-Class Scholarship, Zhejiang University.    
 [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
+
+# Publications
+- **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds**   
+Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
+[PDF: Coming soon]   
+<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 40%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 40%;">
