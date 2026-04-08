@@ -7,11 +7,13 @@ redirect_from:
   - /about.html
 ---
 
-I am an undergraduate student at **Zhejiang University**, majoring in Computer Science & Technology at the **Chu Kochen Honors College**. I currently work on **model-based reinforcement learning** with a focus on the foundations of **Physical AI**.
+I am an undergraduate student at **Zhejiang University**, majoring in Computer Science & Technology at the **Chu Kochen Honors College**. I currently work on **model-based reinforcement learning** and **physical world models**, with a focus on the foundations of **Physical AI**.
 
-My current research interests center on the realizable path toward **physical intelligence**, particularly representations and training paradigms that can support genuine spatial understanding. Previously, my work focused on LM interpretability and continuous reasoning, motivated by the goal of improving reasoning efficiency and stability. Over time, I came to realize that **AGI** and its deployment in the physical world both depend on **true spatial intelligence**. This led me to shift my research toward **physical world models**, with the hope of "bringing AI beyond screens and into the physical world of everyday life."
+I am interested in one question: **what is the realizable path toward physical intelligence?** I believe it will require new representations and training paradigms for **genuine spatial understanding**, rather than incremental extensions of today’s LM/VLM-style frameworks. My broader ambition is to help bring AI beyond screens and into the physical world of everyday life.
 
-My long-term goal is to develop models with **genuine physical consistency**, capable of **programmable and behavioral interactive** in the real world.
+Previously, I also worked on **LM interpretability** and **continuous reasoning**, motivated by the goal of improving reasoning efficiency and stability. That experience pushed me to think more deeply about the foundations of intelligence, and ultimately led me to believe that real-world **AGI** depends on **true spatial intelligence**.
+
+My long-term goal is to develop models with **genuine physical consistency**, capable of **programmable** and **interactive** behavior in the real world.
 
 
 ## News
