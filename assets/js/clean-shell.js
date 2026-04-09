@@ -18,6 +18,7 @@
   let triggerX = 56; // px
   let raf = null;
   let lastClientX = 0;
+  let lastClientY = 0;
 
   const open = () => {
     drawer.classList.add(OPEN_CLASS);
@@ -58,8 +59,39 @@
     return leftGutter > 8 ? Math.round(leftGutter) : 56;
   };
 
+  const computePanelLayout = () => {
+    const content =
+      document.querySelector(".cb-main__container") || document.querySelector(".cb-article");
+    const header = document.querySelector(".cb-header");
+    const top = header ? Math.round(header.getBoundingClientRect().bottom + 12) : 84;
+
+    // Default positioning: inside the left gutter (no overlap with content).
+    let left = 12;
+    let width = 280;
+
+    if (content) {
+      const rect = content.getBoundingClientRect();
+      const leftGutter = Math.max(0, rect.left);
+      const maxWidthInGutter = Math.floor(leftGutter - 24);
+      width = Math.min(320, maxWidthInGutter);
+
+      // If the gutter is too small, fall back to a compact overlay width.
+      if (!Number.isFinite(width) || width < 200) {
+        width = Math.min(320, Math.max(220, Math.floor(window.innerWidth * 0.72)));
+      }
+    }
+
+    // Keep within viewport.
+    width = Math.min(width, Math.max(180, window.innerWidth - 24));
+
+    drawer.style.setProperty("--cb-drawer-left", `${left}px`);
+    drawer.style.setProperty("--cb-drawer-top", `${Math.max(12, top)}px`);
+    drawer.style.setProperty("--cb-drawer-width", `${width}px`);
+  };
+
   const updateTriggerX = () => {
     triggerX = computeTriggerX();
+    computePanelLayout();
   };
 
   const onPointerMove = (e) => {
@@ -67,13 +99,18 @@
     if (e.pointerType && e.pointerType !== "mouse") return;
 
     lastClientX = e.clientX;
+    lastClientY = e.clientY;
     if (raf) return;
 
     raf = window.requestAnimationFrame(() => {
       raf = null;
       if (pointerInPanel) return;
 
-      if (lastClientX <= triggerX) open();
+      // "Blank area" heuristic: don't pop the menu when hovering interactive UI.
+      const el = document.elementFromPoint(lastClientX, lastClientY);
+      const overInteractive = !!(el && el.closest("a, button, input, textarea, select, label"));
+
+      if (!overInteractive && lastClientX <= triggerX) open();
       else scheduleClose();
     });
   };
