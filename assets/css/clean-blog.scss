@@ -87,7 +87,7 @@ body.cb-body {
   left: 0;
   height: 100vh;
   width: clamp(18px, calc((100vw - var(--cb-main-max)) / 2), 240px);
-  pointer-events: auto;
+  pointer-events: none; /* hover is handled by JS to avoid blocking content clicks */
   background: transparent;
 }
 
