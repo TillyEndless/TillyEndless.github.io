@@ -1,0 +1,49 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+source "$(dirname "$0")/_ruby_env.sh"
+
+port="${JEKYLL_PORT:-4000}"
+livereload_port="${JEKYLL_LIVERELOAD_PORT:-35729}"
+local_config="local/_serve_config.yml"
+
+port_is_available() {
+  ruby -rsocket -e '
+    port = Integer(ARGV.fetch(0))
+    begin
+      server = TCPServer.new("0.0.0.0", port)
+      server.close
+      exit 0
+    rescue Errno::EADDRINUSE, Errno::EACCES
+      exit 1
+    end
+  ' "$1"
+}
+
+while ! port_is_available "$port"; do
+  port="$((port + 1))"
+done
+
+while ! port_is_available "$livereload_port"; do
+  livereload_port="$((livereload_port + 1))"
+done
+
+if [[ "$port" != "${JEKYLL_PORT:-4000}" ]]; then
+  echo "Port ${JEKYLL_PORT:-4000} is busy. Starting Jekyll on port $port instead."
+fi
+
+if [[ "$livereload_port" != "${JEKYLL_LIVERELOAD_PORT:-35729}" ]]; then
+  echo "LiveReload port ${JEKYLL_LIVERELOAD_PORT:-35729} is busy. Using $livereload_port instead."
+fi
+
+mkdir -p "$(dirname "$local_config")"
+cat > "$local_config" <<EOF
+url: "http://127.0.0.1:$port"
+EOF
+
+bundle exec jekyll serve \
+  --config _config.yml,"$local_config" \
+  -H 127.0.0.1 \
+  -l \
+  --livereload-port "$livereload_port" \
+  --port "$port"

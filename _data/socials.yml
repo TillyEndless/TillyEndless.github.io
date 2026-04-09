@@ -1,9 +1,0 @@
-# this file contains the social media links and usernames of the author
-# the socials will be displayed in the order they are defined here
-# for more information, please refer to the documentation of jekyll-socials plugin: https://github.com/george-gca/jekyll-socials
-
-cv_pdf: /assets/pdf/cv.pdf # path to your CV PDF file
-email: endlesstilly@gmail.com
-github_username: TillyEndless
-rss_icon: true # comment this line to hide the RSS icon
-

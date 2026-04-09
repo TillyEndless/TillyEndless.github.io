@@ -1,0 +1,76 @@
+{
+  "basics": {
+    "name": "Your Sidebar Name",
+    "email": "none@example.org",
+    "phone": "",
+    "website": "https://tillyendless.github.io",
+    "summary": "Currently employed at Red Brick University. Short biography for the left-hand sidebar",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Earth",
+      "countryCode": "US",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "Google Scholar",
+        "username": "",
+        "url": "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+      },
+      {
+        "network": "ORCID",
+        "username": "",
+        "url": "http://orcid.org/yourorcidurl"
+      },
+      {
+        "network": "GitHub",
+        "username": "academicpages",
+        "url": "https://github.com/academicpages"
+      }
+    ]
+  },
+  "work": [],
+  "education": [
+    {
+      "institution": "GitHub University",
+      "area": "Ph.D in Version Control Theory",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "2018",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "GitHub University",
+      "area": "M.S. in Jekyll",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "2014",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "GitHub University",
+      "area": "B.S. in GitHub",
+      "studyType": "",
+      "startDate": "",
+      "endDate": "2012",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [],
+  "languages": [],
+  "interests": [],
+  "references": [],
+  "publications": [
+    {
+      "name": "Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds",
+      "publisher": "Shaojun Xu, Xiaoling Zhou, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao",
+      "releaseDate": "",
+      "website": "[Coming soon]",
+      "summary": ""
+    }
+  ]
+}

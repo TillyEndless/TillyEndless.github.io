@@ -1,0 +1,18 @@
+current directory: /Users/tilly/code/reporsity/CV/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/tilly/.rbenv/versions/3.1.0/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/tilly/code/reporsity/CV/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250331-24309-4ibokd sitelibdir\=./.gem.20250331-24309-4ibokd clean
+
+current directory: /Users/tilly/code/reporsity/CV/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250331-24309-4ibokd sitelibdir\=./.gem.20250331-24309-4ibokd
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+
+current directory: /Users/tilly/code/reporsity/CV/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250331-24309-4ibokd sitelibdir\=./.gem.20250331-24309-4ibokd install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20250331-24309-4ibokd/racc
+
+current directory: /Users/tilly/code/reporsity/CV/vendor/bundle/ruby/3.1.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20250331-24309-4ibokd sitelibdir\=./.gem.20250331-24309-4ibokd clean
