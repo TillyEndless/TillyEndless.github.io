@@ -8,9 +8,35 @@ redirect_from:
   - /wordpress/blog-posts/
 ---
 
+<div class="cb-index-nav" data-cb-category-bar>
+  <div class="cb-index-nav__inner">
+    <div class="cb-index-tabs" role="tablist" aria-label="Blog categories">
+      <button class="cb-index-tab" type="button" role="tab" data-category="research">Research</button>
+      <button class="cb-index-tab" type="button" role="tab" data-category="thoughts">Thoughts</button>
+    </div>
+
+    <div class="cb-index-legend" aria-label="Legend">
+      <span class="cb-legend-item">
+        <span class="cb-legend-swatch cb-legend-swatch--major" aria-hidden="true"></span>
+        Major / Formal Update
+      </span>
+      <span class="cb-legend-item">
+        <span class="cb-legend-swatch cb-legend-swatch--minor" aria-hidden="true"></span>
+        Minor / Informal Update
+      </span>
+    </div>
+  </div>
+</div>
+
+<p class="cb-empty" data-cb-empty hidden>No posts yet.</p>
+
 <div class="cb-post-grid">
   {% for post in site.posts %}
-    <article class="cb-post-card">
+    {% assign cb_category = post.category | default: 'thoughts' %}
+    <article
+      class="cb-post-card{% if post.featured %} cb-post-card--featured{% endif %}"
+      data-category="{{ cb_category }}"
+    >
       <a class="cb-post-card__link" href="{{ post.url | relative_url }}">
         <h2 class="cb-post-card__title">{{ post.title }}</h2>
         {% if post.date %}
