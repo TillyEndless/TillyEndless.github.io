@@ -2,7 +2,6 @@
 title: "Where AI Is Headed"
 date: 2026-03-16
 category: research
-featured: true
 ---
 
 I see two major trends in the AI industry going forward. One is addressing capacity shortages; the other is improving cost efficiency.

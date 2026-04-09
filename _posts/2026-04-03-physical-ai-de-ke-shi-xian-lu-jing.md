@@ -2,7 +2,6 @@
 title: "A Realizable Path to Physical AI"
 date: 2026-04-03
 category: research
-featured: true
 ---
 
 Physical AI is still in the early phase of its industry cycle, and new paradigms are emerging one after another. Even the term "world model" already comes with nine or ten different interpretations:
