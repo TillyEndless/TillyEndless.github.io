@@ -6,6 +6,23 @@
   Goal: get very close to the look & feel of yangxu09.blog without copying its code verbatim.
 */
 
+/* Self-hosted serif webfont (keeps typography consistent across devices). */
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/source-serif-4/source-serif-4-latin.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  font-style: italic;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/source-serif-4/source-serif-4-latin-italic.woff2") format("woff2");
+}
+
 :root {
   --cb-bg: #ffffff;
   --cb-fg: #171717;
@@ -73,11 +90,11 @@ body.cb-body {
 }
 
 .cb-header__brand {
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  letter-spacing: 0.04em;
+  font-family: inherit;
+  letter-spacing: 0;
   font-size: 1.25rem;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   color: inherit;
   text-decoration: none;
 }
@@ -153,11 +170,11 @@ body.cb-body {
 
 .cb-post-card__title {
   margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: inherit;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
 }
 
 .cb-post-card:hover .cb-post-card__title {
@@ -273,4 +290,3 @@ body.cb-body {
   padding: 0;
   border-radius: 0;
 }
-
