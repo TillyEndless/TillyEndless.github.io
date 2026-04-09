@@ -1,0 +1,57 @@
+---
+layout: compress
+---
+
+{% include base_path %}
+{% assign first_name = site.name | default: site.title | split: ' ' | first | upcase %}
+
+<!doctype html>
+<html lang="{{ site.locale | slice: 0, 2 | default: 'en' }}">
+  <head>
+    <meta charset="utf-8">
+    {% include seo.html %}
+
+    <!-- http://t.co/dKP3o1e -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+      href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ base_path }}/feed.xml{% endif %}"
+      type="application/atom+xml"
+      rel="alternate"
+      title="{{ site.title }} Feed"
+    >
+
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/clean-blog.css">
+  </head>
+
+  <body class="cb-body">
+    <div class="cb-shell">
+      <header class="cb-header">
+        <div class="cb-header__container">
+          <div class="cb-header__row">
+            <a class="cb-header__brand" href="{{ '/blog/' | relative_url }}">{{ first_name }}'S BLOG</a>
+            <a class="cb-header__brand" href="{{ '/' | relative_url }}">HOMEPAGE</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="cb-main">
+        <div class="cb-main__container">
+          {{ content }}
+        </div>
+      </main>
+
+      <footer class="cb-footer">
+        <div class="cb-footer__container">
+          <span>© {{ site.time | date: '%Y' }} {{ site.name | default: site.title }}</span>
+          <span class="cb-footer__muted">
+            Last Deployed: {{ site.time | date: '%b %e, %Y, %l:%M %p' }} Asia/Shanghai (UTC+8)
+          </span>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
+

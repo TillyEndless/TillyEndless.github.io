@@ -1,20 +1,29 @@
 ---
-layout: archive
+layout: clean-blog
 permalink: /blog/
 title: "Blog"
-author_profile: true
+author_profile: false
 redirect_from:
   - /year-archive/
   - /wordpress/blog-posts/
 ---
 
-{% include base_path %}
-{% capture written_year %}'None'{% endcapture %}
-{% for post in site.posts %}
-  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
-  {% include archive-single.html %}
-{% endfor %}
+<p class="cb-index__tagline">{{ site.description }}</p>
+
+<div class="cb-post-grid">
+  {% for post in site.posts %}
+    <article class="cb-post-card">
+      <a class="cb-post-card__link" href="{{ post.url | relative_url }}">
+        <h2 class="cb-post-card__title">{{ post.title }}</h2>
+        {% if post.date %}
+          <p class="cb-post-card__meta">{{ post.date | date: '%b %e, %Y' }}</p>
+        {% endif %}
+        {% if post.excerpt %}
+          <p class="cb-post-card__excerpt">
+            {{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once }}
+          </p>
+        {% endif %}
+      </a>
+    </article>
+  {% endfor %}
+</div>
