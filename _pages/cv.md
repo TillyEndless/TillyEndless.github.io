@@ -1,17 +1,23 @@
 ---
-layout: single
-title: "CV"
+layout: page
 permalink: /cv/
-author_profile: false
-redirect_from:
-  - /resume
+title: CV
+nav: true
+nav_order: 2
+description: Curriculum Vitae (PDF).
 ---
 
-{% assign cv_pdf = '/files/cv.pdf' | relative_url %}
+{% assign cv_pdf = '/assets/pdf/cv.pdf' | relative_url %}
 
-<meta http-equiv="refresh" content="0; url={{ cv_pdf }}">
-<script>
-  window.location.replace("{{ cv_pdf }}");
-</script>
+<p>
+  <a href="{{ cv_pdf }}" target="_blank" rel="noopener noreferrer">
+    Download CV (PDF)
+  </a>
+</p>
 
-If the PDF does not open automatically, [click here to view it]({{ cv_pdf }}).
+<object data="{{ cv_pdf }}" type="application/pdf" width="100%" height="900px">
+  <p>
+    Your browser can't display the PDF inline.
+    <a href="{{ cv_pdf }}" target="_blank" rel="noopener noreferrer">Open the CV</a>.
+  </p>
+</object>

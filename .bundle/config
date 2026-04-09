@@ -1,3 +1,0 @@
----
-BUNDLE_PATH: "local/bundle"
-BUNDLE_MIRROR__HTTPS://RUBYGEMS__ORG/: "https://rubygems.org"
