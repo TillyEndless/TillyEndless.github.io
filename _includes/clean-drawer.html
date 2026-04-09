@@ -1,0 +1,29 @@
+<div class="cb-drawer" data-cb-drawer>
+  <div class="cb-drawer__hotzone" data-cb-drawer-hotzone aria-hidden="true"></div>
+
+  <button class="cb-drawer__toggle" type="button" data-cb-drawer-toggle aria-label="Open archive">
+    <span class="cb-drawer__toggle-icon" aria-hidden="true"></span>
+  </button>
+
+  <nav class="cb-drawer__panel" data-cb-drawer-panel aria-label="Archive">
+    <div class="cb-drawer__panel-inner">
+      <div class="cb-drawer__title">Archive</div>
+      <div class="cb-drawer__subtitle">Hover left gutter to open</div>
+
+      <ol class="cb-drawer__list">
+        {% for post in site.posts %}
+          <li class="cb-drawer__item">
+            <a
+              class="cb-drawer__link{% if page.url == post.url %} is-active{% endif %}"
+              href="{{ post.url | relative_url }}"
+            >
+              <span class="cb-drawer__date">{{ post.date | date: '%Y-%m-%d' }}</span>
+              <span class="cb-drawer__text">{{ post.title }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </nav>
+</div>
+

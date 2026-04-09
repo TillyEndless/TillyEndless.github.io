@@ -21,6 +21,8 @@ layout: compress
 
   <body class="cb-body">
     <div class="cb-shell">
+      {% include clean-drawer.html %}
+
       <header class="cb-header">
         <div class="cb-header__container">
           <div class="cb-header__row">
@@ -58,6 +60,7 @@ layout: compress
         </div>
       </footer>
     </div>
+
+    <script src="{{ base_path }}/assets/js/clean-shell.js" defer></script>
   </body>
 </html>
-
