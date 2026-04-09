@@ -4,6 +4,10 @@ layout: compress
 
 {% include base_path %}
 {% assign first_name = site.name | default: site.title | split: ' ' | first | upcase %}
+{% assign cb_v = site.github.build_revision %}
+{% if cb_v == nil or cb_v == "" %}
+  {% assign cb_v = site.time | date: "%s" %}
+{% endif %}
 
 <!doctype html>
 <html lang="{{ site.locale | slice: 0, 2 | default: 'en' }}">
@@ -16,7 +20,7 @@ layout: compress
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ base_path }}/assets/css/clean-blog.css">
+    <link rel="stylesheet" href="{{ base_path }}/assets/css/clean-blog.css?v={{ cb_v }}">
   </head>
 
   <body class="cb-body">
@@ -61,6 +65,6 @@ layout: compress
       </footer>
     </div>
 
-    <script src="{{ base_path }}/assets/js/clean-shell.js" defer></script>
+    <script src="{{ base_path }}/assets/js/clean-shell.js?v={{ cb_v }}" defer></script>
   </body>
 </html>
