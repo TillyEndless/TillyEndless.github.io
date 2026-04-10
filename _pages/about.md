@@ -13,7 +13,7 @@ redirect_from:
   (Chu Kochen Honors College), majoring in Computer Science and Technology (expected B.Eng. 2027).
   I am currently a research intern at
   <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
-  working with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
+  where I work with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
   Previously, I worked on continuous reasoning for large language models at Zhejiang University.
 </p>
 
@@ -25,7 +25,11 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  My research centers on building
+  Through my previous work on LM interpretability and continuous reasoning, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
+</p>
+
+<p class="about-text">
+  I believe the next generation of physical AI will require
   <span style="
     display: inline-block;
     background: #f1f9fc;
@@ -41,19 +45,15 @@ redirect_from:
       World Models
     </b>
   </span>
-  for embodied intelligence.
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>From reasoning to embodiment:</b> I study how structured latent representations can make intelligence more stable, interpretable, and controllable.
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>From perception to control:</b> I aim to build models that represent 3D structure, predict how the world changes after actions, and support decision-making under uncertainty.
+  with stronger 3D inductive biases and new training representations for spatial understanding.
 </p>
 
 <p class="about-text">
-  My long-term goal is to help build the <b>foundation models of physical intelligence</b>.
+  My broader ambition is to help turn AI into a <b>physically grounded assistant beyond the screen</b>.
+</p>
+
+<p class="about-text">
+  My long-term goal is to develop <b>physically grounded, agentic models</b>.
 </p>
 
 <div class="research-interests" aria-label="Research interests">
