@@ -74,10 +74,10 @@ redirect_from:
 </div>
 
 ## News
-[2025-2026] One paper submitted (under review with **strong feedback**).   
-[2025. 10] Started research at Tsinghua University on physical world models and RL exploration.   
-[2025. 10] Awarded First-Class Scholarship, Zhejiang University.    
-[2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
+- [2025-2026] One paper submitted (under review with **strong feedback**).   
+- [2025. 10] Started research at Tsinghua University on physical world models and RL exploration.   
+- [2025. 10] Awarded First-Class Scholarship, Zhejiang University.    
+- [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
 
 ## Publications
 - **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** [[PDF]({{ '/files/paper.pdf' | relative_url }})]      
