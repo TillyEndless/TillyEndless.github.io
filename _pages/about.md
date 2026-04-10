@@ -120,8 +120,10 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 <div class="education-item">
   <h3>🏆 Scholarship for Leading Achievement</h3>
   <div class="institution">2024/11</div>
+  <div class="year">Awarded by Chu Kochen Honors College to Outstanding students</div>
 </div>
 <div class="education-item">
   <h3><span aria-hidden="true" style="display: inline-block; filter: grayscale(1) brightness(1.25) contrast(1.05); margin-right: 0.35rem;">🏆</span>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
   <div class="institution">2025/01</div>
+  <div class="year">Awarded by Zhejiang Physical Society</div>
 </div>
