@@ -61,9 +61,8 @@ redirect_from:
   <span class="interest-tag">Model-based RL</span>
   <span class="interest-tag">World Models</span>
   <span class="interest-tag">Embodied AI</span>
-  <span class="interest-tag">Learned Dynamics</span>
-  <span class="interest-tag">3D Representations</span>
-  <span class="interest-tag">Interpretability</span>
+  <span class="interest-tag">Representation Learning</span>
+  <span class="interest-tag">LLM Inference</span>
 </div>
 
 ## News
