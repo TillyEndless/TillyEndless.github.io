@@ -28,22 +28,18 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 
 ## Awards {#awards}
 <div class="education-item">
-  <h3>国家奖学金（本科生）</h3>
+  <h3>🏆 National Scholarship (Undergraduate)</h3>
   <div class="institution">2024/10</div>
 </div>
 <div class="education-item">
-  <h3>浙江大学一等奖学金</h3>
-  <div class="institution">2024/10</div>
+  <h3>🏆 First Prize - Zhejiang University Scholarship</h3>
+  <div class="institution">2024/10, 2025/10</div>
 </div>
 <div class="education-item">
-  <h3>竺可桢学院领航奖学金</h3>
+  <h3>🏆 Scholarship for Leading Achievement</h3>
   <div class="institution">2024/11</div>
 </div>
 <div class="education-item">
-  <h3>大学生物理（理论）创新大赛二等奖</h3>
-  <div class="institution">2025/01</div>
-</div>
-<div class="education-item">
-  <h3>浙江大学五星级志愿者荣誉称号</h3>
+  <h3>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
   <div class="institution">2025/01</div>
 </div>
