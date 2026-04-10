@@ -40,11 +40,10 @@
           <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
         {%- endif -%}
         {%- if site.author.github and site.author.github != '' -%}
-          {%- if site.author.email and site.author.email != '' -%} | {%- endif -%}
+          {%- if site.author.email and site.author.email != '' -%}&nbsp;|&nbsp;{%- endif -%}
           <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
         {%- endif -%}
       </span>
     </div>
   </div>
 </header>
-
