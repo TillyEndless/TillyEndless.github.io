@@ -53,11 +53,7 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  My broader ambition is to help turn AI into a <b>physically grounded assistant beyond the screen</b>.
-</p>
-
-<p class="about-text">
-  My long-term goal is to help build <b>the foundation models of physical intelligence</b>.
+  My long-term goal is to help turn AI into a <b>physically grounded assistant beyond the screen</b>.
 </p>
 
 <div class="research-interests" aria-label="Research interests">
