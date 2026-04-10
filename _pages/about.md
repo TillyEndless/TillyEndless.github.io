@@ -101,19 +101,19 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 ## Awards {#awards}
 <div class="education-item">
   <h3>🏆 National Scholarship (Undergraduate)</h3>
-  <div class="year">2024/10</div>
-  <div class="institution">Awarded by Ministry of National Education to Top 0.5% students</div>
+  <div class="institution">2024/10</div>
+  <div class="year">Awarded by Ministry of National Education to Top 0.5% students</div>
 </div>
 <div class="education-item">
   <h3>🏆 First Prize - Zhejiang University Scholarship</h3>
-  <div class="year">2024/10, 2025/10</div>
-  <div class="institution">Awarded by Zhejiang University</div>
+  <div class="institution">2024/10, 2025/10</div>
+  <div class="year">Awarded by Zhejiang University</div>
 </div>
 <div class="education-item">
   <h3>🏆 Scholarship for Leading Achievement</h3>
-  <div class="year">2024/11</div>
+  <div class="institution">2024/11</div>
 </div>
 <div class="education-item">
   <h3>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
-  <div class="year">2025/01</div>
+  <div class="institution">2025/01</div>
 </div>
