@@ -20,7 +20,7 @@ My long-term goal is to develop **physically grounded, agentic models**.
 [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
 
 # Publications
-- **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds**   
+- **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds**[[PDF]]({{ '/files/paper.pdf' | relative_url }})      
 Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
-[PDF]({{ '/files/paper.pdf' | relative_url }})   
+
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
