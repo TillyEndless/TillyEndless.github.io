@@ -78,7 +78,7 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
 
 ## Competitions {#competitions}
-- 🏆 **2026 NVIDIA DGX Spark Hackathon**   
+- **2026 NVIDIA DGX Spark Hackathon**   
 **Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
 **Xiaoling Zhou**, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen   
 <div class="education-item">
