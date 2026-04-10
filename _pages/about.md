@@ -64,7 +64,7 @@ redirect_from:
 <figure style="margin: 2rem 0 1rem 0; text-align: center;">
   <img src="{{ '/images/path.png' | relative_url }}" 
        alt="A realizable path toward physical intelligence"
-       style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);" />
+       style="max-width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);" />
   <figcaption style="margin-top: 0.8rem; font-size: 0.95rem; color: #666; font-style: italic;">
     My current research focuses on representation and dynamics—modeling.
   </figcaption>
