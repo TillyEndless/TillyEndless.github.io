@@ -6,6 +6,7 @@
 {%- assign author_name_raw = site.author.name | default: site.name | default: site.title -%}
 {%- assign name_parts = author_name_raw | split: '[' -%}
 {%- assign name_en = name_parts[0] | strip -%}
+{%- assign name_en_highlight = name_en | replace: 'Zhou', '<span style="color:#ffb300;">Zhou</span>' -%}
 {%- assign name_cn = '' -%}
 {%- if name_parts.size > 1 -%}
   {%- assign name_cn = name_parts[1] | split: ']' | first | strip -%}
@@ -23,9 +24,9 @@
   </div>
   <div class="header-content">
     <h2>
-      <b>{{ name_en }}</b>
+      <b>{{ name_en_highlight }}</b>
       {%- if name_cn != '' -%}
-        | {{ name_cn }}
+        &nbsp;|&nbsp;{{ name_cn }}
       {%- endif -%}
     </h2>
 
