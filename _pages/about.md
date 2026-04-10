@@ -41,7 +41,7 @@ redirect_from:
       World Models
     </b>
   </span>
-  for embodied intelligence.
+  as a foundation for physical intelligence.
 </p>
 
 <p class="about-text">
