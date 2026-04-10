@@ -1,0 +1,50 @@
+{%- comment -%}
+  Header styled after https://github.com/liweijiang/liweijiang.github.io
+  Data comes from _config.yml (site.author + site.name).
+{%- endcomment -%}
+
+{%- assign author_name_raw = site.author.name | default: site.name | default: site.title -%}
+{%- assign name_parts = author_name_raw | split: '[' -%}
+{%- assign name_en = name_parts[0] | strip -%}
+{%- assign name_cn = '' -%}
+{%- if name_parts.size > 1 -%}
+  {%- assign name_cn = name_parts[1] | split: ']' | first | strip -%}
+{%- endif -%}
+
+<header class="lw-header">
+  <div class="profile-section">
+    <img
+      src="{{ '/images/profile.png' | relative_url }}"
+      alt="{{ name_en }} profile picture"
+      class="profile-img"
+      loading="eager"
+      decoding="async"
+    >
+  </div>
+  <div class="header-content">
+    <h2>
+      <b>{{ name_en }}</b>
+      {%- if name_cn != '' -%}
+        | {{ name_cn }}
+      {%- endif -%}
+    </h2>
+
+    {%- if site.author.employer and site.author.employer != '' -%}
+      <p class="affiliation">{{ site.author.employer }}</p>
+    {%- endif -%}
+
+    <div class="contact-info">
+      <span>
+        <b>Contact:</b>
+        {%- if site.author.email and site.author.email != '' -%}
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        {%- endif -%}
+        {%- if site.author.github and site.author.github != '' -%}
+          {%- if site.author.email and site.author.email != '' -%} | {%- endif -%}
+          <a href="{{ site.author.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+        {%- endif -%}
+      </span>
+    </div>
+  </div>
+</header>
+

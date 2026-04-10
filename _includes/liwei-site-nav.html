@@ -1,0 +1,29 @@
+{%- comment -%}
+  Simple nav in the same style as the reference template.
+  - When include.home_sections=true, show anchors for the homepage sections.
+  - Always show Blog + CV.
+{%- endcomment -%}
+
+{%- assign is_home = false -%}
+{%- if page.url == '/' or page.permalink == '/' -%}
+  {%- assign is_home = true -%}
+{%- endif -%}
+
+{%- assign is_blog = false -%}
+{%- if page.url contains '/blog/' or page.layout == 'liwei-blog' or page.collection == 'posts' -%}
+  {%- assign is_blog = true -%}
+{%- endif -%}
+
+<nav class="lw-nav" style="padding-top: 0.5em; padding-bottom: 0.5em">
+  <ul>
+    <li><a class="nav-link{% if is_home %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
+
+    {%- if include.home_sections -%}
+      <li><a href="#news" class="nav-link">News</a></li>
+      <li><a href="#publications" class="nav-link">Publications</a></li>
+    {%- endif -%}
+
+    <li><a class="nav-link{% if is_blog %} active{% endif %}" href="{{ '/blog/' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/files/cv.pdf' | relative_url }}" class="nav-link">CV</a></li>
+  </ul>
+</nav>

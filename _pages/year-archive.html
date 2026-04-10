@@ -1,5 +1,5 @@
 ---
-layout: clean-blog
+layout: liwei-blog
 permalink: /blog/
 title: "Blog"
 author_profile: false
@@ -8,46 +8,40 @@ redirect_from:
   - /wordpress/blog-posts/
 ---
 
-<div class="cb-index-nav" data-cb-category-bar>
-  <div class="cb-index-nav__inner">
-    <div class="cb-index-tabs" role="tablist" aria-label="Blog categories">
-      <button class="cb-index-tab" type="button" role="tab" data-category="research">Research</button>
-      <button class="cb-index-tab" type="button" role="tab" data-category="thoughts">Thoughts</button>
-    </div>
+{%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
 
-    <div class="cb-index-legend" aria-label="Legend">
-      <span class="cb-legend-item">
-        <span class="cb-legend-swatch cb-legend-swatch--major" aria-hidden="true"></span>
-        Major / Formal Update
-      </span>
-      <span class="cb-legend-item">
-        <span class="cb-legend-swatch cb-legend-swatch--minor" aria-hidden="true"></span>
-        Minor / Informal Update
-      </span>
-    </div>
+{%- if site.posts.size == 0 -%}
+  <p>No posts yet.</p>
+{%- endif -%}
+
+{%- for year in posts_by_year -%}
+  <div class="year-section">
+    <div class="year-header">{{ year.name }}</div>
+
+    {%- for post in year.items -%}
+      {%- assign cb_category = post.category | default: 'thoughts' -%}
+      <div class="publication">
+        <div class="publication-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </div>
+
+        <div class="publication-meta">
+          <span class="publication-venue">{{ post.date | date: "%b %d, %Y" }}</span>
+          <span class="publication-authors">
+            {{ cb_category | capitalize }} · Informal update
+          </span>
+        </div>
+
+        {%- if post.excerpt -%}
+          <div class="blog-excerpt">
+            {{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once | truncate: 220 }}
+          </div>
+        {%- endif -%}
+
+        <div class="publication-links">
+          <a href="{{ post.url | relative_url }}">Read</a>
+        </div>
+      </div>
+    {%- endfor -%}
   </div>
-</div>
-
-<p class="cb-empty" data-cb-empty hidden>No posts yet.</p>
-
-<div class="cb-post-grid">
-  {% for post in site.posts %}
-    {% assign cb_category = post.category | default: 'thoughts' %}
-    <article
-      class="cb-post-card{% if post.featured %} cb-post-card--featured{% endif %}"
-      data-category="{{ cb_category }}"
-    >
-      <a class="cb-post-card__link" href="{{ post.url | relative_url }}">
-        <h2 class="cb-post-card__title">{{ post.title }}</h2>
-        {% if post.date %}
-          <p class="cb-post-card__meta">{{ post.date | date: '%b %e, %Y' }}</p>
-        {% endif %}
-        {% if post.excerpt %}
-          <p class="cb-post-card__excerpt">
-            {{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once }}
-          </p>
-        {% endif %}
-      </a>
-    </article>
-  {% endfor %}
-</div>
+{%- endfor -%}

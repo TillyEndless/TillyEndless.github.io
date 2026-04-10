@@ -235,7 +235,7 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: clean-post
+      layout: liwei-post
       author_profile: false
       read_time: false
       comments: false

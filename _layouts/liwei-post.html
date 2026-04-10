@@ -1,0 +1,27 @@
+---
+layout: liwei-base
+---
+
+<div class="container">
+  {% include liwei-site-header.html %}
+  {% include liwei-site-nav.html %}
+
+  <main class="page-content">
+    <article class="post">
+      <header class="post-header">
+        <div class="post-title">{{ page.title }}</div>
+        <div class="post-meta">
+          {{ page.date | date: "%b %d, %Y" }}
+          {%- if page.category and page.category != '' -%}
+            · {{ page.category }}
+          {%- endif -%}
+        </div>
+      </header>
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+</div>
+

@@ -1,0 +1,20 @@
+---
+layout: liwei-base
+---
+
+<div class="container">
+  {% include liwei-site-header.html %}
+  {% include liwei-site-nav.html %}
+
+  <main class="page-content">
+    <div class="post-header">
+      <div class="post-title">{{ page.title | default: "Blog" }}</div>
+      {%- if page.description and page.description != '' -%}
+        <div class="post-meta">{{ page.description }}</div>
+      {%- endif -%}
+    </div>
+
+    {{ content }}
+  </main>
+</div>
+

@@ -1,0 +1,365 @@
+---
+---
+
+/* Theme inspired by https://github.com/liweijiang/liweijiang.github.io
+   Goal: reuse the same visual language (colors/spacing/typography) across
+   homepage + blog index + blog posts, while keeping Jekyll content. */
+
+:root {
+  --primary-color: #1a365d;
+  --secondary-color: #2b6cb0;
+  --accent-color: #3182ce;
+  --text-color: #2d3748;
+  --light-gray: #f7fafc;
+  --border-color: #e2e8f0;
+  --dark-gray: #4a5568;
+  --yellow-color: #ffcc00;
+  --orange-color: #ff5c00;
+  --red-color: #ff2600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Avenir Next", -webkit-system-fallback, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header.lw-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  align-items: center;
+}
+
+.profile-section {
+  text-align: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 8px;
+  margin: 0 auto 1rem;
+  background: var(--light-gray);
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+.header-content h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.header-content h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+.affiliation {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  gap: 0.5rem;
+}
+
+.contact-info a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Nav */
+nav.lw-nav {
+  background: var(--light-gray);
+  padding: 0.8rem 0;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+nav.lw-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav.lw-nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+nav.lw-nav a:hover,
+nav.lw-nav a.active {
+  background: var(--secondary-color);
+  color: #ffffff;
+}
+
+/* Content typography (scoped so header h2 isn't affected) */
+.page-content {
+  max-width: 900px;
+}
+
+.page-content p {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+  text-align: justify;
+}
+
+.page-content a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.page-content a:hover {
+  text-decoration: underline;
+}
+
+.page-content h1,
+.page-content h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin: 2rem 0 1.2rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  font-weight: 400;
+}
+
+.page-content h3 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 1.4rem 0 0.8rem 0;
+  font-weight: 600;
+}
+
+.page-content ul,
+.page-content ol {
+  margin: 0.2rem 0 1rem 1.25rem;
+}
+
+.page-content li {
+  margin: 0.2rem 0;
+}
+
+/* Blog list uses the compact publication card style from the template */
+.publication {
+  background: #ffffff;
+  padding: 0.7rem;
+  margin-bottom: 0.7rem;
+  border-left: 3px solid var(--secondary-color);
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.publication-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.publication-title a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.publication-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.publication-authors {
+  color: var(--dark-gray);
+  font-style: normal;
+  flex: 1;
+  min-width: 200px;
+  font-weight: 400;
+}
+
+.publication-venue {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.publication-links {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.publication-links a {
+  color: var(--accent-color);
+  text-decoration: none;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+}
+
+.publication-links a:hover {
+  background: var(--accent-color);
+  color: #ffffff;
+}
+
+.year-section {
+  margin-bottom: 1.2rem;
+}
+
+.year-header {
+  font-size: 1.2rem;
+  color: var(--yellow-color);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+  border-left: 10px solid var(--yellow-color);
+  padding-left: 1rem;
+}
+
+.blog-excerpt {
+  color: var(--dark-gray);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  margin-top: 0.35rem;
+}
+
+/* Post page */
+.post-header {
+  margin: 0 0 1.2rem 0;
+}
+
+.post-title {
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.post-meta {
+  color: var(--dark-gray);
+  font-size: 0.95rem;
+}
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.post-body pre,
+.post-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.post-body pre {
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  overflow: auto;
+  margin: 1rem 0;
+}
+
+.post-body code {
+  background: var(--light-gray);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.1rem 0.35rem;
+}
+
+.post-body pre code {
+  border: none;
+  padding: 0;
+  background: transparent;
+}
+
+/* Small screens */
+@media (max-width: 900px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  header.lw-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header-content h2 {
+    font-size: 2rem;
+  }
+
+  .page-content {
+    max-width: 100%;
+  }
+
+  .publication-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+
+  .publication-authors {
+    min-width: auto;
+  }
+
+  .publication-links {
+    justify-content: flex-start;
+  }
+}
+
