@@ -26,18 +26,19 @@ redirect_from:
 
 <p class="about-text">
   My answer is to build
-  <span style="
-    display: inline-block;
-    background: #f1f9fc;
-    border-radius: 6px;
-    margin-bottom: 0.2em;
-    padding: 0.1em 1.02em;
-    box-shadow: 0 2px 4px rgba(111, 206, 243, 0.35),
-                0 1px 2px rgba(107, 171, 255, 0.25);">
-    <b>
-      <span style="color:#FF6B6B;">Physically</span>
-      <span style="color:#5CA9C9;">Consistent</span> and
-      <span style="color:#ffb300;">3D-Aware</span>
+	  <span style="
+	    display: inline-block;
+	    background: var(--light-gray);
+	    border: 1px solid var(--border-color);
+	    border-radius: 6px;
+	    margin-bottom: 0.2em;
+	    padding: 0.1em 1.02em;
+	    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06),
+	                0 1px 2px rgba(0, 0, 0, 0.04);">
+	    <b>
+	      <span style="color:#FF6B6B;">Physically</span>
+	      <span style="color:#5CA9C9;">Consistent</span> and
+	      <span style="color:#ffb300;">3D-Aware</span>
       World Models
     </b>
   </span>
