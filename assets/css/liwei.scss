@@ -14,7 +14,7 @@
     "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans", sans-serif;
   --primary-color: #1a365d;
   --secondary-color: #2b6cb0;
-  --accent-color: #3182ce;
+  --accent-color: var(--secondary-color);
   --text-color: #2d3748;
   --light-gray: #f7fafc;
   --border-color: #e2e8f0;
