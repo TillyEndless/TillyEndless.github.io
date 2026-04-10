@@ -16,11 +16,10 @@
 
 <nav class="lw-nav" style="padding-top: 0.5em; padding-bottom: 0.5em">
   <ul>
-    <li><a class="nav-link{% if is_home %} active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
-
     {%- if include.home_sections -%}
       <li><a href="#news" class="nav-link">News</a></li>
       <li><a href="#publications" class="nav-link">Publications</a></li>
+      <li><a href="#competitions" class="nav-link">Competitions</a></li>
       <li><a href="#awards" class="nav-link">Awards</a></li>
     {%- endif -%}
 

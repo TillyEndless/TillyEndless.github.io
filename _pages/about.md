@@ -77,6 +77,17 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
 
+## Competitions {#competitions}
+<div class="education-item">
+  <h3>🏅 Zhejiang University 16th “Dandelion” Student Innovation Competition</h3>
+  <div class="institution">2024/05 - 2024/10</div>
+</div>
+
+<div class="education-item">
+  <h3>🏅 11th National Parallel Application Challenge</h3>
+  <div class="institution">2024/07</div>
+</div>
+
 ## Awards {#awards}
 <div class="education-item">
   <h3>🏆 National Scholarship (Undergraduate)</h3>
