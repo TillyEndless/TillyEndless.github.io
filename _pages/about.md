@@ -7,7 +7,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-
 <p class="about-text">
   I am a third-year undergraduate student at
   <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a>
@@ -21,7 +20,12 @@ redirect_from:
 <div style="height: 1px;"></div>
 
 <p class="about-text">
-  My research goal is to build
+  I am obsessed with one question:
+  <b><i>"What is the realizable path toward physical intelligence?"</i></b>
+</p>
+
+<p class="about-text">
+  My research centers on building
   <span style="
     display: inline-block;
     background: #f1f9fc;
@@ -37,8 +41,19 @@ redirect_from:
       World Models
     </b>
   </span>
-  that support embodied agents in predicting interaction outcomes and making control decisions under incomplete observations.
-  I am particularly interested in learned dynamics world models and brain-inspired robotics.
+  for embodied intelligence. I am interested in how agents can represent 3D structure, predict how the world changes after actions, and make control decisions under incomplete observations.
+</p>
+
+<p class="about-text">
+  I believe that today’s AI systems are still built on incomplete foundations. Text and 2D visual tokens are enough for abstraction and pattern recognition, but not for genuine spatial and physical intelligence. If we want AI to move beyond the screen and become a real-world assistant, we will need models with stronger 3D inductive biases, richer physical representations, and better predictive structure for interaction and control.
+</p>
+
+<p class="about-text">
+  This belief has shaped the trajectory of my research. In language models, I studied how continuous latent representations can support more stable and interpretable reasoning. In embodied settings, I now study how world models can support exploration, prediction, and control in sparse-reward and long-horizon environments.
+</p>
+
+<p class="about-text">
+  My long-term goal is to help build the <b>foundation models of physical intelligence</b>.
 </p>
 
 <div class="research-interests" aria-label="Research interests">
@@ -49,35 +64,6 @@ redirect_from:
   <span class="interest-tag">3D Representations</span>
   <span class="interest-tag">Interpretability</span>
 </div>
-
-<p class="about-text">
-  My <b>current work</b> includes:
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>World-model exploration:</b> improving exploration in sparse-reward and long-horizon tasks.
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>LLM continuous reasoning:</b> making latent/continuous reasoning more stable and interpretable.
-</p>
-
-<p class="about-text">
-  I am obsessed with one question:
-  <b><i>"what is the realizable path toward physical intelligence?"</i></b>
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>Motivation:</b> text and 2D tokens are not enough for true spatial intelligence.
-</p>
-
-<p class="about-text" style="margin-left: 20px;">
-  <b>Hypothesis:</b> physical AI needs 3D-aware representations and model designs.
-</p>
-
-<p class="about-text">
-  My long-term goal is to develop <b>physically grounded, agentic models</b>.
-</p>
 
 ## News
 [2025-2026] One paper submitted (under review with **strong feedback**).   
