@@ -23,12 +23,12 @@
     >
   </div>
   <div class="header-content">
-    <h2>
-      <b>{{ name_en_highlight }}</b>
-      {%- if name_cn != '' -%}
-        &nbsp;|&nbsp;{{ name_cn }}
-      {%- endif -%}
-    </h2>
+	    <h2>
+	      <b>{{ name_en_highlight }}</b>
+	      {%- if name_cn != '' -%}
+	        &nbsp;|&nbsp;<span class="name-cn">{{ name_cn }}</span>
+	      {%- endif -%}
+	    </h2>
 
     {%- if site.author.employer and site.author.employer != '' -%}
       <p class="affiliation">{{ site.author.employer }}</p>

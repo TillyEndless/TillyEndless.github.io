@@ -87,6 +87,9 @@ redirect_from:
       Details
     </summary>
     <div class="year" style="margin-top: 0.6rem;">
+      <b>领域：</b> 智能体运营
+    </div>
+    <div class="year">
       Built an operator-facing runtime stack that bridges agent capability and operability via security controls, runtime watchdog monitoring, and structured operator feedback.
     </div>
     <div class="year">

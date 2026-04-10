@@ -6,9 +6,15 @@
    homepage + blog index + blog posts, while keeping Jekyll content. */
 
 :root {
+  --display-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans", sans-serif;
+  --content-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans", sans-serif;
   --primary-color: #1a365d;
   --secondary-color: #2b6cb0;
-  --accent-color: #3182ce;
+  --accent-color: var(--secondary-color);
   --text-color: #2d3748;
   --light-gray: #f7fafc;
   --border-color: #e2e8f0;
@@ -93,6 +99,12 @@ header.lw-blog-header a.lw-back-home:hover {
   font-size: 2.2rem;
   font-weight: 400;
   color: var(--primary-color);
+  font-family: var(--display-font);
+}
+
+.header-content .name-cn {
+  font-family: var(--display-font);
+  font-weight: 700;
 }
 
 .title {
@@ -132,6 +144,7 @@ nav.lw-nav {
   padding: 0.8rem 0;
   margin-bottom: 2rem;
   border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 nav.lw-nav ul {
@@ -160,6 +173,7 @@ nav.lw-nav a.active {
 /* Content typography (scoped so header h2 isn't affected) */
 .page-content {
   max-width: 900px;
+  font-family: var(--content-font);
 }
 
 .page-content p {
@@ -211,7 +225,9 @@ nav.lw-nav a.active {
   margin: 2rem 0 1.2rem 0;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--secondary-color);
-  font-weight: 400;
+  font-family: var(--display-font);
+  font-weight: 800;
+  letter-spacing: -0.015em;
 }
 
 .page-content h3 {
