@@ -29,11 +29,6 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 ## Awards {#awards}
 
 <div class="education-item">
-  <h3>竺可桢学院朋辈辅学之星</h3>
-  <div class="institution">2025/06</div>
-</div>
-
-<div class="education-item">
   <h3>大学生物理（理论）创新大赛二等奖</h3>
   <div class="institution">2025/01</div>
 </div>
