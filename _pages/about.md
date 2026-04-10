@@ -52,6 +52,21 @@ redirect_from:
 </div>
 
 <p class="about-text">
+  My <b>current work</b> includes:
+</p>
+
+<p class="about-text" style="margin-left: 20px;">
+  <b>World-model exploration:</b> Efficient exploration via Active Counterfactual Reasoning with non-local state initialization,
+  achieving <b>1.67×</b> average sample-efficiency improvement over DreamerV3 on DeepMind Control Suite
+  (up to <b>8.8×</b> on sparse-reward tasks).
+</p>
+
+<p class="about-text" style="margin-left: 20px;">
+  <b>LLM continuous reasoning:</b> Concept-Augmented Continuous Reasoning for latent reasoning, improving accuracy by about
+  <b>40%</b> over Coconut in multi-step training.
+</p>
+
+<p class="about-text">
   I am obsessed with one question:
   <b><i>"what is the realizable path toward physical intelligence?"</i></b>
 </p>
