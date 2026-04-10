@@ -9,10 +9,10 @@ redirect_from:
 ---
 <p class="about-text">
   I am a third-year undergraduate student at
-  <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a>
+  <b><a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a></b>
   (Chu Kochen Honors College), majoring in Computer Science and Technology (expected B.Eng. 2027).
   I am currently a research intern at
-  <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
+  <b>Tsinghua University</b>,
   where I work with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
   Previously, I worked on continuous inference for large language models at Zhejiang University.
 </p>
