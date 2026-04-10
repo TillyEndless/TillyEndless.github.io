@@ -78,12 +78,10 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
 
 ## Competitions {#competitions}
-
+- **2026 NVIDIA DGX Spark Hackathon**   
+**Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
+**Xiaoling Zhou**, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen   
 <div class="education-item">
-  <h3>2026 NVIDIA DGX Spark Hackathon</h3>
-  <div class="institution">
-    Project: <b>ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw</b>
-  </div>
   <div class="year">
     Built an operator-facing runtime stack that bridges agent capability and operability via security controls, runtime watchdog monitoring, and structured operator feedback.
   </div>
@@ -91,19 +89,16 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
     <b>What we built:</b> Security Control Plane (risk-aware tool interception + auditing) &middot; Runtime Watchdog (timeout/stall/loop &amp; repeated-output detection + health probes) &middot; Operator Feedback (structured events for notifications/dashboards).
   </div>
   <div class="year">
-    <b>Team:</b> <b>Xiaoling Zhou</b>, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen
-  </div>
-  <div class="year">
     <a href="https://github.com/hollyhongever/ClawKeeper" target="_blank" rel="noopener noreferrer">Project repo</a>
   </div>
   <div class="year" style="margin-top: 0.65rem;">
-    <img
-      src="{{ '/images/competition.png' | relative_url }}"
-      alt="ClawKeeper runtime stack: security control plane, runtime watchdog, operator feedback"
-      style="width: 100%; max-width: 980px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08);"
-    >
-  </div>
-</div>
+	    <img
+	      src="{{ '/images/competition.png' | relative_url }}"
+	      alt="ClawKeeper runtime stack: security control plane, runtime watchdog, operator feedback"
+	      style="width: 100%; max-width: 588px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+	    >
+	  </div>
+	</div>
 
 
 ## Awards {#awards}
