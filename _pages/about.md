@@ -80,7 +80,7 @@ redirect_from:
 
 ## Competitions {#competitions}
 - **2026 NVIDIA DGX Spark Hackathon**   
-**Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
+[Project] **ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
 ***Xiaoling Zhou,*** *Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen*   
 <div class="education-item">
   <details style="margin-top: 0.35rem;">
