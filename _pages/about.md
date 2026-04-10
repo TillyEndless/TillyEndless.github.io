@@ -14,7 +14,7 @@ redirect_from:
   I am currently a research intern at
   <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
   where I work with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
-  Previously, I worked on continuous reasoning for large language models at Zhejiang University.
+  Previously, I worked on continuous inference for large language models at Zhejiang University.
 </p>
 
 <div style="height: 1px;"></div>
@@ -46,7 +46,7 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  Through my previous work on LM interpretability and continuous reasoning, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
+  Through my previous work on LM interpretability and continuous inference, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
 </p>
 
 <p class="about-text">
