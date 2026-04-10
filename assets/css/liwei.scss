@@ -266,6 +266,59 @@ nav.lw-nav a.active {
   padding-left: 1rem;
 }
 
+.education-item,
+.experience-item,
+.talk-item {
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+}
+
+.education-item h3,
+.experience-item h3,
+.talk-item h3 {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.education-item h3 a,
+.experience-item h3 a,
+.talk-item h3 a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.education-item h3 a:hover,
+.experience-item h3 a:hover,
+.talk-item h3 a:hover {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.education-item .institution,
+.experience-item .institution,
+.talk-item .institution {
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.education-item .institution a,
+.experience-item .institution a,
+.talk-item .institution a {
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.education-item .year,
+.experience-item .year,
+.talk-item .year {
+  color: var(--dark-gray);
+  font-size: 0.9rem;
+}
+
 .blog-excerpt {
   color: var(--dark-gray);
   font-size: 0.92rem;
@@ -362,4 +415,3 @@ nav.lw-nav a.active {
     justify-content: flex-start;
   }
 }
-

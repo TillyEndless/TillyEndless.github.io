@@ -25,3 +25,50 @@ My long-term goal is to develop **physically grounded, agentic models**.
 Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
+
+## Awards {#awards}
+
+<div class="education-item">
+  <h3>竺可桢学院朋辈辅学之星</h3>
+  <div class="institution">2025/06</div>
+</div>
+
+<div class="education-item">
+  <h3>大学生物理（理论）创新大赛二等奖</h3>
+  <div class="institution">2025/01</div>
+</div>
+
+<div class="education-item">
+  <h3>浙江大学五星级志愿者荣誉称号</h3>
+  <div class="institution">2025/01</div>
+</div>
+
+<div class="education-item">
+  <h3>竺可桢学院领航奖学金</h3>
+  <div class="institution">2024/11</div>
+</div>
+
+<div class="education-item">
+  <h3>国家奖学金（本科生）</h3>
+  <div class="institution">2024/10</div>
+</div>
+
+<div class="education-item">
+  <h3>浙江大学一等奖学金</h3>
+  <div class="institution">2024/10</div>
+</div>
+
+<div class="education-item">
+  <h3>浙江大学优秀学生</h3>
+  <div class="institution">2024/10</div>
+</div>
+
+<div class="education-item">
+  <h3>西部地区赴新疆支教-院级二等奖</h3>
+  <div class="institution">2024/09</div>
+</div>
+
+<div class="education-item">
+  <h3>学业优秀 / 公益服务 / 劳动实践标兵</h3>
+  <div class="institution">2024/09</div>
+</div>
