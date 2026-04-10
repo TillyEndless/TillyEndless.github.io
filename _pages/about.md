@@ -75,7 +75,7 @@ redirect_from:
 - **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** [[PDF]({{ '/files/paper.pdf' | relative_url }})]      
 Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
 
-<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
+<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">    
 
 ## Competitions {#competitions}
 - **2026 NVIDIA DGX Spark Hackathon**   
