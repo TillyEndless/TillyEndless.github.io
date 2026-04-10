@@ -82,23 +82,28 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 **Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
 **Xiaoling Zhou**, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen   
 <div class="education-item">
-  <div class="year">
-    Built an operator-facing runtime stack that bridges agent capability and operability via security controls, runtime watchdog monitoring, and structured operator feedback.
-  </div>
-  <div class="year">
-    <b>What we built:</b> Security Control Plane (risk-aware tool interception + auditing) &middot; Runtime Watchdog (timeout/stall/loop &amp; repeated-output detection + health probes) &middot; Operator Feedback (structured events for notifications/dashboards).
-  </div>
-  <div class="year">
-    <a href="https://github.com/hollyhongever/ClawKeeper" target="_blank" rel="noopener noreferrer">Project repo</a>
-  </div>
-  <div class="year" style="margin-top: 0.65rem;">
-	    <img
-	      src="{{ '/images/competition.png' | relative_url }}"
-	      alt="ClawKeeper runtime stack: security control plane, runtime watchdog, operator feedback"
-	      style="width: 100%; max-width: 588px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
-	    >
-	  </div>
-	</div>
+  <details style="margin-top: 0.35rem;">
+    <summary style="cursor: pointer; color: #1a73e8; font-weight: 600;">
+      Details
+    </summary>
+    <div class="year" style="margin-top: 0.6rem;">
+      Built an operator-facing runtime stack that bridges agent capability and operability via security controls, runtime watchdog monitoring, and structured operator feedback.
+    </div>
+    <div class="year">
+      <b>What we built:</b> Security Control Plane (risk-aware tool interception + auditing) &middot; Runtime Watchdog (timeout/stall/loop &amp; repeated-output detection + health probes) &middot; Operator Feedback (structured events for notifications/dashboards).
+    </div>
+    <div class="year">
+      <a href="https://github.com/hollyhongever/ClawKeeper" target="_blank" rel="noopener noreferrer">Project repo</a>
+    </div>
+    <div class="year" style="margin-top: 0.65rem;">
+      <img
+        src="{{ '/images/competition.png' | relative_url }}"
+        alt="ClawKeeper runtime stack: security control plane, runtime watchdog, operator feedback"
+        style="width: 100%; max-width: 588px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
+      >
+    </div>
+  </details>
+</div>
 
 
 ## Awards {#awards}
