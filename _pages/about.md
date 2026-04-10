@@ -15,7 +15,6 @@ redirect_from:
   I am currently a research intern at
   <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
   working with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
-  (GPA: 3.97/4.00, Rank: 17/148)
   Previously, I worked on concept-augmented continuous reasoning for large language models at Zhejiang University.
 </p>
 
@@ -56,14 +55,11 @@ redirect_from:
 </p>
 
 <p class="about-text" style="margin-left: 20px;">
-  <b>World-model exploration:</b> Efficient exploration via Active Counterfactual Reasoning with non-local state initialization,
-  achieving <b>1.67×</b> average sample-efficiency improvement over DreamerV3 on DeepMind Control Suite
-  (up to <b>8.8×</b> on sparse-reward tasks).
+  <b>World-model exploration:</b> improving exploration in sparse-reward and long-horizon tasks.
 </p>
 
 <p class="about-text" style="margin-left: 20px;">
-  <b>LLM continuous reasoning:</b> Concept-Augmented Continuous Reasoning for latent reasoning, improving accuracy by about
-  <b>40%</b> over Coconut in multi-step training.
+  <b>LLM continuous reasoning:</b> making latent/continuous reasoning more stable and interpretable.
 </p>
 
 <p class="about-text">
@@ -72,14 +68,11 @@ redirect_from:
 </p>
 
 <p class="about-text" style="margin-left: 20px;">
-  <b>Motivation:</b> Through my previous work on LM interpretability and continuous reasoning, I came to realize that today’s
-  models achieve abstraction on top of text and 2D visual tokens, but these foundations are not enough for <b>true spatial intelligence</b>.
+  <b>Motivation:</b> text and 2D tokens are not enough for true spatial intelligence.
 </p>
 
 <p class="about-text" style="margin-left: 20px;">
-  <b>Hypothesis:</b> I believe next-generation physical AI will require <b>new model architectures</b> with built-in 3D inductive biases
-  and <b>new training representations</b> for spatial understanding. My broader ambition is to help
-  <i>"turn AI into a physically grounded assistant beyond the screen"</i>.
+  <b>Hypothesis:</b> physical AI needs 3D-aware representations and model designs.
 </p>
 
 <p class="about-text">
