@@ -152,6 +152,31 @@ nav.lw-nav a.active {
   text-align: justify;
 }
 
+.about-text {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 0.55rem;
+  text-align: justify;
+}
+
+.research-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin: 0.9rem 0 1rem 0;
+}
+
+.interest-tag {
+  background: var(--light-gray);
+  padding: 0.4rem 0.6rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  border: 1px solid var(--border-color);
+}
+
 .page-content a {
   color: var(--secondary-color);
   text-decoration: none;
