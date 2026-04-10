@@ -73,14 +73,14 @@ redirect_from:
 
 ## Publications
 - **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** [[PDF]({{ '/files/paper.pdf' | relative_url }})]      
-Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
+*Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao*   
 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">    
 
 ## Competitions {#competitions}
 - **2026 NVIDIA DGX Spark Hackathon**   
 **Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
-**Xiaoling Zhou**, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen   
+***Xiaoling Zhou,*** *Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen*   
 <div class="education-item">
   <details style="margin-top: 0.35rem;">
     <summary style="cursor: pointer; color: var(--secondary-color); font-weight: 600;">
