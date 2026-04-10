@@ -54,7 +54,7 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  My long-term goal is to help turn AI into a <b>physically grounded assistant beyond the screen</b>. An overview of my research path:
+  My long-term goal is to turn AI into a <b>physically grounded assistant beyond the screen</b>. An overview of my research path:
 </p>
 <figure style="margin: 2rem 0 1rem 0; text-align: center;">
   <img src="{{ '/images/path.png' | relative_url }}" 
