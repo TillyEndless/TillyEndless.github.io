@@ -14,7 +14,7 @@ redirect_from:
   I am currently a research intern at
   <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
   working with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
-  Previously, I worked on concept-augmented continuous reasoning for large language models at Zhejiang University.
+  Previously, I worked on continuous reasoning for large language models at Zhejiang University.
 </p>
 
 <div style="height: 1px;"></div>
@@ -41,15 +41,15 @@ redirect_from:
       World Models
     </b>
   </span>
-  for embodied intelligence. I am interested in how agents can represent 3D structure, predict how the world changes after actions, and make control decisions under incomplete observations.
+  for embodied intelligence.
 </p>
 
-<p class="about-text">
-  I believe that today’s AI systems are still built on incomplete foundations. Text and 2D visual tokens are enough for abstraction and pattern recognition, but not for genuine spatial and physical intelligence. If we want AI to move beyond the screen and become a real-world assistant, we will need models with stronger 3D inductive biases, richer physical representations, and better predictive structure for interaction and control.
+<p class="about-text" style="margin-left: 20px;">
+  <b>From reasoning to embodiment:</b> I study how structured latent representations can make intelligence more stable, interpretable, and controllable.
 </p>
 
-<p class="about-text">
-  This belief has shaped the trajectory of my research. In language models, I studied how continuous latent representations can support more stable and interpretable reasoning. In embodied settings, I now study how world models can support exploration, prediction, and control in sparse-reward and long-horizon environments.
+<p class="about-text" style="margin-left: 20px;">
+  <b>From perception to control:</b> I aim to build models that represent 3D structure, predict how the world changes after actions, and support decision-making under uncertainty.
 </p>
 
 <p class="about-text">
