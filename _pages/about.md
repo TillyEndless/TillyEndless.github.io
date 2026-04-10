@@ -25,11 +25,7 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  Through my previous work on LM interpretability and continuous reasoning, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
-</p>
-
-<p class="about-text">
-  I believe the next generation of physical AI will require
+  My answer is to build
   <span style="
     display: inline-block;
     background: #f1f9fc;
@@ -45,7 +41,15 @@ redirect_from:
       World Models
     </b>
   </span>
-  with stronger 3D inductive biases and new training representations for spatial understanding.
+  for embodied intelligence.
+</p>
+
+<p class="about-text">
+  Through my previous work on LM interpretability and continuous reasoning, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
+</p>
+
+<p class="about-text">
+  I believe the next generation of physical AI will require stronger 3D inductive biases, richer training representations for spatial understanding, and models that can predict how the world changes after actions.
 </p>
 
 <p class="about-text">
@@ -53,7 +57,7 @@ redirect_from:
 </p>
 
 <p class="about-text">
-  My long-term goal is to develop <b>physically grounded, agentic models</b>.
+  My long-term goal is to help build <b>the foundation models of physical intelligence</b>.
 </p>
 
 <div class="research-interests" aria-label="Research interests">
