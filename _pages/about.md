@@ -78,12 +78,12 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
 
 ## Competitions {#competitions}
-- **2026 NVIDIA DGX Spark Hackathon**   
+- 🏆 **2026 NVIDIA DGX Spark Hackathon**   
 **Project: ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
 **Xiaoling Zhou**, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen   
 <div class="education-item">
   <details style="margin-top: 0.35rem;">
-    <summary style="cursor: pointer; color: #1a73e8; font-weight: 600;">
+    <summary style="cursor: pointer; color: var(--secondary-color); font-weight: 600;">
       Details
     </summary>
     <div class="year" style="margin-top: 0.6rem;">
@@ -122,6 +122,6 @@ Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, 
   <div class="institution">2024/11</div>
 </div>
 <div class="education-item">
-  <h3>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
+  <h3><span aria-hidden="true" style="display: inline-block; filter: grayscale(1) brightness(1.25) contrast(1.05); margin-right: 0.35rem;">🏆</span>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
   <div class="institution">2025/01</div>
 </div>

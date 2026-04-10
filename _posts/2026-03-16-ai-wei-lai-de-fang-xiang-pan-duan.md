@@ -10,7 +10,7 @@ The capacity shortage comes from the compute bottleneck. Relative to a world of 
 
 For example, Antigravity has argued that the token loss introduced by third-party agent frameworks needs to be reduced, and as a result it cut off third-party agent harnesses from using Claude subscriptions.
 
-<img src="{{ '/images/image1.png' | relative_url }}" alt="图注" style="width: 70%;">
+<img src="{{ '/images/image1.png' | relative_url }}" alt="图注" style="width: 50%;">
 
 
 At bottom, the model layer has become strong enough while the agent layer remains too weak, creating a mismatch between subscription pricing and real inference cost. That alone tells us a great deal about the direction in which compute utilization is heading.

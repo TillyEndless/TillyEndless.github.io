@@ -6,7 +6,7 @@ category: research
 
 Physical AI is still in the early phase of its industry cycle, and new paradigms are emerging one after another. Even the term "world model" already comes with nine or ten different interpretations:
 
-![Illustration]({{ '/images/image2.jpg' | relative_url }})
+<img src="{{ '/images/image2.jpg' | relative_url }}" alt="Illustration" style="width: 50%;">
 
 *Figure: What is a World Model?*
 

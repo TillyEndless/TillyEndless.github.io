@@ -51,6 +51,24 @@ header.lw-header {
   align-items: center;
 }
 
+/* Compact header used on /blog and post pages */
+header.lw-blog-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.2rem 0 0.75rem 0;
+}
+
+header.lw-blog-header a.lw-back-home {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+header.lw-blog-header a.lw-back-home:hover {
+  text-decoration: underline;
+}
+
 .profile-section {
   text-align: center;
 }
