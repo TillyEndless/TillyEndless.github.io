@@ -80,7 +80,7 @@ redirect_from:
 - [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
 
 ## Publications
-- **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** [[PDF]({{ '/files/paper.pdf' | relative_url }})]      
+- **Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** (**ICML26 Accepted**) [[PDF](https://arxiv.org/pdf/2605.16030)]      
 *Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao*   
 
 <img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">    
