@@ -82,11 +82,11 @@ header.lw-blog-header a.lw-back-home:hover {
 
 .profile-img {
   width: 180px;
-  height: 180px;
+  height: auto;
   border-radius: 8px;
   margin: 0 auto 1rem;
   background: var(--light-gray);
-  object-fit: cover;
+  object-fit: contain;
   border: 1px solid var(--border-color);
 }
 
@@ -450,7 +450,7 @@ nav.lw-nav a.active {
 
   .profile-img {
     width: 150px;
-    height: 150px;
+    height: auto;
   }
 
   .header-content h2 {
