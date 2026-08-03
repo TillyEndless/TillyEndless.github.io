@@ -7,6 +7,8 @@ redirect_from:
   - /about/
   - /about.html
 ---
+<p class="content-updated">Last content update: April 15, 2026</p>
+
 <p class="about-text">
   I am a third-year undergraduate student at
   <b><a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a></b>

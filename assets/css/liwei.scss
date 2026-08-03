@@ -139,6 +139,13 @@ header.lw-blog-header a.lw-back-home:hover {
   text-decoration: underline;
 }
 
+.content-updated {
+  color: var(--dark-gray);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: -0.55rem 0 0.8rem;
+}
+
 /* Nav */
 nav.lw-nav {
   background: var(--light-gray);
