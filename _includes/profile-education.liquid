@@ -8,7 +8,7 @@
     {% if education.lab %}<strong>{{ education.lab }}</strong><br>{% endif %}
     {% if education.advisors %}
       Advisors:
-      {% for advisor in education.advisors %}<a href="{{ advisor.url }}">{{ advisor.name }} ({{ advisor.name_zh }})</a>{% unless forloop.last %} &amp; {% endunless %}{% endfor %}<br>
+      {% for advisor in education.advisors %}<a href="{{ advisor.url }}"><strong>{{ advisor.name }} ({{ advisor.name_zh }})</strong></a>{% unless forloop.last %} &amp; {% endunless %}{% endfor %}<br>
     {% endif %}
     {% if education.gpa %}<strong>GPA: {{ education.gpa }}</strong>{% endif %}
   </p>
