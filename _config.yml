@@ -4,11 +4,11 @@ first_name: Xiaoling
 middle_name: ''
 last_name: Zhou
 contact_note: ''
-description: Xiaoling Zhou (周小灵), Zhejiang University. Efficient video and world models,
-  mixed-precision attention, multi-view geometry, model-based RL, and latent reasoning.
+description: Xiaoling Zhou (周小灵), Zhejiang University. Efficient deep learning,
+  efficient attention, KV-cache optimization, and mixed-precision computation.
 footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
 keywords: Xiaoling Zhou, Zhejiang University, DraftKV, DraftAttention2, MosaicAttention,
-  Mind Dreamer, CUDA, world models, model-based RL, latent reasoning
+  efficient deep learning, efficient attention, KV-cache optimization, mixed precision, CUDA
 lang: en
 icon: magic-circle.png
 url: https://tillyendless.github.io

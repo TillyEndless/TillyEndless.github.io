@@ -32,14 +32,10 @@ redirect_from:
   and <a href="https://shawnricecake.github.io/"><strong>Prof. Xuan Shen</strong></a>.
 </p>
 <p class="about-text">
-  My research focuses on <strong>efficient video and world models</strong>, from long-term KV memory
-  and mixed-precision attention to sparse attention for multi-view geometry. I work across algorithm
-  design and CUDA kernels to improve inference efficiency while preserving generation quality and geometric accuracy.
-  I also study <strong>model-based reinforcement learning</strong> and <strong>latent reasoning in LLMs</strong>.
-</p>
-<p class="about-text">
-  My long-term goal is physically grounded intelligence: models that can represent the world,
-  imagine beyond observed experience, and reason efficiently.
+  My research focuses on <strong>efficient deep learning</strong>, with an emphasis on
+  efficient attention, KV-cache optimization, and mixed-precision computation.
+  I work on algorithms and CUDA kernels to reduce inference latency and memory usage
+  while maintaining model quality.
 </p>
 <p class="content-updated">Last updated: November 5, 2026</p>
 
@@ -74,18 +70,6 @@ redirect_from:
 ## Research Experience {#research}
 
 {% include research-experience.liquid %}
-
-<details class="research-media">
-  <summary>World-model research overview &amp; visualizations</summary>
-  <figure>
-    <img src="{{ '/images/path.png' | relative_url }}" alt="Research overview connecting representation, world dynamics, control, and embodied interaction" loading="lazy">
-    <figcaption>World-model research: connecting representation and dynamics to decision-making.</figcaption>
-  </figure>
-  <div class="research-visualizations">
-    <img src="{{ '/images/image_paper.png' | relative_url }}" alt="Mind Dreamer research diagram" loading="lazy">
-    <img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="World-model imagination visualization" loading="lazy">
-  </div>
-</details>
 
 ## Awards {#awards}
 

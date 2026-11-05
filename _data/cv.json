@@ -4,7 +4,7 @@
     "label": "Computer Science Undergraduate",
     "email": "endlesstilly@gmail.com",
     "website": "https://tillyendless.github.io",
-    "summary": "Undergraduate at Zhejiang University’s Chu Kochen Honors College, researching efficient video and world models, multi-view geometry, and latent reasoning. My master’s destination is the CAD&CG Lab at Zhejiang University’s College of Computer Science and Technology, advised by Chunhua Shen and Xuan Shen.",
+    "summary": "Undergraduate at Zhejiang University’s Chu Kochen Honors College, researching efficient deep learning with an emphasis on efficient attention, KV-cache optimization, and mixed-precision computation. I work on algorithms and CUDA kernels to reduce inference latency and memory usage while maintaining model quality. My master’s destination is the CAD&CG Lab at Zhejiang University’s College of Computer Science and Technology, advised by Chunhua Shen and Xuan Shen.",
     "profiles": [
       {
         "network": "GitHub",
@@ -212,10 +212,10 @@
     }
   ],
   "interests": [
-    "Efficient Video & World Models",
-    "Mixed-Precision & Sparse Attention",
-    "Multi-View Geometry",
-    "Model-Based Reinforcement Learning",
-    "Latent Reasoning"
+    "Efficient Deep Learning",
+    "Efficient Attention",
+    "KV-Cache Optimization",
+    "Mixed-Precision Computation",
+    "GPU Kernel Optimization"
   ]
 }
