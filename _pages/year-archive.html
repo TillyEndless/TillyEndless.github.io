@@ -1,47 +1,24 @@
 ---
-layout: liwei-blog
+layout: page
 permalink: /blog/
-title: "Blog"
-author_profile: false
+title: Blog
+nav: true
+nav_order: 2
 redirect_from:
   - /year-archive/
   - /wordpress/blog-posts/
 ---
 
-{%- assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
-
-{%- if site.posts.size == 0 -%}
-  <p>No posts yet.</p>
-{%- endif -%}
-
-{%- for year in posts_by_year -%}
-  <div class="year-section">
-    <div class="year-header">{{ year.name }}</div>
-
-    {%- for post in year.items -%}
-      {%- assign cb_category = post.category | default: 'thoughts' -%}
-      <div class="publication">
-        <div class="publication-title">
-          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </div>
-
-        <div class="publication-meta">
-          <span class="publication-venue">{{ post.date | date: "%b %d, %Y" }}</span>
-          <span class="publication-authors">
-            {{ cb_category | capitalize }} · Informal update
-          </span>
-        </div>
-
-        {%- if post.excerpt -%}
-          <div class="blog-excerpt">
-            {{ post.excerpt | markdownify | strip_html | strip_newlines | escape_once | truncate: 220 }}
-          </div>
-        {%- endif -%}
-
-        <div class="publication-links">
-          <a href="{{ post.url | relative_url }}">Read</a>
-        </div>
-      </div>
-    {%- endfor -%}
-  </div>
-{%- endfor -%}
+{% assign posts_by_year = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+{% for year in posts_by_year %}
+<h2>{{ year.name }}</h2>
+<ul class="post-list">
+  {% for post in year.items %}
+  <li class="mb-4">
+    <h3><a class="post-title" href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }} · {{ post.category | capitalize }}</p>
+    {{ post.excerpt }}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

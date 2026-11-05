@@ -1,0 +1,31 @@
+// Site-specific adjustments; the remaining styles come from al-folio v0.16.3.
+:root {
+  --global-theme-color: #222222;
+  --global-hover-color: #000000;
+  --dark-gray: var(--global-text-color-light);
+  --light-gray: var(--global-code-bg-color);
+  --border-color: var(--global-divider-color);
+}
+html[data-theme="dark"] {
+  --global-bg-color: #1c1c1c;
+  --global-theme-color: #eeeeee;
+  --global-hover-color: #ffffff;
+  --global-highlight-color: #eeeeee;
+  --global-footer-bg-color: #171717;
+}
+.post-header .name-cn { font-size: 0.7em; font-weight: 400; }
+.post-header .desc { line-height: 1.8; }
+.profile.float-right { width: 270px; margin: 0 0 1.5rem 2.5rem; }
+.profile img { aspect-ratio: 1; object-fit: cover; }
+.content-updated { font-size: 0.8rem; color: var(--global-text-color-light); }
+.about-text { line-height: 1.8; margin-bottom: 1.2rem; }
+.research-interests { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.25rem 0; }
+.interest-tag { border: 1px solid var(--global-divider-color); border-radius: 4px; padding: 0.3rem 0.6rem; font-size: 0.85rem; }
+.education-item { margin-bottom: 1.25rem; padding-left: 1rem; border-left: 2px solid var(--global-divider-color); }
+.education-item h3 { font-size: 1.1rem; filter: grayscale(1); }
+.education-item .year { color: var(--global-text-color-light); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 4px; }
+@media (max-width: 575.98px) {
+  .profile.float-right { float: none !important; width: 225px; max-width: 100%; margin: 0 auto 1.75rem; }
+  .post-header .post-title { font-size: 2rem; }
+}

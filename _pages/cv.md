@@ -1,6 +1,8 @@
 ---
-layout: single
+layout: page
 title: "CV"
+nav: true
+nav_order: 3
 permalink: /cv/
 author_profile: false
 redirect_from:

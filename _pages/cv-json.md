@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: page
 title: "CV"
 permalink: /cv-json/
 author_profile: false

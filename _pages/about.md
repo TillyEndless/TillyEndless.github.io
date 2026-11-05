@@ -1,26 +1,28 @@
 ---
 permalink: /
 title: "About Me"
-layout: liwei-home
-author_profile: false
+layout: about
+subtitle: >
+  Zhejiang University of Computer Science &amp; Technology<br>
+  Email: <a href="mailto:endlesstilly@gmail.com">endlesstilly@gmail.com</a> · <a href="https://github.com/TillyEndless">GitHub</a>
+profile:
+  align: right
+  image: profile.jpg
+  image_circular: false
+social: false
+announcements:
+  enabled: false
+latest_posts:
+  enabled: false
+selected_papers: false
 redirect_from: 
   - /about/
   - /about.html
 ---
 <p class="content-updated">Last content update: April 15, 2026</p>
 
-<div class="home-intro">
-  <figure class="home-portrait">
-    <img
-      src="{{ '/images/profile.jpg' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"
-      alt="Xiaoling Zhou profile picture"
-      class="profile-img"
-      width="800"
-      height="800"
-      loading="eager"
-      decoding="async"
-    >
-  </figure>
+
+
 
 <p class="about-text">
   I am a third-year undergraduate student at
@@ -56,7 +58,6 @@ redirect_from:
 <p class="about-text">
   My long-term goal is to turn AI into a <b>physically grounded assistant beyond the screen</b>. An overview of my research path:
 </p>
-</div>
 <figure style="margin: 2rem 0 1rem 0; text-align: center;">
   <img src="{{ '/images/path.png' | relative_url }}" 
        alt="A realizable path toward physical intelligence"
