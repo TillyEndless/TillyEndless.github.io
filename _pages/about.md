@@ -3,7 +3,6 @@ permalink: /
 title: About Me
 layout: about
 subtitle: >
-  Computer Science · Chu Kochen Honors College, Zhejiang University<br>
   Email: <a href="mailto:endlesstilly@gmail.com">endlesstilly@gmail.com</a> · <a href="https://github.com/TillyEndless">GitHub</a> · <a href="/cv/">CV</a>
 profile:
   align: right
