@@ -1,10 +1,10 @@
 ---
 permalink: /
-title: "About Me"
+title: About Me
 layout: about
 subtitle: >
-  Zhejiang University of Computer Science &amp; Technology<br>
-  Email: <a href="mailto:endlesstilly@gmail.com">endlesstilly@gmail.com</a> · <a href="https://github.com/TillyEndless">GitHub</a>
+  Computer Science · Chu Kochen Honors College, Zhejiang University<br>
+  Email: <a href="mailto:endlesstilly@gmail.com">endlesstilly@gmail.com</a> · <a href="https://github.com/TillyEndless">GitHub</a> · <a href="/cv/">CV</a>
 profile:
   align: right
   image: profile.jpg
@@ -15,128 +15,92 @@ announcements:
 latest_posts:
   enabled: false
 selected_papers: false
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
-<p class="content-updated">Last content update: April 15, 2026</p>
-
-
-
 
 <p class="about-text">
-  I am a third-year undergraduate student at
-  <b><a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a></b>
-  (Chu Kochen Honors College), majoring in Computer Science and Technology (expected B.Eng. 2027).
-  I am currently a research intern at
-  <b>Tsinghua University</b>,
-  where I work with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
-  Previously, I worked on continuous inference for large language models at Zhejiang University.
+  I am an undergraduate in <strong>Computer Science and Technology</strong> at
+  <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>’s
+  <strong>Chu Kochen Honors College</strong>, with an expected graduation date of June 2027
+  and a GPA of <strong>3.97/4.00</strong>.
 </p>
-
-<div style="height: 1px;"></div>
-
 <p class="about-text">
-  I am obsessed with one question:
-  <b><i>"What is the realizable path toward physical intelligence?"</i></b>
+  My research focuses on <strong>efficient video and world models</strong>, from long-term KV memory
+  and mixed-precision attention to sparse attention for multi-view geometry. I work across algorithm
+  design and CUDA kernels to improve inference efficiency while preserving generation quality and geometric accuracy.
+  I also study <strong>model-based reinforcement learning</strong> and <strong>latent reasoning in LLMs</strong>.
 </p>
-
 <p class="about-text">
-  My answer is to build
-  <b>Physically Consistent and 3D-Aware World Models</b>
-  as a foundation for physical intelligence.
+  My long-term goal is physically grounded intelligence: models that can represent the world,
+  imagine beyond observed experience, and reason efficiently.
 </p>
+<p class="content-updated">Last updated: November 5, 2026</p>
 
-<p class="about-text">
-  Through my previous work on LM interpretability and continuous inference, I came to realize that today’s models achieve abstraction over text and 2D visual tokens, but these foundations are not enough for true spatial intelligence.
-</p>
+<nav class="profile-section-links" aria-label="Homepage sections">
+  <a href="#news">News</a>
+  <a href="#education">Education</a>
+  <a href="#publications">Publications</a>
+  <a href="#research">Research</a>
+  <a href="#awards">Awards</a>
+  <a href="#skills">Skills</a>
+</nav>
 
-<p class="about-text">
-  I believe the next generation of physical AI will require stronger 3D inductive biases, better spatial representations, and ultimately the ability to predict how the world changes after actions.
-</p>
+## News {#news}
 
-<p class="about-text">
-  My long-term goal is to turn AI into a <b>physically grounded assistant beyond the screen</b>. An overview of my research path:
-</p>
-<figure style="margin: 2rem 0 1rem 0; text-align: center;">
-  <img src="{{ '/images/path.png' | relative_url }}" 
-       alt="A realizable path toward physical intelligence"
-       style="max-width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);" />
-  <figcaption style="margin-top: 0.8rem; font-size: 0.95rem; color: var(--dark-gray); font-style: italic;">
-    My current research focuses on representation and dynamics—modeling.
-  </figcaption>
-</figure>
+<ul class="profile-news">
+  <li><time>Oct. 2026</time><span><strong>DraftKV</strong>: an ongoing project on efficient long-term memory for video generation.</span></li>
+  <li><time>Sept. 2026</time><span><strong>Draft Attention v2</strong> and <strong>MosaicAttention</strong> are under review.</span></li>
+  <li><time>2026</time><span><strong>Mind Dreamer</strong> was accepted to <strong>ICML 2026</strong>. <a href="https://arxiv.org/abs/2605.16030">Paper</a></span></li>
+</ul>
 
-<div class="research-interests" aria-label="Research interests">
-  <span class="interest-tag">Model-based RL</span>
-  <span class="interest-tag">World Models</span>
-  <span class="interest-tag">Embodied AI</span>
-  <span class="interest-tag">Representation Learning</span>
-  <span class="interest-tag">LLM Inference</span>
+## Education {#education}
+
+{% include profile-education.liquid %}
+
+## Publications & Manuscripts {#publications}
+
+<p class="profile-meta">Accepted work, manuscripts under review, and an ongoing project are labeled separately below.</p>
+<div class="publications">
+{% bibliography %}
 </div>
 
-## News
-- [2025-2026] One paper submitted (under review with **strong feedback**).   
-- [2025. 10] Started research at Tsinghua University on physical world models and RL exploration.   
-- [2025. 10] Awarded First-Class Scholarship, Zhejiang University.    
-- [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
+## Research Experience {#research}
 
-## Publications
-- **Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** (**ICML26 Accepted**) [[PDF](https://arxiv.org/abs/2605.16030)]      
-*Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao*   
+{% include research-experience.liquid %}
 
-<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">    
-
-## Competitions {#competitions}
-- **2026 NVIDIA DGX Spark Hackathon**   
-[Project] **ClawKeeper: Security Management &amp; Work Monitoring System Based on NemoClaw**   
-***Xiaoling Zhou,*** *Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen*   
-<div class="education-item">
-  <details style="margin-top: 0.35rem;">
-    <summary style="cursor: pointer; color: var(--secondary-color); font-weight: 600;">
-      Details
-    </summary>
-    <div class="year" style="margin-top: 0.6rem;">
-      Field: Agent Operations
-    </div>
-    <div class="year">
-      Built an operator-facing runtime stack that bridges agent capability and operability via security controls, runtime watchdog monitoring, and structured operator feedback.
-    </div>
-    <div class="year">
-      <b>What we built:</b> Security Control Plane (risk-aware tool interception + auditing) &middot; Runtime Watchdog (timeout/stall/loop &amp; repeated-output detection + health probes) &middot; Operator Feedback (structured events for notifications/dashboards).
-    </div>
-    <div class="year">
-      <a href="https://github.com/hollyhongever/ClawKeeper" target="_blank" rel="noopener noreferrer">Project repo</a>
-    </div>
-    <div class="year" style="margin-top: 0.65rem;">
-      <img
-        src="{{ '/images/competition.png' | relative_url }}"
-        alt="ClawKeeper runtime stack: security control plane, runtime watchdog, operator feedback"
-        style="width: 100%; max-width: 588px; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.08); display: block; margin: 0 auto;"
-      >
-    </div>
-  </details>
-</div>
-
+<details class="research-media">
+  <summary>World-model research overview &amp; visualizations</summary>
+  <figure>
+    <img src="{{ '/images/path.png' | relative_url }}" alt="Research overview connecting representation, world dynamics, control, and embodied interaction" loading="lazy">
+    <figcaption>World-model research: connecting representation and dynamics to decision-making.</figcaption>
+  </figure>
+  <div class="research-visualizations">
+    <img src="{{ '/images/image_paper.png' | relative_url }}" alt="Mind Dreamer research diagram" loading="lazy">
+    <img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="World-model imagination visualization" loading="lazy">
+  </div>
+</details>
 
 ## Awards {#awards}
-<div class="education-item">
-  <h3>🏆 National Scholarship (Undergraduate)</h3>
-  <div class="institution">2024/10</div>
-  <div class="year">Awarded by Ministry of National Education to Top 0.5% students</div>
-</div>
-<div class="education-item">
-  <h3>🏆 First Prize - Zhejiang University Scholarship</h3>
-  <div class="institution">2024/10, 2025/10</div>
-  <div class="year">Awarded by Zhejiang University</div>
-</div>
-<div class="education-item">
-  <h3>🏆 Scholarship for Leading Achievement</h3>
-  <div class="institution">2024/11</div>
-  <div class="year">Awarded by Chu Kochen Honors College to Outstanding students</div>
-</div>
-<div class="education-item">
-  <h3><span aria-hidden="true" style="display: inline-block; filter: grayscale(1) brightness(1.25) contrast(1.05); margin-right: 0.35rem;">🏆</span>Second Prize - College Students’ Physics (Theory) Innovation Competition</h3>
-  <div class="institution">2025/01</div>
-  <div class="year">Awarded by Zhejiang Physical Society</div>
+
+{% include profile-awards.liquid %}
+
+## Skills {#skills}
+
+{% include profile-skills.liquid %}
+
+## Additional Project {#competitions}
+
+<div class="research-item">
+  <h3>ClawKeeper</h3>
+  <p class="profile-meta">2026 NVIDIA DGX Spark Hackathon</p>
+  <p>Security management and work monitoring for AI agents, combining a security control plane, runtime watchdog, and structured operator feedback.</p>
+  <p class="profile-meta"><strong>Xiaoling Zhou</strong>, Lei Hong, Yifeng Guan, Chengbo Sun, Haoyuan Chen</p>
+  <details>
+    <summary>Project details</summary>
+    <p>Risk-aware tool interception and auditing; timeout, stall, loop, and repeated-output detection; runtime health probes and operator notifications.</p>
+    <img class="project-diagram" src="{{ '/images/competition.png' | relative_url }}" alt="ClawKeeper security control plane, runtime watchdog, and operator feedback" loading="lazy">
+  </details>
+  <a href="https://github.com/hollyhongever/ClawKeeper">Project repository</a>
 </div>

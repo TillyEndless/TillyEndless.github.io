@@ -1,0 +1,8 @@
+{% assign education = site.data.cv.education.first %}
+<div class="education-summary">
+  <h3>{{ education.institution }}</h3>
+  <p>{{ education.studyType }} in {{ education.area }}<br>
+    <span class="profile-meta">Sept. 2023 – June 2027 (expected)</span><br>
+    <strong>GPA: {{ education.gpa }}</strong>
+  </p>
+</div>

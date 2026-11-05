@@ -1,0 +1,90 @@
+[
+  {
+    "id": "draftkv",
+    "name": "DraftKV",
+    "title": "Attention-Guided KV Retrieval for Long-Horizon Video Generation",
+    "dates": "Sept. 2026 – Oct. 2026",
+    "startDate": "2026-09",
+    "endDate": "2026-10",
+    "status": "Project in progress",
+    "summary": "Retrieves local and salient long-range memories from full-precision CPU-resident KV, using low-resolution attention scores to balance long-term memory and inference cost.",
+    "results": [
+      "35.4% lower peak GPU memory on SolarWM-H3 33B, with improved generation quality and long-history consistency.",
+      "1.21× end-to-end speedup for 60-second LongLive 1.0 generation; 1.91× / 2.51× Fetch+Attention speedups on RTX 4090 / 5090."
+    ],
+    "methods": [
+      "Extended DraftAttention2’s low-resolution importance scoring to historical KV retrieval.",
+      "Designed Streaming FlashAttention to overlap host-to-device KV transfer with attention computation."
+    ]
+  },
+  {
+    "id": "draftattention2",
+    "name": "DraftAttention2",
+    "title": "Low-Resolution-Guided Mixed-Precision Attention for Video Generation",
+    "dates": "July 2026 – Sept. 2026",
+    "startDate": "2026-07",
+    "endDate": "2026-09",
+    "status": "Under review",
+    "summary": "Uses low-resolution attention importance estimates to route visual interactions to 16-bit, 8/4-bit, or sparse computation, preserving critical information in few-step diffusion.",
+    "results": [
+      "Up to 2.51× / 2.60× DiT inference speedups on HunyuanVideo-13B / MiniMax-H3.",
+      "1.87× speedup in 8-step video generation while maintaining near-dense attention quality."
+    ],
+    "methods": [
+      "Combined average/max dual-path pooling with an attention-output error bound to study mixed precision versus pure sparsity.",
+      "Designed a fused CUDA kernel for quantization, data reordering, and cross-precision Online Softmax, reducing intermediate writes and redundant memory traffic."
+    ]
+  },
+  {
+    "id": "mosaicattention",
+    "name": "MosaicAttention",
+    "title": "Sparse Attention for Multi-View Geometry Transformers",
+    "dates": "July 2026 – Sept. 2026",
+    "startDate": "2026-07",
+    "endDate": "2026-09",
+    "status": "Under review",
+    "summary": "Combines 2D average/max pooling and hierarchical sparse routing to retain important cross-view geometry while reducing redundant global attention.",
+    "results": [
+      "Up to 3.12× end-to-end inference speedup at 128 input views, while matching or improving accuracy on CO3Dv2 and other multi-view geometry tasks."
+    ],
+    "methods": [
+      "Allocated computation across layers while preserving 2D image structure and critical cross-view interactions.",
+      "Incorporated mixed-precision execution to further improve inference efficiency."
+    ]
+  },
+  {
+    "id": "mind-dreamer",
+    "name": "Mind Dreamer",
+    "title": "Untethering World-Model Imagination via Active Intervention",
+    "dates": "Oct. 2025 – May 2026",
+    "startDate": "2025-10",
+    "endDate": "2026-05",
+    "status": "ICML 2026",
+    "summary": "Addresses Historical Tethering in model-based reinforcement learning by synthesizing high-value latent states as new imagination starting points beyond observed trajectories.",
+    "results": [
+      "1.67× average and up to 8.8× sample-efficiency gains over DreamerV3 on DeepMind Control Suite, with higher final returns on multiple sparse-reward tasks."
+    ],
+    "methods": [
+      "Identified how imagination initialized only from observed states limits exploration of unvisited, high-value regions.",
+      "Jointly scored task value and uncertainty to guide active exploration in latent space."
+    ],
+    "url": "https://arxiv.org/abs/2605.16030"
+  },
+  {
+    "id": "beyond-token-supervision",
+    "name": "Beyond Token Supervision",
+    "title": "Semantic Anchors for Latent Reasoning in LLMs",
+    "dates": "May 2025 – Sept. 2025",
+    "startDate": "2025-05",
+    "endDate": "2025-09",
+    "status": "Research project",
+    "summary": "Uses sparse autoencoders to extract semantic features from an explicit chain-of-thought teacher and supervise intermediate latent reasoning states.",
+    "results": [
+      "11.7% GSM8K accuracy improvement over the COCONUT latent-reasoning baseline, reducing semantic drift."
+    ],
+    "methods": [
+      "Identified semantic drift caused by the absence of explicit intermediate supervision in continuous latent reasoning.",
+      "Aligned intermediate latent states with semantic anchors extracted from correct explicit reasoning trajectories."
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+<ul class="profile-awards">
+  {% for award in site.data.cv.awards %}
+  <li>
+    <div><strong>{{ award.title }}</strong><br><span class="profile-meta">{{ award.summary }}</span></div>
+    <span class="profile-meta">{{ award.display_date }}</span>
+  </li>
+  {% endfor %}
+</ul>

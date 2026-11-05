@@ -4,11 +4,11 @@ first_name: Xiaoling
 middle_name: ''
 last_name: Zhou
 contact_note: ''
-description: Xiaoling Zhou (周小灵) — world models, model-based reinforcement learning,
-  and physical intelligence.
+description: Xiaoling Zhou (周小灵), Zhejiang University. Efficient video and world models,
+  mixed-precision attention, multi-view geometry, model-based RL, and latent reasoning.
 footer_text: Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
-keywords: Xiaoling Zhou, world models, model-based reinforcement learning, embodied
-  AI
+keywords: Xiaoling Zhou, Zhejiang University, DraftKV, DraftAttention2, MosaicAttention,
+  Mind Dreamer, CUDA, world models, model-based RL, latent reasoning
 lang: en
 icon: magic-circle.png
 url: https://tillyendless.github.io
@@ -233,9 +233,9 @@ filtered_bibtex_keywords:
 - supp
 - video
 - website
-max_author_limit: 3
+max_author_limit: 20
 more_authors_animation_delay: 10
-enable_publication_thumbnails: true
+enable_publication_thumbnails: false
 external_links:
   enabled: true
   rel: external nofollow noopener

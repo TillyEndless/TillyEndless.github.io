@@ -15,6 +15,8 @@ Requires Homebrew `ruby@3.2`. Dependencies are installed in the ignored `local/b
 ## Content and customization
 
 - `_pages/about.md`: biography, research interests, news, competitions, and awards.
+- `_data/research.json` and `_data/cv.json`: research contributions, education, awards, and skills shared across the homepage and online CV.
+- `_pages/cv-json.md`: HTML CV at `/cv-json/`, using the same data and bibliography.
 - `_posts/`: blog articles. Existing URLs are retained as `/:categories/:title/`.
 - `_bibliography/papers.bib`: publications shown at `/publications/`.
 - `assets/img/profile.jpg`: current square profile photo; `images/profile.jpg` remains available at its existing URL.

@@ -1,0 +1,20 @@
+<div class="research-list">
+  {% for project in site.data.research %}
+  <article class="research-item" id="{{ project.id }}">
+    <header>
+      <h3>{{ project.name }}</h3>
+      <span class="profile-meta">{{ project.dates }}</span>
+    </header>
+    <p class="research-subtitle">{{ project.title }}</p>
+    <p>{{ project.summary }}</p>
+    <ul class="research-results">
+      {% for result in project.results %}<li>{{ result }}</li>{% endfor %}
+    </ul>
+    <details>
+      <summary>Methods &amp; contributions</summary>
+      <ul>{% for method in project.methods %}<li>{{ method }}</li>{% endfor %}</ul>
+    </details>
+    {% if project.url %}<a class="research-paper-link" href="{{ project.url }}">Read the paper</a>{% endif %}
+  </article>
+  {% endfor %}
+</div>

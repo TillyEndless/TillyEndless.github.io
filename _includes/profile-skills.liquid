@@ -1,0 +1,5 @@
+<dl class="profile-skills">
+  {% for skill in site.data.cv.skills %}
+  <div><dt>{{ skill.name }}</dt><dd>{{ skill.keywords | join: ', ' }}</dd></div>
+  {% endfor %}
+</dl>
