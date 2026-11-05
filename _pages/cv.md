@@ -9,7 +9,7 @@ redirect_from:
   - /resume
 ---
 
-{% assign cv_pdf = '/files/cv.pdf' | relative_url %}
+{% assign cv_pdf = '/files/cv.pdf' | relative_url | bust_file_cache %}
 
 <meta http-equiv="refresh" content="0; url={{ cv_pdf }}">
 <script>
