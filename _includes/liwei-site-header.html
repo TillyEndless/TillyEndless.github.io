@@ -6,31 +6,19 @@
 {%- assign author_name_raw = site.author.name | default: site.name | default: site.title -%}
 {%- assign name_parts = author_name_raw | split: '[' -%}
 {%- assign name_en = name_parts[0] | strip -%}
-{%- assign name_en_highlight = name_en | replace: 'Zhou', '<span style="color:#ffb300;">Zhou</span>' -%}
 {%- assign name_cn = '' -%}
 {%- if name_parts.size > 1 -%}
   {%- assign name_cn = name_parts[1] | split: ']' | first | strip -%}
 {%- endif -%}
 
 <header class="lw-header">
-  <div class="profile-section">
-    <img
-      src="{{ '/images/profile.jpg' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"
-      alt="{{ name_en }} profile picture"
-      class="profile-img"
-      width="800"
-      height="800"
-      loading="eager"
-      decoding="async"
-    >
-  </div>
   <div class="header-content">
-	    <h2>
-	      <b>{{ name_en_highlight }}</b>
+      <h1>
+        <b>{{ name_en }}</b>
 	      {%- if name_cn != '' -%}
 	        &nbsp;|&nbsp;<span class="name-cn">{{ name_cn }}</span>
 	      {%- endif -%}
-	    </h2>
+      </h1>
 
     {%- if site.author.employer and site.author.employer != '' -%}
       <p class="affiliation">{{ site.author.employer }}</p>

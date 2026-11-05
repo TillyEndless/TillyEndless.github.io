@@ -18,7 +18,7 @@
     {%- endif -%}
     <link rel="stylesheet" href="{{ '/assets/css/liwei.css' | relative_url }}?v={{ cache_bust }}">
   </head>
-  <body>
+  <body{% if page.layout == 'liwei-home' %} class="home-page"{% endif %}>
     {{ content }}
   </body>
 </html>

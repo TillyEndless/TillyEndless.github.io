@@ -9,6 +9,19 @@ redirect_from:
 ---
 <p class="content-updated">Last content update: April 15, 2026</p>
 
+<div class="home-intro">
+  <figure class="home-portrait">
+    <img
+      src="{{ '/images/profile.jpg' | relative_url }}?v={{ site.github.build_revision | default: site.time | date: '%s' }}"
+      alt="Xiaoling Zhou profile picture"
+      class="profile-img"
+      width="800"
+      height="800"
+      loading="eager"
+      decoding="async"
+    >
+  </figure>
+
 <p class="about-text">
   I am a third-year undergraduate student at
   <b><a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a></b>
@@ -28,22 +41,7 @@ redirect_from:
 
 <p class="about-text">
   My answer is to build
-	  <span style="
-	    display: inline-block;
-	    background: var(--light-gray);
-	    border: 1px solid var(--border-color);
-	    border-radius: 6px;
-	    margin-bottom: 0.2em;
-	    padding: 0.1em 1.02em;
-	    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06),
-	                0 1px 2px rgba(0, 0, 0, 0.04);">
-	    <b>
-	      <span style="color:#FF6B6B;">Physically</span>
-	      <span style="color:#5CA9C9;">Consistent</span> and
-	      <span style="color:#ffb300;">3D-Aware</span>
-      World Models
-    </b>
-  </span>
+  <b>Physically Consistent and 3D-Aware World Models</b>
   as a foundation for physical intelligence.
 </p>
 
@@ -58,11 +56,12 @@ redirect_from:
 <p class="about-text">
   My long-term goal is to turn AI into a <b>physically grounded assistant beyond the screen</b>. An overview of my research path:
 </p>
+</div>
 <figure style="margin: 2rem 0 1rem 0; text-align: center;">
   <img src="{{ '/images/path.png' | relative_url }}" 
        alt="A realizable path toward physical intelligence"
        style="max-width: 70%; height: auto; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);" />
-  <figcaption style="margin-top: 0.8rem; font-size: 0.95rem; color: #666; font-style: italic;">
+  <figcaption style="margin-top: 0.8rem; font-size: 0.95rem; color: var(--dark-gray); font-style: italic;">
     My current research focuses on representation and dynamics—modeling.
   </figcaption>
 </figure>

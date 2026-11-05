@@ -482,3 +482,173 @@ nav.lw-nav a.active {
     justify-content: flex-start;
   }
 }
+
+/* Homepage: monochrome typography with a portrait beside the introduction. */
+body.home-page {
+  --primary-color: #f2f2f2;
+  --secondary-color: #e0e0e0;
+  --accent-color: #f2f2f2;
+  --text-color: #dedede;
+  --light-gray: #252525;
+  --border-color: #444444;
+  --dark-gray: #b3b3b3;
+  --yellow-color: #eeeeee;
+  --orange-color: #eeeeee;
+  --red-color: #eeeeee;
+  color-scheme: dark;
+  background: #1c1c1c;
+
+  .container {
+    max-width: 1200px;
+    padding: 2.5rem 2rem 4rem;
+  }
+
+  header.lw-header {
+    display: block;
+    padding-bottom: 1.5rem;
+  }
+
+  .header-content h1 {
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+    line-height: 1.2;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.035em;
+  }
+
+  .header-content .name-cn {
+    font-size: 0.7em;
+    font-weight: 400;
+  }
+
+  .affiliation {
+    color: var(--dark-gray);
+  }
+
+  nav.lw-nav {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid var(--border-color);
+    border-radius: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  nav.lw-nav ul {
+    justify-content: flex-start;
+    gap: 0.5rem 1.75rem;
+  }
+
+  nav.lw-nav a {
+    display: inline-block;
+    padding: 0.35rem 0;
+    border-radius: 0;
+  }
+
+  nav.lw-nav a:hover,
+  nav.lw-nav a.active {
+    color: #ffffff;
+    background: transparent;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+  }
+
+  a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+  }
+
+  .page-content {
+    max-width: none;
+  }
+
+  .page-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 1.2rem;
+  }
+
+  .page-content .content-updated {
+    color: var(--dark-gray);
+    font-size: 0.8rem;
+    margin: 0 0 1.25rem;
+  }
+
+  .page-content a {
+    text-decoration: underline;
+    text-decoration-color: #888888;
+    text-underline-offset: 0.2em;
+  }
+
+  .page-content a:hover {
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+  }
+
+  .home-intro {
+    display: flow-root;
+  }
+
+  .home-portrait {
+    float: right;
+    width: 270px;
+    margin: 0 0 1.5rem 2.5rem;
+  }
+
+  .home-portrait .profile-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    margin: 0;
+    border: 0;
+  }
+
+  .page-content h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-top: 2.5rem;
+  }
+
+  .page-content li {
+    line-height: 1.8;
+    margin-bottom: 0.65rem;
+  }
+
+  .interest-tag {
+    border-radius: 4px;
+    font-weight: 400;
+  }
+
+  .education-item h3 {
+    filter: grayscale(1);
+  }
+
+  @media (max-width: 900px) {
+    .container {
+      padding: 1.75rem 1.5rem 3rem;
+    }
+
+    header.lw-header {
+      text-align: left;
+    }
+
+    .home-portrait {
+      float: none;
+      width: 225px;
+      max-width: 100%;
+      margin: 0 auto 1.75rem;
+    }
+
+    nav.lw-nav ul {
+      gap: 0.35rem 1.25rem;
+    }
+
+    .page-content p {
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+  }
+}
