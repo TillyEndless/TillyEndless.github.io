@@ -1,5 +1,8 @@
 // Has to be in the head tag, otherwise a flicker effect will occur.
 
+// Keep new preferences separate from legacy theme choices; default to dark.
+const themeStorageKey = "al-folio-color-scheme";
+
 // Toggle through light, dark, and system theme settings.
 let toggleThemeSetting = () => {
   let themeSetting = determineThemeSetting();
@@ -14,7 +17,7 @@ let toggleThemeSetting = () => {
 
 // Change the theme setting and apply the theme.
 let setThemeSetting = (themeSetting) => {
-  localStorage.setItem("theme", themeSetting);
+  localStorage.setItem(themeStorageKey, themeSetting);
 
   document.documentElement.setAttribute("data-theme-setting", themeSetting);
 
@@ -253,9 +256,9 @@ let transTheme = () => {
 };
 
 // Determine the expected state of the theme toggle, which can be "dark", "light", or
-// "system". Default is "system".
+// "system". Default is "dark".
 let determineThemeSetting = () => {
-  let themeSetting = localStorage.getItem("theme");
+  let themeSetting = localStorage.getItem(themeStorageKey);
   if (themeSetting != "dark" && themeSetting != "light" && themeSetting != "system") {
     themeSetting = "dark";
   }

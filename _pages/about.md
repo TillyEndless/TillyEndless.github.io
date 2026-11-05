@@ -21,15 +21,15 @@ redirect_from:
 ---
 
 <p class="about-text">
-  I am an undergraduate in <strong>Computer Science and Technology</strong> at
-  <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>’s
-  <strong>Chu Kochen Honors College</strong>, with an expected graduation date of June 2027.
+  I am an undergraduate in Computer Science and Technology at
+  <a href="https://www.zju.edu.cn/english/"><strong>Zhejiang University</strong></a>’s
+  <a href="http://ckc.zju.edu.cn/">Chu Kochen Honors College</a>, with an expected graduation date of June 2027.
 </p>
 <p class="about-text">
-  In <strong>27 fall</strong>, I will pursue a <strong>master’s degree at Zhejiang University</strong>’s
-  <strong>College of Computer Science and Technology</strong>, in the <strong>CAD&amp;CG Lab</strong>,
-  advised by <a href="https://cshen.github.io/"><strong>Prof. Chunhua Shen (沈春华)</strong></a>
-  and <a href="https://shawnricecake.github.io/"><strong>Prof. Xuan Shen (沈轩)</strong></a>.
+  In <strong>27 fall</strong>, I will pursue a master’s degree at <strong>Zhejiang University</strong>’s
+  College of Computer Science and Technology, in the <strong>CAD&amp;CG Lab</strong>,
+  advised by <a href="https://cshen.github.io/"><strong>Prof. Chunhua Shen</strong></a>
+  and <a href="https://shawnricecake.github.io/"><strong>Prof. Xuan Shen</strong></a>.
 </p>
 <p class="about-text">
   My research focuses on <strong>efficient video and world models</strong>, from long-term KV memory
