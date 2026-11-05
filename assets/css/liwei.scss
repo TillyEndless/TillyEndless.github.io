@@ -81,12 +81,12 @@ header.lw-blog-header a.lw-back-home:hover {
 }
 
 .profile-img {
-  width: 126px;
-  height: auto;
+  width: 180px;
+  height: 180px;
   border-radius: 8px;
   margin: 0 auto 1rem;
   background: var(--light-gray);
-  object-fit: contain;
+  object-fit: cover;
   border: 1px solid var(--border-color);
 }
 
@@ -456,8 +456,8 @@ nav.lw-nav a.active {
   }
 
   .profile-img {
-    width: 105px;
-    height: auto;
+    width: 150px;
+    height: 150px;
   }
 
   .header-content h2 {
