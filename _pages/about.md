@@ -20,7 +20,7 @@ redirect_from:
 ---
 
 <p class="about-text">
-  I am an undergraduate in Computer Science and Technology (Class of 2027) at
+  I am an undergraduate in Computer Science and Technology at
   <a href="https://www.zju.edu.cn/english/"><strong>Zhejiang University</strong></a>’s
   <a href="http://ckc.zju.edu.cn/">Chu Kochen Honors College</a>, with an expected graduation date of June 2027.
 </p>
