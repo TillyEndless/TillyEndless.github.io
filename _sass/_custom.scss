@@ -13,12 +13,20 @@ html[data-theme="dark"] {
   --global-highlight-color: #eeeeee;
   --global-footer-bg-color: #171717;
 }
+// Match shawnricecake.github.io's Roboto typography and default tracking.
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.5;
+  letter-spacing: normal;
+}
 .post-header .name-cn { font-size: 0.7em; font-weight: 400; }
-.post-header .desc { line-height: 1.8; }
-.profile.float-right { width: 270px; margin: 0 0 1.5rem 2.5rem; }
+.post-header .desc { line-height: 1.5; }
+.profile.float-right { width: 270px; margin: 0 0 0 1rem; }
 .profile img { aspect-ratio: 1; object-fit: cover; }
 .content-updated { font-size: 0.8rem; color: var(--global-text-color-light); }
-.about-text { line-height: 1.8; margin-bottom: 1.2rem; }
+.about-text { line-height: 1.5; margin-bottom: 1rem; }
 .research-interests { display: flex; flex-wrap: wrap; gap: 0.65rem; margin: 1.25rem 0; }
 .interest-tag { border: 1px solid var(--global-divider-color); border-radius: 4px; padding: 0.3rem 0.6rem; font-size: 0.85rem; }
 .education-item { margin-bottom: 1.25rem; padding-left: 1rem; border-left: 2px solid var(--global-divider-color); }
@@ -27,34 +35,33 @@ html[data-theme="dark"] {
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 4px; }
 @media (max-width: 575.98px) {
   .profile.float-right { float: none !important; width: 225px; max-width: 100%; margin: 0 auto 1.75rem; }
-  .post-header .post-title { font-size: 2rem; }
 }
 
 // CV-based research profile, shared by the homepage and online CV.
-.profile-meta { color: var(--global-text-color-light); font-size: 0.9rem; }
-.profile-section-links { clear: both; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; border-block: 1px solid var(--global-divider-color); padding: 0.85rem 0; margin: 1.75rem 0 2rem; }
+.profile-meta { color: var(--global-text-color-light); font-size: 0.875rem; }
+.profile-section-links { clear: both; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; border-block: 1px solid var(--global-divider-color); padding: 0.5rem 0; margin: 1rem 0 1.25rem; }
 .profile-section-links a { text-decoration: none; }
 .profile-news, .profile-awards { list-style: none; padding: 0; }
-.profile-news li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; margin-bottom: 0.9rem; }
+.profile-news li { display: grid; grid-template-columns: 7rem 1fr; gap: 1rem; margin-bottom: 0.4rem; }
 .profile-news time { color: var(--global-text-color-light); font-size: 0.9rem; }
 .education-summary h3 { font-size: 1.1rem; font-weight: 600; }
-.research-item { padding: 1.5rem 0; border-bottom: 1px solid var(--global-divider-color); }
+.research-item { padding: 0.75rem 0; border-bottom: 1px solid var(--global-divider-color); }
 .research-item header { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
-.research-item h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.35rem; }
+.research-item h3 { font-size: 1rem; font-weight: 500; margin-bottom: 0.25rem; }
 .research-subtitle { color: var(--global-text-color-light); font-size: 0.95rem; }
-.research-item p, .research-item li { line-height: 1.7; }
+.research-item p, .research-item li { line-height: 1.5; }
 .research-results { padding-left: 1.25rem; }
-.research-item details { margin-top: 0.8rem; }
+.research-item details { margin-top: 0.5rem; }
 .research-item summary, .research-media summary { cursor: pointer; font-size: 0.9rem; }
-.research-item details ul { margin-top: 0.8rem; padding-left: 1.25rem; }
+.research-item details ul { margin-top: 0.5rem; padding-left: 1.25rem; }
 .research-paper-link { display: inline-block; margin-top: 0.8rem; font-size: 0.9rem; }
 .research-media { margin: 1.75rem 0; }
 .research-media figure { margin-top: 1rem; }
 .research-media img, .project-diagram { max-width: 100%; height: auto; border-radius: 6px; }
 .research-media figcaption { color: var(--global-text-color-light); font-size: 0.85rem; margin-top: 0.5rem; }
 .research-visualizations { display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 1rem; }
-.profile-awards li { display: flex; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid var(--global-divider-color); padding: 0.9rem 0; }
-.profile-skills div { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; margin-bottom: 0.75rem; }
+.profile-awards li { display: flex; justify-content: space-between; gap: 1.5rem; border-bottom: 1px solid var(--global-divider-color); padding: 0.5rem 0; }
+.profile-skills div { display: grid; grid-template-columns: 11rem 1fr; gap: 1rem; margin-bottom: 0.5rem; }
 .profile-skills dd { margin: 0; }
 .publications .row > .col-sm-10 { flex: 0 0 100%; max-width: 100%; }
 @media (max-width: 575.98px) {

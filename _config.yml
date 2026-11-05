@@ -31,7 +31,7 @@ search_enabled: false
 socials_in_search: true
 posts_in_search: true
 bib_search: true
-max_width: 1200px
+max_width: 930px
 serve_og_meta: false
 serve_schema_org: false
 og_image:
