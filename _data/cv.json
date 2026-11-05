@@ -138,9 +138,9 @@
   "publications": [
     {
       "name": "DraftKV: Efficient Long-Term Memory via Attention-Guided KV Retrieval for Video Generation",
-      "publisher": "Project in progress",
+      "publisher": "Project in progress; First Author",
       "releaseDate": "2026-10",
-      "summary": "Project in progress; no venue or author list specified in the CV."
+      "summary": "Project in progress; first author."
     },
     {
       "name": "Draft Attention v2: Fast Video Diffusion with Low-Resolution-Guided Mixed-Precision Attention",
