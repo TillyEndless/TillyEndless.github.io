@@ -21,10 +21,16 @@ redirect_from:
 ---
 
 <p class="about-text">
-  I am an undergraduate in <strong>Computer Science and Technology</strong> at
+  I am a <strong>2023-cohort undergraduate in Computer Science and Technology</strong> at
   <a href="https://www.zju.edu.cn/english/">Zhejiang University</a>’s
   <strong>Chu Kochen Honors College</strong>, with an expected graduation date of June 2027
   and a GPA of <strong>3.97/4.00</strong>.
+</p>
+<p class="about-text">
+  I will pursue a <strong>master’s degree at Zhejiang University</strong>’s
+  <strong>College of Computer Science and Technology</strong>, in the <strong>CAD&amp;CG Lab</strong>,
+  advised by <a href="https://cshen.github.io/">Prof. Chunhua Shen (沈春华)</a>
+  and <a href="https://shawnricecake.github.io/">Prof. Xuan Shen (沈轩)</a>.
 </p>
 <p class="about-text">
   My research focuses on <strong>efficient video and world models</strong>, from long-term KV memory

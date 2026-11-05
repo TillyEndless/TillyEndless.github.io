@@ -1,8 +1,16 @@
-{% assign education = site.data.cv.education.first %}
+{% for education in site.data.cv.education %}
 <div class="education-summary">
   <h3>{{ education.institution }}</h3>
-  <p>{{ education.studyType }} in {{ education.area }}<br>
-    <span class="profile-meta">Sept. 2023 – June 2027 (expected)</span><br>
-    <strong>GPA: {{ education.gpa }}</strong>
+  <p>{{ education.studyType }}{% if education.area %} in {{ education.area }}{% endif %}<br>
+    {% if education.display_dates %}<span class="profile-meta">{{ education.display_dates }}</span><br>{% endif %}
+    {% if education.cohort %}<span class="profile-meta">{{ education.cohort }} cohort</span><br>{% endif %}
+    {% if education.status %}<span class="profile-meta">{{ education.status }}</span><br>{% endif %}
+    {% if education.lab %}<strong>{{ education.lab }}</strong><br>{% endif %}
+    {% if education.advisors %}
+      Advisors:
+      {% for advisor in education.advisors %}<a href="{{ advisor.url }}">{{ advisor.name }} ({{ advisor.name_zh }})</a>{% unless forloop.last %} &amp; {% endunless %}{% endfor %}<br>
+    {% endif %}
+    {% if education.gpa %}<strong>GPA: {{ education.gpa }}</strong>{% endif %}
   </p>
 </div>
+{% endfor %}

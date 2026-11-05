@@ -4,7 +4,7 @@
     "label": "Computer Science Undergraduate",
     "email": "endlesstilly@gmail.com",
     "website": "https://tillyendless.github.io",
-    "summary": "Undergraduate at Zhejiang University’s Chu Kochen Honors College, researching efficient video and world models, multi-view geometry, and latent reasoning.",
+    "summary": "Undergraduate at Zhejiang University’s Chu Kochen Honors College, researching efficient video and world models, multi-view geometry, and latent reasoning. My master’s destination is the CAD&CG Lab at Zhejiang University’s College of Computer Science and Technology, advised by Chunhua Shen and Xuan Shen.",
     "profiles": [
       {
         "network": "GitHub",
@@ -21,7 +21,27 @@
       "startDate": "2023-09",
       "endDate": "2027-06",
       "expected": true,
-      "gpa": "3.97/4.00"
+      "gpa": "3.97/4.00",
+      "cohort": "2023",
+      "display_dates": "Sept. 2023 – June 2027 (expected)"
+    },
+    {
+      "institution": "Zhejiang University, College of Computer Science and Technology",
+      "studyType": "Master’s degree",
+      "status": "Incoming / future destination",
+      "lab": "CAD&CG Lab",
+      "advisors": [
+        {
+          "name": "Chunhua Shen",
+          "name_zh": "沈春华",
+          "url": "https://cshen.github.io/"
+        },
+        {
+          "name": "Xuan Shen",
+          "name_zh": "沈轩",
+          "url": "https://shawnricecake.github.io/"
+        }
+      ]
     }
   ],
   "work": [],
