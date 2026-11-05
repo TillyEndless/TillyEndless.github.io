@@ -21,12 +21,12 @@ redirect_from:
 ---
 
 <p class="about-text">
-  I am an undergraduate in Computer Science and Technology at
+  I am an undergraduate in Computer Science and Technology (Class of 2027) at
   <a href="https://www.zju.edu.cn/english/"><strong>Zhejiang University</strong></a>’s
   <a href="http://ckc.zju.edu.cn/">Chu Kochen Honors College</a>, with an expected graduation date of June 2027.
 </p>
 <p class="about-text">
-  In <strong>27 fall</strong>, I will pursue a master’s degree at <strong>Zhejiang University</strong>’s
+  I will pursue a master’s degree at <strong>Zhejiang University</strong>’s
   College of Computer Science and Technology, in the <strong>CAD&amp;CG Lab</strong>,
   advised by <a href="https://cshen.github.io/"><strong>Prof. Chunhua Shen</strong></a>
   and <a href="https://shawnricecake.github.io/"><strong>Prof. Xuan Shen</strong></a>.

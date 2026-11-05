@@ -3,7 +3,7 @@
   <h3>{{ education.institution }}</h3>
   <p>{{ education.studyType }}{% if education.area %} in {{ education.area }}{% endif %}<br>
     {% if education.display_dates %}<span class="profile-meta">{{ education.display_dates }}</span><br>{% endif %}
-    {% if education.cohort %}<span class="profile-meta">{{ education.cohort }} cohort</span><br>{% endif %}
+    {% if education.graduating_class %}<span class="profile-meta">Class of {{ education.graduating_class }}</span><br>{% endif %}
     {% if education.status %}<span class="profile-meta">{{ education.status }}</span><br>{% endif %}
     {% if education.lab %}<strong>{{ education.lab }}</strong><br>{% endif %}
     {% if education.advisors %}

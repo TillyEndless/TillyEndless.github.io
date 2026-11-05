@@ -22,13 +22,13 @@
       "endDate": "2027-06",
       "expected": true,
       "gpa": "3.97/4.00",
-      "cohort": "2023",
-      "display_dates": "Sept. 2023 – June 2027 (expected)"
+      "display_dates": "Sept. 2023 – June 2027 (expected)",
+      "graduating_class": "2027"
     },
     {
       "institution": "Zhejiang University, College of Computer Science and Technology",
       "studyType": "Master’s degree",
-      "status": "Incoming · 27 fall",
+      "status": "Future destination",
       "lab": "CAD&CG Lab",
       "advisors": [
         {
