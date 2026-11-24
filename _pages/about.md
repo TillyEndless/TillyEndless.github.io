@@ -36,7 +36,7 @@ redirect_from:
   I work on algorithms and CUDA kernels to reduce inference latency and memory usage
   while maintaining model quality.
 </p>
-<p class="content-updated">Last updated: November 5, 2026</p>
+<p class="content-updated">Last updated: November 24, 2026</p>
 
 <nav class="profile-section-links" aria-label="Homepage sections">
   <a href="#news">News</a>
@@ -50,8 +50,8 @@ redirect_from:
 ## News {#news}
 
 <ul class="profile-news">
-  <li><time>Oct. 2026</time><span><strong>DraftKV</strong>: an ongoing project on efficient long-term memory for video generation.</span></li>
-  <li><time>Sept. 2026</time><span><strong>Draft Attention v2</strong> and <strong>MosaicAttention</strong> are under review.</span></li>
+  <li><time>Nov. 2026</time><span><strong>DraftKV</strong> is under review. <a href="/files/draftkv.pdf">PDF</a> · <a href="https://github.com/TillyEndless/DraftKV">Code</a></span></li>
+  <li><time>Oct. 2026</time><span><strong>Draft Attention v2</strong> and <strong>MosaicAttention</strong> are under review.</span></li>
   <li><time>2026</time><span><strong>Mind Dreamer</strong> was accepted to <strong>ICML 2026</strong>. <a href="https://arxiv.org/abs/2605.16030">Paper</a></span></li>
 </ul>
 
@@ -61,7 +61,7 @@ redirect_from:
 
 ## Publications & Manuscripts {#publications}
 
-<p class="profile-meta">Accepted work, manuscripts under review, and an ongoing project are labeled separately below.</p>
+<p class="profile-meta">Accepted work and manuscripts under review are labeled separately below.</p>
 <div class="publications">
 {% bibliography %}
 </div>
