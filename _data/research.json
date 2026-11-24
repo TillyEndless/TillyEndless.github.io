@@ -6,18 +6,15 @@
     "dates": "Sept. 2026 – Nov. 2026",
     "startDate": "2026-09",
     "endDate": "2026-11",
-    "status": "Under review",
-    "summary": "Training-free historical KV retrieval combines 3D camera geometry and low-resolution attention relevance to improve spatial and visual consistency during long-horizon revisits.",
-    "results": [
-      "3.27× end-to-end speedup and 42.2% peak GPU memory savings compared with other CPU-offloaded KV retrieval methods.",
-      "Enables high-quality interactive world generation with historical KV retrieval on SolarWM-33B using a single H100."
+    "status": "Preprint",
+    "url": "https://tillyendless.github.io/files/draftkv.pdf",
+    "bullets": [
+      "Identified a consistency–efficiency trade-off in interactive video world models: historical KV caches preserve scene consistency during revisits, but retrieval, transfer, and attention incur substantial inference overhead.",
+      "Developed **DraftKV**, a training-free hierarchical KV retrieval framework combining 3D geometric grounding with low-resolution attention relevance, with theoretical bounds on relevance approximation and retrieval utility.",
+      "Designed **Streaming CG-Attention** to overlap host-to-device KV transfer with attention computation using fixed-size GPU staging buffers independent of retrieved context length.",
+      "Achieved **3.27× end-to-end speedup and 42.2% peak GPU memory savings** over existing CPU-offloaded KV retrieval methods while improving generation quality and long-term consistency, enabling historical KV retrieval for SolarWM-33B on a single H100."
     ],
-    "methods": [
-      "Hierarchical Draft Retrieval combines geometry-aware Draft Grounding and attention-guided Draft Refinement.",
-      "Theoretical analysis establishes draft relevance approximation and retrieval utility bounds.",
-      "Streaming CG-Attention overlaps host-to-device KV transfer with attention computation using fixed-size GPU staging buffers."
-    ],
-    "url": "https://tillyendless.github.io/files/draftkv.pdf"
+    "code": "https://github.com/TillyEndless/DraftKV"
   },
   {
     "id": "draftattention2",
@@ -26,17 +23,14 @@
     "dates": "July 2026 – Oct. 2026",
     "startDate": "2026-07",
     "endDate": "2026-10",
-    "status": "Under review",
-    "summary": "Uses low-resolution attention importance estimates to route visual interactions to 16-bit, 8/4-bit, or sparse computation, preserving critical information in few-step diffusion.",
-    "results": [
-      "Up to 2.51× / 2.60× DiT inference speedups on HunyuanVideo-13B / MiniMax-H3.",
-      "1.87× speedup in 8-step video generation while maintaining near-dense attention quality."
-    ],
-    "methods": [
-      "Combined average/max dual-path pooling with an attention-output error bound to study mixed precision versus pure sparsity.",
-      "Designed a fused CUDA kernel for quantization, data reordering, and cross-precision Online Softmax, reducing intermediate writes and redundant memory traffic."
-    ],
-    "url": "https://arxiv.org/abs/2609.32628"
+    "status": "Preprint",
+    "url": "https://arxiv.org/abs/2609.32628",
+    "bullets": [
+      "Identified an efficiency–quality trade-off in few-step video diffusion: sparse attention discards information that is difficult to recover, while uniform low-bit quantization introduces errors in critical visual interactions.",
+      "Developed **DraftAttention2**, using dual-path average/max pooling to estimate attention importance and allocate interactions to 16-bit, 8/4-bit, or sparse computation, with theoretical analysis of attention-output error bounds.",
+      "Designed a **fused CUDA kernel** integrating quantization, data reordering, and cross-precision online softmax to reduce intermediate writes and redundant memory accesses.",
+      "Achieved up to **2.51×/2.60× DiT inference speedups** on HunyuanVideo-13B/MiniMax-H3 and **1.87× speedup** in 8-step video generation while maintaining near-dense generation quality."
+    ]
   },
   {
     "id": "mosaicattention",
@@ -46,13 +40,10 @@
     "startDate": "2026-07",
     "endDate": "2026-10",
     "status": "Under review",
-    "summary": "Combines 2D average/max pooling and hierarchical sparse routing to retain important cross-view geometry while reducing redundant global attention.",
-    "results": [
-      "Up to 3.12× end-to-end inference speedup at 128 input views, while matching or improving accuracy on CO3Dv2 and other multi-view geometry tasks."
-    ],
-    "methods": [
-      "Allocated computation across layers while preserving 2D image structure and critical cross-view interactions.",
-      "Incorporated mixed-precision execution to further improve inference efficiency."
+    "bullets": [
+      "Identified a limitation of existing sparse attention for multi-view geometry Transformers: overlooking 2D spatial structure makes it difficult to preserve critical cross-view interactions.",
+      "Developed **MosaicAttention**, combining 2D average/max pooling with hierarchical sparse routing to allocate computation across layers, further accelerating inference through mixed-precision computation.",
+      "Achieved up to **3.12× end-to-end inference speedup** with 128 input views while maintaining or improving accuracy on CO3Dv2 and other multi-view geometry tasks."
     ]
   },
   {
@@ -63,15 +54,12 @@
     "startDate": "2025-10",
     "endDate": "2026-05",
     "status": "ICML 2026",
-    "summary": "Addresses Historical Tethering in model-based reinforcement learning by synthesizing high-value latent states as new imagination starting points beyond observed trajectories.",
-    "results": [
-      "1.67× average and up to 8.8× sample-efficiency gains over DreamerV3 on DeepMind Control Suite, with higher final returns on multiple sparse-reward tasks."
-    ],
-    "methods": [
-      "Identified how imagination initialized only from observed states limits exploration of unvisited, high-value regions.",
-      "Jointly scored task value and uncertainty to guide active exploration in latent space."
-    ],
-    "url": "https://arxiv.org/abs/2605.16030"
+    "url": "https://arxiv.org/abs/2605.16030",
+    "bullets": [
+      "Identified **Historical Tethering** in model-based reinforcement learning: initializing imagination from previously observed states limits exploration of unvisited regions with high learning potential.",
+      "Developed **Mind Dreamer**, actively synthesizing high-value latent states as new imagination starting points and guiding exploration through joint assessment of task value and uncertainty.",
+      "Achieved **1.67× average and up to 8.8× sample-efficiency gains** over DreamerV3 on DeepMind Control Suite, with higher final returns on multiple sparse-reward tasks."
+    ]
   },
   {
     "id": "beyond-token-supervision",
@@ -81,13 +69,10 @@
     "startDate": "2025-05",
     "endDate": "2025-09",
     "status": "Research project",
-    "summary": "Uses sparse autoencoders to extract semantic features from an explicit chain-of-thought teacher and supervise intermediate latent reasoning states.",
-    "results": [
-      "11.7% GSM8K accuracy improvement over the COCONUT latent-reasoning baseline, reducing semantic drift."
-    ],
-    "methods": [
-      "Identified semantic drift caused by the absence of explicit intermediate supervision in continuous latent reasoning.",
-      "Aligned intermediate latent states with semantic anchors extracted from correct explicit reasoning trajectories."
+    "bullets": [
+      "Identified **semantic drift** caused by the absence of explicit intermediate supervision in continuous latent reasoning.",
+      "Developed a semantic-anchor approach using sparse autoencoders to extract features from correct explicit reasoning trajectories and supervise intermediate latent states.",
+      "Achieved **11.7% GSM8K accuracy improvement** over the COCONUT latent-reasoning baseline."
     ]
   }
 ]

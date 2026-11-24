@@ -50,8 +50,8 @@ redirect_from:
 ## News {#news}
 
 <ul class="profile-news">
-  <li><time>Nov. 2026</time><span><strong>DraftKV</strong> is under review. <a href="/files/draftkv.pdf">PDF</a> · <a href="https://github.com/TillyEndless/DraftKV">Code</a></span></li>
-  <li><time>Oct. 2026</time><span><strong>Draft Attention v2</strong> and <strong>MosaicAttention</strong> are under review.</span></li>
+  <li><time>Nov. 2026</time><span><strong>DraftKV</strong> preprint released. <a href="/files/draftkv.pdf">PDF</a> · <a href="https://github.com/TillyEndless/DraftKV">Code</a></span></li>
+  <li><time>Oct. 2026</time><span><strong>Draft Attention v2</strong> preprint released; <strong>MosaicAttention</strong> is under review.</span></li>
   <li><time>2026</time><span><strong>Mind Dreamer</strong> was accepted to <strong>ICML 2026</strong>. <a href="https://arxiv.org/abs/2605.16030">Paper</a></span></li>
 </ul>
 
@@ -61,7 +61,7 @@ redirect_from:
 
 ## Publications & Manuscripts {#publications}
 
-<p class="profile-meta">Accepted work and manuscripts under review are labeled separately below.</p>
+<p class="profile-meta">Accepted papers, preprints, and manuscripts under review.</p>
 <div class="publications">
 {% bibliography %}
 </div>

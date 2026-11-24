@@ -70,3 +70,13 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px soli
   .profile-skills div { grid-template-columns: 1fr; gap: 0.2rem; }
   .research-visualizations { grid-template-columns: 1fr; }
 }
+
+// Compact CV-style research entries; keep the existing site typography and theme.
+.research-compact { padding: 0.7rem 0 0.85rem; }
+.research-compact h3 { font-size: 1.08rem; font-weight: 700; margin: 0; }
+.research-compact .research-subtitle { font-style: italic; margin: 0.05rem 0 0.35rem; }
+.research-compact .research-date { white-space: nowrap; }
+.research-compact .research-results { margin: 0 0 0.2rem; padding-left: 1.3rem; list-style-type: circle; }
+.research-compact .research-results li { margin-bottom: 0.3rem; line-height: 1.5; }
+.research-compact .research-results strong { font-weight: 600; }
+.research-compact .research-links { font-size: 0.9rem; margin-top: 0.3rem; }
