@@ -8,12 +8,12 @@ redirect_from:
   - /about.html
 ---
 <p class="about-text">
-  I am a third-year undergraduate student at
+  I am a senior undergraduate student at
   <a href="https://www.zju.edu.cn/english/" target="_blank" rel="noopener noreferrer">Zhejiang University</a>
   (Chu Kochen Honors College), majoring in Computer Science and Technology (expected B.Eng. 2027).
-  I am currently a research intern at
+  I have worked on research at
   <a href="https://www.tsinghua.edu.cn/en/" target="_blank" rel="noopener noreferrer">Tsinghua University</a>,
-  where I work with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
+  where I worked with Prof. Luping Shi and Prof. Rong Zhao on <b>model-based reinforcement learning</b> and <b>world models</b>.
   Previously, I worked on continuous reasoning for large language models at Zhejiang University.
 </p>
 
@@ -73,6 +73,8 @@ redirect_from:
 </figure>
 
 <div class="research-interests" aria-label="Research interests">
+  <span class="interest-tag">Efficient AI</span>
+  <span class="interest-tag">Video Generation</span>
   <span class="interest-tag">Model-based RL</span>
   <span class="interest-tag">World Models</span>
   <span class="interest-tag">Embodied AI</span>
@@ -82,16 +84,46 @@ redirect_from:
 </div>
 
 ## News
-[2025-2026] One paper submitted (under review with **strong feedback**).   
+[2026. 11] DraftKV submitted and under review.  
+[2026. 10] Draft Attention v2 and MosaicAttention under review.  
+[2026. 05] Mind Dreamer accepted at ICML 2026 (CCF-A).   
 [2025. 10] Started research at Tsinghua University on physical world models and RL exploration.   
 [2025. 10] Awarded First-Class Scholarship, Zhejiang University.    
 [2024. 10] Awarded **National Scholarship (Top 0.5%)** & First-Class Scholarship, Zhejiang University.    
 
 ## Publications
-- **Mind Dreamer: Untethering Imagination via Active Counterfactual Reasoning on Latent Manifolds** [[PDF]({{ '/files/paper.pdf' | relative_url }})]      
-Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao   
 
-<img src="{{ '/images/image_paper.png' | relative_url }}" alt="图注" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="图注" style="width: 50%;">   
+- **DraftKV: Protecting Persistent Worlds through Hierarchical Streaming Retrieval** [[PDF]({{ '/files/draftkv.pdf' | relative_url }})] [[Code](https://github.com/TillyEndless/DraftKV)]  
+  **Xiaoling Zhou**, Haopeng Li, Yufa Zhou, Rui Ding, Yu Li, Jun Lin, Enze Xie, Chunhua Shen, Xuan Shen  
+  *Under Review, November 2026*
+
+- **Draft Attention v2: Fast Video Diffusion with Low-Resolution-Guided Mixed-Precision Attention** [[arXiv](https://arxiv.org/abs/2609.32628)]  
+  Rui Ding, Haopeng Li, Weize Ma, Yufa Zhou, Yitong Li, **Xiaoling Zhou**, Jiashuo Cao, Liyang Li, Hua Geng, Jiuxiang Gu, Jun Lin, Enze Xie, Xuan Shen  
+  *Under Review, October 2026*
+
+- **MosaicAttention: Hierarchical Block-Sparse Attention for Multi-View Geometry Transformers**  
+  Zhizhen Pan, Rui Ding, Weize Ma, **Xiaoling Zhou**, Jun Lin, Chunhua Shen, Xuan Shen  
+  *Under Review, October 2026*
+
+- **Mind Dreamer: Untethering Imagination via Active Latent Intervention on Latent Manifolds** [[arXiv](https://arxiv.org/abs/2605.16030)]  
+  Shaojun Xu, **Xiaoling Zhou**, Yihan Lin, Yapeng Meng, Xinglong Ji, Luping Shi, Rong Zhao  
+  *ICML 2026 (CCF-A), Accepted*
+
+<img src="{{ '/images/image_paper.png' | relative_url }}" alt="Mind Dreamer overview" style="width: 50%;"><img src="{{ '/images/random_mosaic_4x6.gif' | relative_url }}" alt="Mind Dreamer demonstrations" style="width: 50%;">
+
+## Research Experience
+
+- **DraftKV | Hierarchical Streaming KV Retrieval for Persistent World Models** (Sep–Nov 2026)  
+  Developed a training-free historical KV retrieval framework combining 3D camera geometry with low-resolution attention relevance. Designed overlapped CPU-to-GPU KV streaming and attention computation with fixed-size GPU staging buffers. Achieved **3.27× end-to-end speedup** and **42.2% peak GPU memory savings** compared with other CPU-offloaded KV retrieval methods, enabling historical KV retrieval for SolarWM-33B on a single H100.
+
+- **DraftAttention2 | Low-Resolution-Guided Mixed-Precision Video Generation** (Jul–Oct 2026)  
+  Combined average/max-pooled attention importance estimates with 16-bit, 8/4-bit and sparse computation. Fused quantization, data reordering and cross-precision online softmax into a CUDA kernel. Achieved up to **2.51×/2.60× DiT inference speedup** on HunyuanVideo-13B and MiniMax-H3, and **1.87× speedup** for 8-step video generation while retaining near-dense generation quality.
+
+- **MosaicAttention | Sparse Attention for Multi-View Geometry Transformers** (Jul–Oct 2026)  
+  Used 2D average/max pooling and hierarchical sparse routing to preserve important cross-view interactions, with mixed-precision computation for efficiency. Achieved up to **3.12× end-to-end inference speedup** with 128 input views on multi-view geometry tasks while maintaining or improving accuracy.
+
+- **Mind Dreamer | Active Latent Intervention for World Model Imagination** (Oct 2025–May 2026)  
+  Addressed historical tethering in model-based reinforcement learning by actively generating valuable latent starting states and guiding exploration with task value and uncertainty. Achieved **1.67× average and up to 8.8× sample efficiency improvements** over DreamerV3 on DeepMind Control Suite tasks.
 
 ## Competitions {#competitions}
 - **2026 NVIDIA DGX Spark Hackathon**   
