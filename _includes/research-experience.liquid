@@ -13,7 +13,7 @@
     </ul>
     {% if project.url %}
     <div class="research-links">
-      <a href="{{ project.url }}">{% if project.id == 'draftkv' %}PDF{% else %}arXiv{% endif %}</a>
+      <a href="{{ project.url }}">arXiv</a>
       {% if project.code %}<span aria-hidden="true"> · </span><a href="{{ project.code }}">Code</a>{% endif %}
     </div>
     {% endif %}

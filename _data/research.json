@@ -7,7 +7,7 @@
     "startDate": "2026-09",
     "endDate": "2026-11",
     "status": "Preprint",
-    "url": "https://tillyendless.github.io/files/draftkv.pdf",
+    "url": "https://arxiv.org/abs/2611.31944",
     "bullets": [
       "Identified a consistency–efficiency trade-off in interactive video world models: historical KV caches preserve scene consistency during revisits, but retrieval, transfer, and attention incur substantial inference overhead.",
       "Developed **DraftKV**, a training-free hierarchical KV retrieval framework combining 3D geometric grounding with low-resolution attention relevance, with theoretical bounds on relevance approximation and retrieval utility.",
